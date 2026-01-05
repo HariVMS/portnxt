@@ -1,15 +1,69 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-poppins);
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-  --color-primary: #007bfd;
-  --color-accent: #ED184F;
-  --color-secondary-pink: #feddf5;
-  --color-secondary-green: #e7fce7;
-  --color-secondary-purple: #d0bfff;
-  --color-dark-bg: #111111;
-  --color-hero-bg: #97a685;
+    /* Makelink Brand Colors (HSL) */
+    --primary: 211 100% 50%;
+    /* #007bfd */
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 345 86% 51%;
+    /* #ED184F */
+    --accent-foreground: 0 0% 100%;
+
+    --hero-bg: 87 18% 59%;
+    /* #97a685 */
+
+    --dark-bg: 0 0% 7%;
+    /* #111111 */
+    --gray-bg: 210 40% 96%;
+    /* #F8FAFC */
+
+    /* Secondary Pastels */
+    --secondary-blue: 197 100% 95%;
+    /* #e5f7ff */
+    --secondary-peach: 32 87% 92%;
+    /* #fcedda */
+    --secondary-green: 120 71% 95%;
+    /* #e7fce7 */
+    --secondary-pink: 315 100% 93%;
+    /* #feddf5 */
+    --secondary-purple: 260 100% 87%;
+    /* #d0bfff */
+  }
+}
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-hero-bg: hsl(var(--hero-bg));
+  --color-dark-bg: hsl(var(--dark-bg));
+  --color-gray-bg: hsl(var(--gray-bg));
+
+  --color-secondary-blue: hsl(var(--secondary-blue));
+  --color-secondary-peach: hsl(var(--secondary-peach));
+  --color-secondary-green: hsl(var(--secondary-green));
+  --color-secondary-pink: hsl(var(--secondary-pink));
+  --color-secondary-purple: hsl(var(--secondary-purple));
+
+  --font-display: "Geist Sans", "Helvetica Neue", sans-serif;
+  --font-poppins: var(--font-poppins);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-poppins), sans-serif;
 }
 
 /* Custom Animations */
