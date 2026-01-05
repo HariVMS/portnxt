@@ -2,9 +2,12 @@
 
 @theme {
   --font-sans: var(--font-poppins);
-  
+
   --color-primary: #007bfd;
   --color-accent: #ED184F;
+  --color-secondary-pink: #feddf5;
+  --color-secondary-green: #e7fce7;
+  --color-secondary-purple: #d0bfff;
   --color-dark-bg: #111111;
   --color-hero-bg: #97a685;
 }
