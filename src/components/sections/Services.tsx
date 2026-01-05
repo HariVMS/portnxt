@@ -36,22 +36,19 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white p-8 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,123,253,0.1)] transition-all duration-300 group border border-slate-100 hover:border-blue-100 relative overflow-hidden"
+                            className="bg-white p-6 rounded-[24px] shadow-sm hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 group border border-transparent hover:border-slate-100 relative overflow-hidden h-full flex flex-col"
                         >
-                            {/* Background Decoration on Hover */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500"></div>
-
-                            <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors relative z-10">
+                            <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors relative z-10 shrink-0">
                                 {/* Try to load real image, fallback to icon. For now using Icon as placeholder until we download all 12 icons */}
                                 <service.icon size={32} className="text-primary group-hover:text-white transition-colors" />
                             </div>
 
                             <h3 className="text-xl font-bold text-slate-900 mb-3 relative z-10">{service.title}</h3>
-                            <p className="text-slate-500 text-[15px] mb-6 leading-relaxed relative z-10">
+                            <p className="text-slate-500 text-[15px] mb-6 leading-relaxed relative z-10 flex-grow">
                                 {service.desc}
                             </p>
 
-                            <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`} className="inline-flex items-center text-accent font-bold text-xs tracking-wider uppercase hover:tracking-widest transition-all relative z-10">
+                            <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`} className="inline-flex items-center text-accent font-bold text-xs tracking-wider uppercase hover:tracking-widest transition-all relative z-10 mt-auto">
                                 Read More <span className="text-lg ml-1 leading-none">+</span>
                             </Link>
                         </div>

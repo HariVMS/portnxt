@@ -21,7 +21,7 @@ export default function Hero() {
                         <div className="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
                             <Link
                                 href="/contact-us"
-                                className="flex items-center gap-2 bg-primary text-white px-9 py-4 rounded-full font-bold text-sm tracking-widest hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-500/30 transform hover:-translate-y-1 uppercase"
+                                className="flex items-center gap-2 bg-primary text-white px-9 py-4 rounded-full font-bold text-sm tracking-widest btn-hover-effect shadow-xl transform hover:-translate-y-1 uppercase border-2 border-transparent hover:border-primary"
                             >
                                 Let's Talk
                                 <ArrowUpRight size={18} strokeWidth={3} />

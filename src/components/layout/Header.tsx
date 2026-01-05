@@ -119,7 +119,7 @@ export default function Header() {
                     <div className="hidden md:flex items-center gap-4">
                         <Link
                             href="/brochure"
-                            className="flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-[12px] font-bold tracking-widest hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 group"
+                            className="flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-transparent hover:border-primary shadow-lg"
                         >
                             BROCHURE
                             <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
