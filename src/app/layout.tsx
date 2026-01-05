@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -9,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Makelink Innovation | Software Development & Digital Marketing",
+  title: "Portnext Innovation | Software Development & Digital Marketing",
   description: "Transforming Ideas into Reality with cutting-edge software solutions.",
 };
 
@@ -23,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-white text-slate-900`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

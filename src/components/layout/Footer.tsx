@@ -66,7 +66,7 @@ export default function Footer() {
                                 </div>
                                 <div className="flex-1">
                                     <div className="text-white font-bold mb-1">Our Location</div>
-                                    <div className="leading-snug">Makelink Innovation, Delhi, India</div>
+                                    <div className="leading-snug">Portnext Innovation, Delhi, India</div>
                                 </div>
                             </li>
                             <li className="flex gap-4 group cursor-pointer">
@@ -79,12 +79,12 @@ export default function Footer() {
                                 </div>
                             </li>
                             <li className="flex gap-4 group cursor-pointer">
-                                <a href="mailto:sales@makelinkit.com" className="w-10 h-10 rounded bg-[#222] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <a href="mailto:sales@portnext.com" className="w-10 h-10 rounded bg-[#222] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                                     <Mail size={18} />
                                 </a>
                                 <div className="flex-1">
                                     <div className="text-white font-bold mb-1">Email Address</div>
-                                    <div className="leading-snug">sales@makelinkit.com</div>
+                                    <div className="leading-snug">sales@portnext.com</div>
                                 </div>
                             </li>
                         </ul>
@@ -96,7 +96,7 @@ export default function Footer() {
             <div className="border-t border-white/5 mt-16 pt-8">
                 <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="text-[15px]">
-                        Copyright © 2025 <span className="text-white font-bold">Makelink Innovation</span>. All Rights Reserved.
+                        Copyright © 2025 <span className="text-white font-bold">Portnext Innovation</span>. All Rights Reserved.
                     </div>
                     <div className="flex gap-3">
                         <a href="#" className="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center hover:bg-facebook hover:text-white transition-all"><Facebook size={18} /></a>

@@ -4,7 +4,7 @@ import Stats from "@/components/sections/Stats";
 import { CheckCircle2, Lightbulb, Users, Target, Rocket } from "lucide-react";
 
 export const metadata = {
-    title: "About Us | Makelink Innovation",
+    title: "About Us | Portnext Innovation",
     description: "We’re the right tech-solutions partner for all your digital innovation & transformation needs.",
 };
 
@@ -13,7 +13,7 @@ export default function AboutUs() {
         <main>
             <PageHero
                 title="Software Development & Digital Marketing Company"
-                description="Makelink Innovation empowers enterprises and startups alike to stay ahead in an increasingly digital-driven market."
+                description="Portnext Innovation empowers enterprises and startups alike to stay ahead in an increasingly digital-driven market."
                 breadcrumb="About Us"
             />
 
@@ -24,7 +24,7 @@ export default function AboutUs() {
                 title="We are a pleasant team of specialists who love helping businesses develop."
                 description=""
                 imageSrc="/img/Home/about_us_robot.webp" // Need to verify if this exists, else use hero_robot
-                imageAlt="About Makelink Team"
+                imageAlt="About Portnext Team"
                 listItems={[
                     "Software Development & Digital Marketing Specialists",
                     "Creating top-notch software answers just for you",
@@ -38,10 +38,10 @@ export default function AboutUs() {
             <section className="py-10 bg-white -mt-10">
                 <div className="container max-w-4xl text-slate-600 text-lg leading-relaxed space-y-6">
                     <p>
-                        Welcome to Makelink Innovation Pvt. Ltd. We're a pleasant team of specialists who love helping businesses develop. Our enterprise focuses on the most important areas: Software Development and Digital Marketing. We accept it as true in creating an international effect, and our intention is to help our customers shine inside the Digital world.
+                        Welcome to Portnext Innovation Pvt. Ltd. We're a pleasant team of specialists who love helping businesses develop. Our enterprise focuses on the most important areas: Software Development and Digital Marketing. We accept it as true in creating an international effect, and our intention is to help our customers shine inside the Digital world.
                     </p>
                     <p>
-                        At Makelink, we create top-notch software answers just for you. Whether or not you need web development, a mobile app, or even special solutions like blockchain and IoT, we’ve given you covered. Our talented team works carefully with you to understand your desires and innovate your ideas into truth. We use the latest technology to ensure your software program is not just good, but the best.
+                        At Portnext, we create top-notch software answers just for you. Whether or not you need web development, a mobile app, or even special solutions like blockchain and IoT, we’ve given you covered. Our talented team works carefully with you to understand your desires and innovate your ideas into truth. We use the latest technology to ensure your software program is not just good, but the best.
                     </p>
                     <p>
                         But that's not all! We also provide top-notch digital marketing services. In today’s busy world, it’s important to stand out. Our team knows just how to help your business get noticed. We create smart marketing strategies that bring you more customers and help your business grow.
@@ -89,7 +89,7 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="text-center mb-16">
                         <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">WHY CHOOSE US</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">What sets Makelink Innovation apart</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">What sets Portnext Innovation apart</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

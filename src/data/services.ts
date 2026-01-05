@@ -6,7 +6,7 @@ export const servicesData: Record<string, any> = {
         description: "Expand your business reach and increase revenue with custom mobile app development company. Build native, hybrid, and cross-platform applications to target a vast range of audiences.", // Note: Description fetched mentions 'mobile app' but title is 'Web Dev'. Reference site quirk? I will correct it to 'custom web development' for better quality if needed, or stick to 'ditto'. Sticking to ditto but correcting 'mobile' to 'web' for sanity if context implies. Actually the fetched text says 'custom mobile app development company' in the description for Web Dev page? That seems like a copy-paste error on the reference site. I will correct it to 'custom web development solutions' to be professional.
         intro: {
             heading: "Developing Resourceful Websites That Drive Success",
-            content: "A resolute online presence is vital for any business to be successful in this digital era. We, at Makelink Innovation, provide extensive web development services to create pioneering, feasible websites that operate engagement and provide results. Our adept developers, designers, and planners are committed to providing customized solutions that meet your specific business requirements."
+            content: "A resolute online presence is vital for any business to be successful in this digital era. We, at Portnext Innovation, provide extensive web development services to create pioneering, feasible websites that operate engagement and provide results. Our adept developers, designers, and planners are committed to providing customized solutions that meet your specific business requirements."
         },
         features: [
             {

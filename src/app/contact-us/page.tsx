@@ -2,8 +2,8 @@ import PageHero from "@/components/layout/PageHero";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Us | Makelink Innovation",
-  description: "Get in touch with Makelink Innovation for your software development and digital marketing needs.",
+  title: "Contact Us | Portnext Innovation",
+  description: "Get in touch with Portnext Innovation for your software development and digital marketing needs.",
 };
 
 export default function ContactUs() {
@@ -129,7 +129,7 @@ export default function ContactUs() {
                     <div>
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Email Address</span>
                       <p className="text-slate-700 font-medium hover:text-primary transition-colors">
-                        <a href="mailto:sales@makelinkit.com">sales@makelinkit.com</a>
+                        <a href="mailto:sales@portnext.com">sales@portnext.com</a>
                       </p>
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export default function ContactUs() {
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Makelink Location"
+                  title="Portnext Location"
                   className="grayscale hover:grayscale-0 transition-all duration-500"
                 ></iframe>
               </div>

@@ -13,7 +13,6 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
       <Hero />
       <Services />
       <About />
@@ -23,7 +22,6 @@ export default function Home() {
       <Process />
       <Industries />
       <ContactCTA />
-      <Footer />
     </main>
   );
 }

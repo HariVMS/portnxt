@@ -47,7 +47,7 @@ export default function Hero() {
                             {/* 3D Image */}
                             <Image
                                 src="/img/Home/hero-img.webp"
-                                alt="Makelink Innovation Digital Solutions"
+                                alt="Portnext Innovation Digital Solutions"
                                 width={700}
                                 height={700}
                                 className="w-full h-auto object-contain drop-shadow-2xl"

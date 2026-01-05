@@ -12,7 +12,7 @@ export default function Stats() {
                 <div className="text-center mb-12">
                     <h3 className="text-2xl font-bold leading-relaxed max-w-4xl mx-auto">
                         <span className="text-[30px] md:text-[40px] leading-tight block mb-4">❝</span>
-                        Partner with Makelink Innovation to unlock tailored, scalable solutions that drive innovation and efficiency for your enterprise—trust our expertise to elevate your business.
+                        Partner with Portnext Innovation to unlock tailored, scalable solutions that drive innovation and efficiency for your enterprise—trust our expertise to elevate your business.
                         <span className="text-[30px] md:text-[40px] leading-tight block mt-2">❞</span>
                     </h3>
                 </div>

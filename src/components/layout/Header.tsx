@@ -12,25 +12,25 @@ export default function Header() {
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm font-sans">
             {/* Top Bar */}
-            <div className="bg-[#111] text-white py-2 text-xs md:text-sm">
+            <div className="bg-primary text-white py-2 text-xs md:text-sm">
                 <div className="container flex flex-col md:flex-row justify-between items-center gap-2">
                     <div className="flex items-center gap-6">
-                        <a href="tel:+919667949121" className="flex items-center gap-2 hover:text-primary transition-colors">
-                            <Phone size={14} className="text-primary" />
-                            <span>+91 96679 49121</span>
+                        <a href="tel:+919667949121" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+                            <span className="font-bold">+91 96679 49121</span>
                         </a>
-                        <a href="mailto:sales@makelinkit.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-                            <Mail size={14} className="text-primary" />
-                            <span>sales@makelinkit.com</span>
+                        <span className="hidden md:inline text-white/40">|</span>
+                        <a href="mailto:sales@portnext.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+                            <span>sales@portnext.com</span>
                         </a>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-3">
-                            <a href="#" className="hover:text-primary transition-colors"><Facebook size={14} /></a>
-                            <a href="#" className="hover:text-primary transition-colors"><Twitter size={14} /></a>
-                            <a href="#" className="hover:text-primary transition-colors"><Instagram size={14} /></a>
-                            <a href="#" className="hover:text-primary transition-colors"><Linkedin size={14} /></a>
-                            <a href="#" className="hover:text-primary transition-colors"><Youtube size={14} /></a>
+                            {/* Social Icons - White circle bg in reference? Simplified here */}
+                            <a href="#" className="hover:text-white/80 transition-colors"><Facebook size={16} /></a>
+                            <a href="#" className="hover:text-white/80 transition-colors"><Instagram size={16} /></a>
+                            <a href="#" className="hover:text-white/80 transition-colors"><Linkedin size={16} /></a>
+                            <a href="#" className="hover:text-white/80 transition-colors"><Twitter size={16} /></a>
+                            <a href="#" className="hover:text-white/80 transition-colors"><Youtube size={16} /></a>
                         </div>
                     </div>
                 </div>
@@ -39,14 +39,21 @@ export default function Header() {
             {/* Main Navigation */}
             <div className="container bg-white relative">
                 <div className="flex justify-between items-center py-4">
-                    {/* Logo */}
+                    {/* Logo - Renaming to Portnext visually via Alt for now, assuming image swap later or it contains text */}
                     <Link href="/" className="flex items-center gap-2">
+                        {/* User requested renaming 'Makelink' to 'Portnext' in all places. 
+                             If the image has 'Makelink' burned in, this won't fix it visually without a new image. 
+                             But per instructions, I'll update the Alt and hopefully the user provides a new asset or I use text if strictly requested 
+                             "refeane the given image" implies copying the *style* of the header. 
+                             "rename all the palce where 'Makelink' into 'portnext'" implies text changes. 
+                             I will update Alt and Title text. 
+                         */}
                         <Image
                             src="/img/Home/makelink-innovation-logo.webp"
-                            alt="Makelink Innovation"
+                            alt="Portnext Innovation"
                             width={180}
                             height={50}
-                            className="h-10 w-auto"
+                            className="h-10 w-auto" // Should ideally be replaced by actual Portnext logo
                             priority
                         />
                     </Link>
@@ -62,14 +69,14 @@ export default function Header() {
                             </button>
 
                             {/* Mega Menu Dropdown */}
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white shadow-xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-3 gap-8">
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white shadow-xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-3 gap-8 text-left normal-case">
 
                                 {/* Other Services */}
                                 <div className="space-y-4">
                                     <div className="bg-secondary-pink/30 p-3 rounded-lg flex items-center gap-3">
                                         <div className="font-bold text-slate-900 text-sm">Other Services</div>
                                     </div>
-                                    <ul className="space-y-2 text-sm text-slate-600 font-normal normal-case">
+                                    <ul className="space-y-2 text-sm text-slate-600 font-normal">
                                         <li><Link href="/services/ui-ux-graphic-design" className="hover:text-primary hover:tracking-wide transition-all">UI/UX Graphic Design</Link></li>
                                         <li><Link href="/services/cloud" className="hover:text-primary hover:tracking-wide transition-all">Cloud Solutions</Link></li>
                                         <li><Link href="/services/block-chain" className="hover:text-primary hover:tracking-wide transition-all">Blockchain Development</Link></li>
@@ -83,7 +90,7 @@ export default function Header() {
                                     <div className="bg-secondary-green p-3 rounded-lg flex items-center gap-3">
                                         <div className="font-bold text-slate-900 text-sm">Development Services</div>
                                     </div>
-                                    <ul className="space-y-2 text-sm text-slate-600 font-normal normal-case">
+                                    <ul className="space-y-2 text-sm text-slate-600 font-normal">
                                         <li><Link href="/services/web-development" className="hover:text-primary hover:tracking-wide transition-all">Web Development</Link></li>
                                         <li><Link href="/services/mobile-app-development" className="hover:text-primary hover:tracking-wide transition-all">Mobile App Development</Link></li>
                                         <li><Link href="/services/ai-development" className="hover:text-primary hover:tracking-wide transition-all">AI Development</Link></li>
@@ -98,7 +105,7 @@ export default function Header() {
                                     <div className="bg-secondary-purple/30 p-3 rounded-lg flex items-center gap-3">
                                         <div className="font-bold text-slate-900 text-sm">Digital Marketing</div>
                                     </div>
-                                    <ul className="space-y-2 text-sm text-slate-600 font-normal normal-case">
+                                    <ul className="space-y-2 text-sm text-slate-600 font-normal">
                                         <li><Link href="/services/search-engine-optimization" className="hover:text-primary hover:tracking-wide transition-all">SEO Optimization</Link></li>
                                         <li><Link href="/services/social-media-marketing" className="hover:text-primary hover:tracking-wide transition-all">Social Media Marketing</Link></li>
                                         <li><Link href="/services/pay-per-click" className="hover:text-primary hover:tracking-wide transition-all">Pay Per Click (PPC)</Link></li>
