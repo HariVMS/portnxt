@@ -1,38 +1,26 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
-    /* Makelink Brand Colors (HSL) */
     --primary: 211 100% 50%;
-    /* #007bfd */
     --primary-foreground: 0 0% 100%;
 
     --accent: 345 86% 51%;
-    /* #ED184F */
     --accent-foreground: 0 0% 100%;
 
     --hero-bg: 87 18% 59%;
-    /* #97a685 */
 
     --dark-bg: 0 0% 7%;
-    /* #111111 */
     --gray-bg: 210 40% 96%;
-    /* #F8FAFC */
 
-    /* Secondary Pastels */
     --secondary-blue: 197 100% 95%;
-    /* #e5f7ff */
     --secondary-peach: 32 87% 92%;
-    /* #fcedda */
     --secondary-green: 120 71% 95%;
-    /* #e7fce7 */
     --secondary-pink: 315 100% 93%;
-    /* #feddf5 */
     --secondary-purple: 260 100% 87%;
-    /* #d0bfff */
   }
 }
 
@@ -57,16 +45,14 @@
   --color-secondary-purple: hsl(var(--secondary-purple));
 
   --font-display: "Geist Sans", "Helvetica Neue", sans-serif;
-  --font-poppins: var(--font-poppins);
+  --font-sans: var(--font-brandon), sans-serif;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-poppins), sans-serif;
 }
 
-/* Custom Animations */
 @keyframes scale-up {
   0% {
     transform: scale(1);
@@ -109,7 +95,6 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Button Hover Effect from Reference */
 .btn-hover-effect {
   position: relative;
   overflow: hidden;
@@ -148,4 +133,177 @@ body {
 
 body {
   font-family: var(--font-sans);
+} */
+
+
+@import "tailwindcss";
+
+/* --------------------------------------------------
+   Base CSS Variables
+-------------------------------------------------- */
+@layer base {
+  :root {
+    /* Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --primary: 211 100% 50%;
+    /* #007bfd */
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 345 86% 51%;
+    /* #ED184F */
+    --accent-foreground: 0 0% 100%;
+
+    --hero-bg: 87 18% 59%;
+    /* #97a685 */
+    --dark-bg: 0 0% 7%;
+    /* #111111 */
+    --gray-bg: 210 40% 96%;
+    /* #F8FAFC */
+
+    --secondary-blue: 197 100% 95%;
+    --secondary-peach: 32 87% 92%;
+    --secondary-green: 120 71% 95%;
+    --secondary-pink: 315 100% 93%;
+    --secondary-purple: 260 100% 87%;
+
+    /* Fonts (IMPORTANT) */
+    --font-brandon: "Brandon", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* --------------------------------------------------
+   Tailwind v4 Theme Mapping
+-------------------------------------------------- */
+@theme {
+  /* Colors */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-hero-bg: hsl(var(--hero-bg));
+  --color-dark-bg: hsl(var(--dark-bg));
+  --color-gray-bg: hsl(var(--gray-bg));
+
+  --color-secondary-blue: hsl(var(--secondary-blue));
+  --color-secondary-peach: hsl(var(--secondary-peach));
+  --color-secondary-green: hsl(var(--secondary-green));
+  --color-secondary-pink: hsl(var(--secondary-pink));
+  --color-secondary-purple: hsl(var(--secondary-purple));
+
+  /* Fonts */
+  --font-brandon: var(--font-brandon);
+  --font-display: "Geist Sans", "Helvetica Neue", sans-serif;
+}
+
+/* --------------------------------------------------
+   Global Styles
+-------------------------------------------------- */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Headings use display font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* --------------------------------------------------
+   Animations
+-------------------------------------------------- */
+@keyframes scale-up {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background-color: white;
+  transition: width 0.3s ease;
+  z-index: -1;
+  border-radius: 9999px;
+}
+
+.btn-hover-effect:hover::before {
+  width: 100%;
+}
+
+.btn-hover-effect:hover {
+  color: var(--color-primary);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+
+/* --------------------------------------------------
+   Utilities
+-------------------------------------------------- */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1280px;
 }

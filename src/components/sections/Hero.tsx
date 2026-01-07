@@ -4,16 +4,12 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-hero-bg overflow-hidden font-sans">
-            <div className="container relative z-10">
+        <section className="relative bg-[url('/hero-banner.svg')] pt-32 pb-20 md:pt-48 md:pb-32   overflow-hidden font-sans">
+            <div className="container 2xl:max-w-[1536px] relative z-10">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
                     {/* Left Content */}
                     <div className="flex-1 text-center md:text-left z-20">
-                        <h1 className="text-4xl md:text-[64px] font-[800] text-[#111] leading-[1.1] mb-6 tracking-tight">
-                            MakeLink Innovation <br />
-                            <span className="text-white">Transforming Ideas</span> <br />
-                            into Reality
-                        </h1>
+                        <h1 className="text-white lg:text-4xl font-bold leading-[1.2] text-xl !font-brandon"> MakeLink Innovation Transforming Ideas into Reality </h1>
                         <p className="text-lg md:text-[20px] text-slate-800 mb-10 max-w-xl mx-auto md:mx-0 font-medium leading-relaxed">
                             We empower businesses to seize their present and shape their future through cutting-edge software solutions and digital marketing strategies.
                         </p>

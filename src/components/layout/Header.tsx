@@ -10,13 +10,13 @@ export default function Header() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm font-sans">
+        <header className="fixed top-0 left-0 w-full grid grid-rows-[48px_1fr] z-50 bg-white shadow-sm font-sans">
             {/* Top Bar */}
-            <div className="bg-primary text-white py-2 text-xs md:text-sm">
-                <div className="container flex flex-col md:flex-row justify-between items-center gap-2">
-                    <div className="flex items-center gap-6">
+            <div className="bg-primary text-white py-2 w-full flex  text-xs md:text-sm">
+                <div className="container flex flex-col md:flex-row 2xl:max-w-[1536px] justify-between items-center gap-2">
+                    <div className="flex items-center gap-6 ">
                         <a href="tel:+919667949121" className="flex items-center gap-2 hover:text-white/80 transition-colors">
-                            <span className="font-bold">+91 96679 49121</span>
+                            <span className="font-normal text-[16px] font-brandon">+91 96679 49121</span>
                         </a>
                         <span className="hidden md:inline text-white/40">|</span>
                         <a href="mailto:sales@portnext.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
@@ -60,7 +60,7 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden lg:flex items-center gap-8 font-bold text-[13px] tracking-wide text-slate-800 uppercase">
-                        <Link href="/about-us" className="hover:text-primary transition-colors">COMPANY</Link>
+                        <Link href="/about-us" className="hover:text-primary transition-colors !font-brandon">COMPANY</Link>
 
                         <div className="relative group">
                             <button className="flex items-center gap-1 hover:text-primary transition-colors py-4">
