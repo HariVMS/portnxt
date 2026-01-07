@@ -138,9 +138,7 @@ body {
 
 @import "tailwindcss";
 
-/* --------------------------------------------------
-   Base CSS Variables
--------------------------------------------------- */
+
 @layer base {
   :root {
     /* Colors */
@@ -173,9 +171,7 @@ body {
   }
 }
 
-/* --------------------------------------------------
-   Tailwind v4 Theme Mapping
--------------------------------------------------- */
+
 @theme {
   /* Colors */
   --color-background: hsl(var(--background));
@@ -202,28 +198,17 @@ body {
   --font-display: "Geist Sans", "Helvetica Neue", sans-serif;
 }
 
-/* --------------------------------------------------
-   Global Styles
--------------------------------------------------- */
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-brandon) !important;
 }
 
-/* Headings use display font */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
+* {
+  font-family: var(--font-brandon) !important;
 }
 
-/* --------------------------------------------------
-   Animations
--------------------------------------------------- */
+
 @keyframes scale-up {
   from {
     transform: scale(1);

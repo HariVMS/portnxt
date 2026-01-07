@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${brandon.variable} antialiased bg-white text-slate-900 !font-brandon`}
+        className={`${brandon.variable} antialiased bg-white text-slate-900 `}
       >
         <Header />
         {children}
