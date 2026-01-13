@@ -1,58 +1,69 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function Hero() {
-    return (
-        <section className="relative bg-[url('/hero-banner.svg')] pt-32 pb-20 md:pt-48 md:pb-32   overflow-hidden font-sans">
-            <div className="container 2xl:max-w-[1536px] relative z-10">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-                    {/* Left Content */}
-                    <div className="flex-1 text-center md:text-left z-20">
-                        <h1 className="text-white lg:text-4xl font-bold leading-[1.2] text-xl !font-brandon"> MakeLink Innovation Transforming Ideas into Reality </h1>
-                        <p className="text-lg md:text-[20px] text-slate-800 mb-10 max-w-xl mx-auto md:mx-0 font-medium leading-relaxed">
-                            We empower businesses to seize their present and shape their future through cutting-edge software solutions and digital marketing strategies.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
-                            <Link
-                                href="/contact-us"
-                                className="flex items-center gap-2 bg-primary text-white px-9 py-4 rounded-full font-bold text-sm tracking-widest btn-hover-effect shadow-xl transform hover:-translate-y-1 uppercase border-2 border-transparent hover:border-primary"
-                            >
-                                Let's Talk
-                                <ArrowUpRight size={18} strokeWidth={3} />
-                            </Link>
-
-                            <div className="flex items-center gap-3">
-                                <div className="bg-white/40 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-bold text-[#111] border border-white/30 shadow-sm">
-                                    StartupIndia
-                                </div>
-                                <div className="bg-white/40 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-bold text-[#111] border border-white/30 shadow-sm">
-                                    ISO 9001:2015
-                                </div>
-                                <div className="bg-white/40 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-bold text-[#111] border border-white/30 shadow-sm">
-                                    ISO 27001:2022
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Content - Visual */}
-                    <div className="flex-1 relative w-full flex justify-center md:justify-end">
-                        <div className="relative w-full max-w-[600px] animate-float">
-                            {/* 3D Image */}
-                            <Image
-                                src="/img/Home/hero-img.webp"
-                                alt="Portnext Innovation Digital Solutions"
-                                width={700}
-                                height={700}
-                                className="w-full h-auto object-contain drop-shadow-2xl"
-                                priority
-                            />
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section className="relative bg-[url('/hero-banner.svg')] pt-32 pb-10 md:pt-48 md:pb-22  2xl:max-h-[717px]  overflow-hidden font-sans">
+      <div className="container 2xl:max-w-[1536px] relative z-10">
+        <div className="grid grid-cols-[1fr_640px] md:flex-row items-center gap-8 md:gap-16  ">
+          {/* Left Content */}
+          <div className="flex-1 text-center md:text-left z-20">
+            <h1 className="text-white lg:max-w-[600px] lg:text-4xl font-bold leading-[1.2] text-xl !font-brandon">
+              {" "}
+              MakeLink Innovation Transforming Ideas into Reality{" "}
+            </h1>
+            <p className="text-sm md:text-[15.5px] text-background p-10 pt-9 px-0 font-light ">
+              We empower businesses to seize their present and shape their
+              future through cutting-edge software solutions and AI-driven
+              innovations, enabling them to overcome challenges and achieve
+              sustainable success.{" "}
+            </p>
+            <div className="mb-10">
+              <Image
+                src="/img/Home/startup-india-ISO-logo.svg"
+                alt="Portnext Innovation Digital Solutions ISO Certificates"
+                width={270}
+                height={80}
+                className="max-w-full max-h-full"
+                priority
+              />
             </div>
-        </section>
-    );
+
+            <div className="hidden md:flex items-center gap-4">
+              <Link
+                href="/contact-us"
+                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
+              >
+                <span className="text-[18px]">LET'S TALK</span>
+                <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">
+                  {" "}
+                  <GoArrowUpRight
+                    size={21}
+                    className="group-hover:rotate-45  stroke-[0.5] text-primary  transition-transform duration-500"
+                  />
+                </span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Content - Visual */}
+          <div className="flex-1 relative 2xl:min-w-[900px]">
+            <div className="relative w-full  animate-float">
+              {/* 3D Image */}
+              <Image
+                src="/img/Home/hero-img.webp"
+                alt="Portnext Innovation Digital Solutions"
+                width={700}
+                height={700}
+                className=" object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

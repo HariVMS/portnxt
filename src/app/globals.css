@@ -135,9 +135,7 @@ body {
   font-family: var(--font-sans);
 } */
 
-
 @import "tailwindcss";
-
 
 @layer base {
   :root {
@@ -167,10 +165,10 @@ body {
     --secondary-purple: 260 100% 87%;
 
     /* Fonts (IMPORTANT) */
-    --font-brandon: "Brandon", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-brandon: "Brandon", system-ui, -apple-system, BlinkMacSystemFont,
+      sans-serif;
   }
 }
-
 
 @theme {
   /* Colors */
@@ -220,7 +218,6 @@ body {
 }
 
 @keyframes float-slow {
-
   0%,
   100% {
     transform: translateY(0);
@@ -232,7 +229,6 @@ body {
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -278,8 +274,7 @@ body {
 
 .btn-hover-effect:hover {
   color: var(--color-primary);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
   border-color: var(--color-primary);
 }

@@ -9,8 +9,8 @@ Copyright (c) 2012 by Hannes von Doehren. All rights reserved.
 <defs>
 <font id="BrandonText-Regular" horiz-adv-x="1228" >
   <font-face 
-    font-family="Brandon Text Regular"
-    font-weight="390"
+    fontFamily="Brandon Text Regular"
+    fontWeight="390"
     font-stretch="normal"
     units-per-em="2048"
     panose-1="2 11 5 3 2 2 3 6 2 3"
