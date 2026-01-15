@@ -12,88 +12,88 @@ import { FaWhatsapp } from "react-icons/fa"; // You might need to install react-
 
 export default function Footer() {
     return (
-        <footer className="bg-[#111111] text-[#b0b0b0] text-[14px] font-sans pt-20 pb-6 relative z-50">
+        <footer className="bg-[#192020] text-[#b0b0b0] text-[14px] font-sans pt-12 pb-6 relative z-50">
             {/* Main Footer Content */}
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="container mx-auto px-4 2xl:max-w-[1536px]" >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-0">
 
                     {/* Column 1: Quick Menu */}
-                    <div>
-                        <h4 className="text-white font-medium mb-6 text-[16px] tracking-wide">Quick Menu</h4>
+                    <div >
+                        <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">Quick Menu</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/about-us" className="hover:text-white transition-colors block">About Us</Link></li>
-                            <li><Link href="/portfolio" className="hover:text-white transition-colors block">Portfolio</Link></li>
-                            <li><Link href="/team" className="hover:text-white transition-colors block">Team</Link></li>
-                            <li><Link href="/online-course" className="hover:text-white transition-colors block">Online Course</Link></li>
-                            <li><Link href="/partners" className="hover:text-white transition-colors block">Our Partners</Link></li>
-                            <li><Link href="/clients" className="hover:text-white transition-colors block">Our Clients</Link></li>
-                            <li><Link href="/contact" className="hover:text-white transition-colors block">Contact Us</Link></li>
-                            <li><Link href="/helpdesk" className="hover:text-white transition-colors block">Helpdesk</Link></li>
+                            <li><Link href="/about-us" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">About Us</Link></li>
+                            <li><Link href="/portfolio" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Portfolio</Link></li>
+                            <li><Link href="/team" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Team</Link></li>
+                            <li><Link href="/online-course" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Online Course</Link></li>
+                            <li><Link href="/partners" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Our Partners</Link></li>
+                            <li><Link href="/clients" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Our Clients</Link></li>
+                            <li><Link href="/contact" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Contact Us</Link></li>
+                            <li><Link href="/helpdesk" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Helpdesk</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 2: Development Service */}
                     <div>
-                        <h4 className="text-white font-medium mb-6 text-[16px] tracking-wide">Development Service</h4>
+                        <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">Development Service</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/services/web-development" className="hover:text-white transition-colors block">Web Development</Link></li>
-                            <li><Link href="/services/app-development" className="hover:text-white transition-colors block">App Development</Link></li>
-                            <li><Link href="/services/cloud-services" className="hover:text-white transition-colors block">Cloud Services</Link></li>
-                            <li><Link href="/services/erp-development" className="hover:text-white transition-colors block">ERP Development</Link></li>
-                            <li><Link href="/services/ai-development" className="hover:text-white transition-colors block">AI Development</Link></li>
-                            <li><Link href="/services/iot-development" className="hover:text-white transition-colors block">IOT Development</Link></li>
-                            <li><Link href="/services/blockchain" className="hover:text-white transition-colors block">Block Chain</Link></li>
-                            <li><Link href="/services/devops" className="hover:text-white transition-colors block">DevOps</Link></li>
+                            <li><Link href="/services/web-development" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Web Development</Link></li>
+                            <li><Link href="/services/app-development" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">App Development</Link></li>
+                            <li><Link href="/services/cloud-services" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Cloud Services</Link></li>
+                            <li><Link href="/services/erp-development" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">ERP Development</Link></li>
+                            <li><Link href="/services/ai-development" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">AI Development</Link></li>
+                            <li><Link href="/services/iot-development" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">IOT Development</Link></li>
+                            <li><Link href="/services/blockchain" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Block Chain</Link></li>
+                            <li><Link href="/services/devops" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">DevOps</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 3: Digital Marketing */}
                     <div>
-                        <h4 className="text-white font-medium mb-6 text-[16px] tracking-wide">Digital Marketing</h4>
+                        <h4 className="text-base lg:text-[18px] !font-brandon text-white font-medium mb-3 lg:mb-7">Digital Marketing</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/services/seo" className="hover:text-white transition-colors block">SEO</Link></li>
-                            <li><Link href="/services/email-marketing" className="hover:text-white transition-colors block">Email Marketing</Link></li>
-                            <li><Link href="/services/smm" className="hover:text-white transition-colors block">SMM</Link></li>
-                            <li><Link href="/services/ppc" className="hover:text-white transition-colors block">PPC</Link></li>
-                            <li><Link href="/services/content-marketing" className="hover:text-white transition-colors block">Content Marketing</Link></li>
-                            <li><Link href="/services/cro" className="hover:text-white transition-colors block">CRO</Link></li>
+                            <li><Link href="/services/seo" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">SEO</Link></li>
+                            <li><Link href="/services/email-marketing" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Email Marketing</Link></li>
+                            <li><Link href="/services/smm" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">SMM</Link></li>
+                            <li><Link href="/services/ppc" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">PPC</Link></li>
+                            <li><Link href="/services/content-marketing" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Content Marketing</Link></li>
+                            <li><Link href="/services/cro" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">CRO</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 4: Industries */}
                     <div>
-                        <h4 className="text-white font-medium mb-6 text-[16px] tracking-wide">Industries</h4>
+                        <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">Industries</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/industries/healthcare" className="hover:text-white transition-colors block">Healthcare</Link></li>
-                            <li><Link href="/industries/finance" className="hover:text-white transition-colors block">Finance</Link></li>
-                            <li><Link href="/industries/real-estate" className="hover:text-white transition-colors block">Real Estate</Link></li>
-                            <li><Link href="/industries/retail" className="hover:text-white transition-colors block">Retail</Link></li>
-                            <li><Link href="/industries/education" className="hover:text-white transition-colors block">Education</Link></li>
-                            <li><Link href="/industries/logistics" className="hover:text-white transition-colors block">Logistics</Link></li>
-                            <li><Link href="/industries/travel" className="hover:text-white transition-colors block">Travel</Link></li>
-                            <li><Link href="/industries/manufacturing" className="hover:text-white transition-colors block">Manufacturing</Link></li>
+                            <li><Link href="/industries/healthcare" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Healthcare</Link></li>
+                            <li><Link href="/industries/finance" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Finance</Link></li>
+                            <li><Link href="/industries/real-estate" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Real Estate</Link></li>
+                            <li><Link href="/industries/retail" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Retail</Link></li>
+                            <li><Link href="/industries/education" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Education</Link></li>
+                            <li><Link href="/industries/logistics" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Logistics</Link></li>
+                            <li><Link href="/industries/travel" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Travel</Link></li>
+                            <li><Link href="/industries/manufacturing" className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block">Manufacturing</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 5: Contact Info */}
                     <div>
-                        <h4 className="text-white font-medium mb-6 text-[16px] tracking-wide">Contact Info</h4>
+                        <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">Contact Info</h4>
                         <div className="space-y-6">
-                            <div>
+                            <div className="flex gap-3 flex-col">
                                 <div className="text-white mb-1">Phone Number : +91 96679 49121</div>
                                 <div className="text-white">Email Address- sales@portnext.com</div>
                             </div>
 
                             {/* Social Icons */}
                             <div className="flex gap-3">
-                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Facebook size={16} fill="currentColor" className="stroke-0" /></a>
-                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"><Facebook size={16} fill="currentColor" className="stroke-0" /></a>
+                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all">
                                     {/* X Logo simulation since it's not always in lucide default old versions, or use Twitter but style as X if preferred, or generic. Using simple SVG for X if needed or just Text. Let's use a simple shape or the Lucide Twitter for now but the user asked for "Same Design". The image has an X logo. */}
                                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                                 </a>
-                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Instagram size={16} /></a>
-                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Linkedin size={16} fill="currentColor" className="stroke-0" /></a>
-                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-all"><Youtube size={16} fill="currentColor" className="stroke-0" /></a>
+                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"><Instagram size={16} /></a>
+                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"><Linkedin size={16} fill="currentColor" className="stroke-0" /></a>
+                                <a href="#" className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"><Youtube size={16} fill="currentColor" className="stroke-0" /></a>
                             </div>
 
                             {/* Certification Logos */}
@@ -101,9 +101,9 @@ export default function Footer() {
                                 <Image
                                     src="/img/Home/startup-india-ISO-logo.svg"
                                     alt="Certifications"
-                                    width={200}
-                                    height={60}
-                                    className="h-12 w-auto object-contain" // Adjusted for proper containment
+                                    width={1000}
+                                    height={1000}
+                                    className=" object-contain" // Adjusted for proper containment
                                 />
                             </div>
                         </div>
@@ -112,19 +112,17 @@ export default function Footer() {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/10 mt-12 pt-6">
-                <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-[13px] text-[#888]">
-                        © 2025 Makelink Innovation. All rights reserved.
-                        {/* Keeping 'Makelink Innovation' as per screenshot since user asked for "Same Design", although project is 'Prtnxt'. Verification will check if they want brand update. Safe bet: Use what's in screenshot or existing project name? Screenshot says 'Makelink'. Code says 'Portnext'. I will use 'Portnext' to avoid branding regression, but keep structure. Actually, user said 'same design as image'. I will blindly follow image layout but keep 'Portnext' for brand safety unless explicitly asked to rebrand. Wait, user might be rebranding. I'll stick to 'Portnext' logic for text content matching current state, but visual style of image.  
+            <div className="container mx-auto mt-10 pt-5 pb-0 border-t border-white px-4 2xl:max-w-[1536px]  flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="text-[16px] text-white">
+                    © 2025 Makelink Innovation. All rights reserved.
+                    {/* Keeping 'Makelink Innovation' as per screenshot since user asked for "Same Design", although project is 'Prtnxt'. Verification will check if they want brand update. Safe bet: Use what's in screenshot or existing project name? Screenshot says 'Makelink'. Code says 'Portnext'. I will use 'Portnext' to avoid branding regression, but keep structure. Actually, user said 'same design as image'. I will blindly follow image layout but keep 'Portnext' for brand safety unless explicitly asked to rebrand. Wait, user might be rebranding. I'll stick to 'Portnext' logic for text content matching current state, but visual style of image.  
                         Actually, looking at the code I wrote above: "Email Address- sales@portnext.com".
                         Let's use "Portnext Innovation" for copyright to be safe. */}
-                    </div>
-                    <div className="flex gap-6 text-[13px] text-[#888]">
-                        <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
-                    </div>
+                </div>
+                <div className="flex gap-6 text-[16px] text-white">
+                    <Link href="/terms" className="text-white hover:text-[#73b9ef] text-[16px] transition-colors">Terms & Conditions</Link>
+                    <Link href="/privacy" className="text-white hover:text-[#73b9ef] text-[16px] transition-colors">Privacy Policy</Link>
+                    <Link href="/faq" className="text-white hover:text-[#73b9ef] text-[16px] transition-colors">FAQ</Link>
                 </div>
             </div>
 
