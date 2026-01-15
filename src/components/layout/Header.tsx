@@ -94,9 +94,8 @@ export default function Header() {
                 SERVICES
                 <ChevronDown
                   size={14}
-                  className={`transform transition-transform ${
-                    isServicesOpen ? "rotate-180" : ""
-                  }`}
+                  className={`transform transition-transform ${isServicesOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 

@@ -8,6 +8,7 @@ import Features from "@/components/sections/Features";
 import Stats from "@/components/sections/Stats";
 import Process from "@/components/sections/Process";
 import Industries from "@/components/sections/Industries";
+import Tools from "@/components/sections/Tools";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Stats />
       <Process />
       <Industries />
+      <Tools />
       <ContactCTA />
     </main>
   );
