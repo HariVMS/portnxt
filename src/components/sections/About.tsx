@@ -1,53 +1,74 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function About() {
     return (
-        <section className="py-24 bg-dark-bg text-white overflow-hidden relative font-sans">
-            <div className="container relative z-10">
-                <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-                    {/* Left Content */}
-                    <div className="flex-1">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-[#1F1F1F] text-primary text-[11px] font-[800] tracking-[0.15em] mb-6 border border-white/5">
-                            WHO WE ARE
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                            Innovation to transform <br />
-                            <span className="text-primary">your organization</span>
-                        </h2>
-                        <p className="text-slate-400 text-lg mb-10 leading-relaxed font-light">
-                            We are a team of passionate developers, designers, and strategists committed to delivering high-quality software solutions. We believe in the power of technology to solve complex problems and drive business growth.
-                        </p>
-
-                        <div className="flex gap-4">
-                            <Link
-                                href="/about-us"
-                                className="flex items-center gap-2 bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-xs tracking-widest transition-all uppercase shadow-lg shadow-blue-900/20"
-                            >
-                                Learn More
-                                <ArrowUpRight size={16} strokeWidth={3} />
-                            </Link>
+        <section className="py-12 bg-[#192020] text-white overflow-hidden relative font-sans">
+            <div className="container relative z-10 2xl:max-w-[1536px] px-0 ">
+                <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 2xl:grid 2xl:grid-cols-[600px_1fr] ">
+                    {/* Left Content - Visual */}
+                    <div className="relative flex justify-center items-center max-w-[600px] max-h-[500px]">
+                        <div className="relative w-full">
+                            <Image
+                                src="/img/Home/about.webp"
+                                alt="Digital Marketing and Development"
+                                width={1000}
+                                height={1000}
+                                className="relative z-10 w-full h-auto object-contain"
+                            />
                         </div>
                     </div>
 
-                    {/* Right Content - Visual */}
-                    <div className="flex-1 relative flex justify-center items-center">
-                        <div className="relative w-full max-w-[500px]">
-                            {/* Glow effects */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-blue-500/10 rounded-full blur-[100px]"></div>
+                    {/* Right Content - Text */}
+                    <div className="flex-1 !font-brandon  max-w-[90%]">
+                        <h3 className="font-bold !font-brandon text-base lg:text-xl text-[#51BAE9] mb-2">
+                            About Us
+                        </h3>
+                        <h2 className="font-bold text-xl sm:text-3xl md:text-3xl mb-6 text-white">
+                            Innovation to <span className="text-[#51BAE9] italic">transform</span> your organization
+                        </h2>
+                        <div className="text-white !font-brandon  text-[15px] leading-relaxed space-y-4 mb-10 font-light">
+                            <p className="!font-brandon ">
+                                Welcome to MakeLink Innovation, in which your thoughts transform into truth. Founded in 2021, we're now not simply an IT corporation—we're pioneers of digital marketing. Our passionate team of over 20 licensed specialists brings a wealth of knowledge in custom web and cellular utility development, in addition to digital marketing offerings.
+                            </p>
+                            <p className="!font-brandon ">
+                                What sets us aside? Our unwavering dedication to satisfaction and protection is subsidized by using our ISO 9001:2015 and ISO 27001:2013 certifications. We take delight in handing over tailor-made solutions that meet the specific desires of our customers. With more than 50 hit tasks across diverse industries, we have a demonstrated track record of riding enterprise boom and overcoming demanding situations.
+                            </p>
+                        </div>
 
-                            <Image
-                                src="/img/Home/about-robo.svg"
-                                alt="AI Robot Innovation"
-                                width={500}
-                                height={500}
-                                className="relative z-10 w-full h-auto animate-float-slow"
-                            />
+                        <div className="hidden md:flex items-center gap-4">
+                            <Link
+                                href="/contact-us"
+                                className="flex items-center gap-1 bg-primary text-white pl-7 pr-7 py-4 h-[68px] max-w-[258px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
+                            >
+                                <span className="text-[16px]">LEARN MORE</span>
+                                <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">
+                                    {" "}
+                                    <GoArrowUpRight
+                                        size={21}
+                                        className="group-hover:rotate-45  stroke-[0.5] text-primary  transition-transform duration-500"
+                                    />
+                                </span>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Floating Robot - Bottom Right */}
+            <div className="absolute -bottom-10 -right-10 2xl:right-0 2xl:bottom-0 z-0 opacity-80 pointer-events-none hidden lg:block">
+                <Image
+                    src="/img/Home/about-robo.svg"
+                    alt="AI Robot"
+                    width={1000}
+                    height={1000}
+                    className="w-[150px] md:w-[250px] animate-float-slow"
+                />
+            </div>
+            {/* Glow effects */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
         </section>
     );
 }
