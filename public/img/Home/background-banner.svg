@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="775" viewBox="0 0 1920 775">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_990" data-name="Rectangle 990" width="1920" height="775" transform="translate(18731 20286)" fill="#111112"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.479" gradientTransform="matrix(0.999, 0.041, -0.041, 0.999, 0.021, -0.02)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#41c4ff" stop-opacity="0.251"/>
+      <stop offset="1" stop-color="#50c8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="Ellipse_42">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_43">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Mask_Group_63" data-name="Mask Group 63" transform="translate(-18731 -20286)" clip-path="url(#clip-path)">
+    <rect id="Rectangle_989" data-name="Rectangle 989" width="1920" height="775" transform="translate(18731 20286)" fill="#111112"/>
+    <g data-type="innerShadowGroup">
+      <ellipse id="Ellipse_42-2" data-name="Ellipse 42" cx="443.5" cy="392" rx="443.5" ry="392" transform="translate(20057 20089)" opacity="0.99" fill="url(#radial-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 18731, 20286)" filter="url(#Ellipse_42)">
+        <ellipse id="Ellipse_42-3" data-name="Ellipse 42" cx="443.5" cy="392" rx="443.5" ry="392" transform="translate(1326 -197)" fill="#fff" opacity="0.99"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <ellipse id="Ellipse_43-2" data-name="Ellipse 43" cx="443.5" cy="392.5" rx="443.5" ry="392.5" transform="translate(18477 20364)" opacity="0.99" fill="url(#radial-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 18731, 20286)" filter="url(#Ellipse_43)">
+        <ellipse id="Ellipse_43-3" data-name="Ellipse 43" cx="443.5" cy="392.5" rx="443.5" ry="392.5" transform="translate(-254 78)" fill="#fff" opacity="0.99"/>
+      </g>
+    </g>
+  </g>
+</svg>

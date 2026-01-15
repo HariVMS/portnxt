@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <div className=" fixed top-0 left-0 w-full  z-50 bg-white shadow-sm ">
-      <header className="fixed top-0 left-0 w-full grid grid-rows-[48px_1fr] z-50 bg-white shadow-sm ">
+      <header className="w-full grid grid-rows-[48px_1fr] z-50 bg-white shadow-sm ">
         {/* Top Bar */}
         <div className="bg-primary text-white py-2 w-full flex  text-xs md:text-sm">
           <div className="container flex flex-col md:flex-row 2xl:max-w-[1536px] justify-between items-center gap-2">

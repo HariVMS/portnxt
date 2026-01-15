@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative bg-[url('/hero-banner.svg')] pt-32 pb-10 md:pt-48 md:pb-22  2xl:max-h-[717px]  overflow-hidden font-sans">
       <div className="container 2xl:max-w-[1536px] relative z-10">
-        <div className="grid grid-cols-[1fr_640px] md:flex-row items-center gap-8 md:gap-16  ">
+        <div className="grid md:grid-cols-[1fr_340px] lg:grid-cols-[1fr_440px] xl:grid-cols-[1fr_640px] md:flex-row items-center gap-8 md:gap-16  ">
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left z-20">
             <h1 className="text-white lg:max-w-[600px] lg:text-4xl font-bold leading-[1.2] text-xl !font-brandon">
@@ -20,7 +20,7 @@ export default function Hero() {
               innovations, enabling them to overcome challenges and achieve
               sustainable success.{" "}
             </p>
-            <div className="mb-10">
+            <div className="mb-10 ">
               <Image
                 src="/img/Home/startup-india-ISO-logo.svg"
                 alt="Portnext Innovation Digital Solutions ISO Certificates"
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           {/* Right Content - Visual */}
-          <div className="flex-1 relative 2xl:min-w-[900px]">
+          <div className="flex-1 relative hidden md:block 2xl:min-w-[900px]">
             <div className="relative w-full  animate-float">
               {/* 3D Image */}
               <Image

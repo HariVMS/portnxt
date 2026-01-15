@@ -7,7 +7,7 @@ export default function About() {
     return (
         <section className="py-12 bg-[#192020] text-white overflow-hidden relative font-sans">
             <div className="container relative z-10 2xl:max-w-[1536px] px-0 ">
-                <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 2xl:grid 2xl:grid-cols-[600px_1fr] ">
+                <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16 2xl:grid 2xl:grid-cols-[600px_1fr] ">
                     {/* Left Content - Visual */}
                     <div className="relative flex justify-center items-center max-w-[600px] max-h-[500px]">
                         <div className="relative w-full">
@@ -22,7 +22,7 @@ export default function About() {
                     </div>
 
                     {/* Right Content - Text */}
-                    <div className="flex-1 !font-brandon  max-w-[90%]">
+                    <div className="flex-1 !font-brandon sm:p-5  lg:max-w-[90%]">
                         <h3 className="font-bold !font-brandon text-base lg:text-xl text-[#51BAE9] mb-2">
                             About Us
                         </h3>
