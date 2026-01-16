@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { ChevronDown, Menu, X, PenTool, Monitor, Megaphone, ChevronRight } from "lucide-react";
 import {
@@ -16,9 +16,41 @@ import {
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY.current) {
+          // Scrolling down
+          setIsVisible(false);
+        } else {
+          // Scrolling up
+          setIsVisible(true);
+        }
+      } else {
+        // Always show at top
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className=" fixed top-0 left-0 w-full  z-50 bg-white shadow-sm ">
+    <div
+      className={`fixed top-0 left-0 w-full z-50 bg-white shadow-sm transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-[48px]"
+        }`}
+    >
       <header className="w-full grid grid-rows-[48px_1fr] z-50 bg-white shadow-sm ">
         {/* Top Bar */}
         <div className="bg-primary text-white py-2 w-full flex  text-xs md:text-sm">
