@@ -109,17 +109,13 @@ export default function Services() {
   return (
     <section className="py-12 bg-[#F8FAFC]  ">
       <div className="container 2xl:max-w-[1536px] w-full">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="font-bold text-base lg:text-xl text-[#ED184F] ">
             What We Do
           </div>
           <h2 className="font-bold text-xl sm:text-3xl lg:text-3xl lg:mb-3">
             Our Services{" "}
           </h2>
-          <p className="text-slate-500  mx-auto text-lg">
-            We offer a wide range of specialized services to help your business
-            specific goals and requirements.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4   gap-8">
