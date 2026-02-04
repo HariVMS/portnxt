@@ -1,142 +1,339 @@
-import { Code, Smartphone, Cloud, BarChart, Monitor, ShoppingCart, Cpu, Network, Database, Layers, Shield, Globe } from "lucide-react";
 
-export const servicesData: Record<string, any> = {
+import {
+    Code2, Smartphone, Megaphone, Palette, Cloud, Settings, Handshake, Globe, BrainCircuit, Link, Cpu, Infinity
+} from "lucide-react";
+
+export interface ServiceData {
+    id: string;
+    title: string;
+    description: string;
+    heroImage?: string;
+    subServices: {
+        title: string;
+        description: string;
+        icon?: any;
+    }[];
+    process: {
+        title: string;
+        description: string;
+    }[];
+    whyChooseUs: {
+        title: string;
+        description: string;
+    }[];
+    faq?: {
+        question: string;
+        answer: string;
+    }[];
+}
+
+export const servicesData: Record<string, ServiceData> = {
     "web-development": {
-        title: "Best Custom Web Development Services",
-        description: "Expand your business reach and increase revenue with custom mobile app development company. Build native, hybrid, and cross-platform applications to target a vast range of audiences.", // Note: Description fetched mentions 'mobile app' but title is 'Web Dev'. Reference site quirk? I will correct it to 'custom web development' for better quality if needed, or stick to 'ditto'. Sticking to ditto but correcting 'mobile' to 'web' for sanity if context implies. Actually the fetched text says 'custom mobile app development company' in the description for Web Dev page? That seems like a copy-paste error on the reference site. I will correct it to 'custom web development solutions' to be professional.
-        intro: {
-            heading: "Developing Resourceful Websites That Drive Success",
-            content: "A resolute online presence is vital for any business to be successful in this digital era. We, at Portnext Innovation, provide extensive web development services to create pioneering, feasible websites that operate engagement and provide results. Our adept developers, designers, and planners are committed to providing customized solutions that meet your specific business requirements."
-        },
-        features: [
-            {
-                title: "Custom Web Development",
-                description: "We specialize in developing custom websites from scratch, ensuring they perfectly comply with your business goals and brand identity.",
-                subFeatures: ["Impactful Web Design", "eCommerce Development", "Content Management Systems (CMS)"]
-            },
-            {
-                title: "Front-End Development",
-                description: "Our front-end development services work on establishing visually appealing and interactive user interfaces using the latest technologies.",
-                subFeatures: ["HTML/CSS Development", "JavaScript Development", "UI/UX Design"]
-            },
-            {
-                title: "Back-End Development",
-                description: "We build strong and scalable back-end structures that power your website's functionality and guarantee effortless data management and security.",
-                subFeatures: ["Database Integration", "API Development", "Server-Side Programming"]
-            },
-            {
-                title: "Full-Stack Development",
-                description: "Our full-stack developers have expertise in both front-end and back-end technologies, enabling us to deliver inclusive web solutions.",
-                subFeatures: ["MEAN Stack Development", "MERN Stack Development", "LAMP Stack Development"]
-            },
-            {
-                title: "Web Application Development",
-                description: "Alter your business operations with custom web applications tailored to your specific needs.",
-                subFeatures: ["Enterprise Web Applications", "SaaS Solutions", "Progressive Web Apps (PWAs)"]
-            },
-            {
-                title: "Website Maintenance and Support",
-                description: "Keep your website running effortlessly with our maintenance and support services.",
-                subFeatures: ["Regular Updates", "Performance Monitoring", "Technical Support"]
-            }
+        id: "web-development",
+        title: "Web Development",
+        description: "Robust and scalable websites tailored to your business needs. We create pioneering, feasible websites that drive engagement.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Custom Web Development", description: "Tailored solutions built from scratch to meet your specific business requirements.", icon: Code2 },
+            { title: "E-commerce Development", description: "Secure and scalable online stores with seamless shopping experiences.", icon: Code2 },
+            { title: "CMS Development", description: "Easy-to-manage websites using powerful Content Management Systems.", icon: Code2 },
+            { title: "Full-Stack Development", description: "Comprehensive front-end and back-end integration for robust applications.", icon: Code2 },
+            { title: "Web Application Development", description: "Custom web apps to streamline your business operations.", icon: Code2 },
+            { title: "Maintenance & Support", description: "Ongoing support to keep your website secure and up-to-date.", icon: Code2 },
         ],
-        faq: [
-            { question: "What web development services do you offer?", answer: "We offer a comprehensive range of web development services, including custom website development, e-commerce solutions, CMS-based websites, web application development, website maintenance, and support." },
-            { question: "How long does it take to develop a website?", answer: "The timeline for developing a website depends on the complexity and requirements of the project. A simple website may take a few weeks, while more complex web applications can take several months." },
-            { question: "Can you redesign our existing website?", answer: "Yes, we provide website redesign services to improve the look, feel, and functionality of your current website, ensuring it aligns with your modern business goals." },
-            { question: "Will my website be mobile-friendly and responsive?", answer: "Absolutely. All the websites we develop are designed to be fully responsive, ensuring they provide an optimal viewing experience on all devices, including desktops, tablets, and smartphones." },
-            { question: "Do you offer e-commerce web development services?", answer: "Yes, we specialize in building secure and scalable e-commerce websites that provide a seamless shopping experience for your customers." },
-            { question: "Do you provide website maintenance and support after launch?", answer: "Yes, we offer ongoing maintenance and support services to ensure your website continues to perform optimally and remains secure and up-to-date." },
-            { question: "How do you ensure the security of the websites you develop?", answer: "We follow industry best practices for web security, including secure coding, data encryption, and regular security audits, to protect your website from potential threats." },
-            { question: "What sets your web development services apart from others?", answer: "Our focus on customized solutions, an experienced team, a user-centric approach, and a proven development methodology sets us apart in delivering high-quality web solutions." },
-            { question: "Can you help with SEO and digital marketing for my new website?", answer: "Yes, we offer comprehensive digital marketing services, including SEO, content marketing, and social media marketing, to help increase your website's visibility and drive traffic." },
-            { question: "How do I get started with your web development services?", answer: "You can get started by contacting us through our website or giving us a call. We will discuss your project requirements and provide a tailored proposal." },
-            { question: "Can you integrate third-party services and APIs into my website?", answer: "Yes, we have experience integrating various third-party services and APIs, such as payment gateways, social media platforms, analytics tools, and more, to enhance the functionality of your website." }
+        process: [
+            { title: "Discovery & Analysis", description: "Understanding your business needs, challenges, and goals." },
+            { title: "Planning & Design", description: "Developing a detailed plan and designing a tailored solution." },
+            { title: "Development", description: "Building the website using the current technologies." },
+            { title: "Testing & QA", description: "Conducting diligent testing to ensure functionality." },
+            { title: "Deployment", description: "Implementing the website and providing user training." },
+        ],
+        whyChooseUs: [
+            { title: "Experienced Team", description: "Adept developers with ample experience in web development." },
+            { title: "Customized Solutions", description: "Specialized solutions designed to meet your unique requirements." },
+            { title: "User-Centric Design", description: "Prioritizing user experience for functional and appealing interfaces." },
+            { title: "Proven Methodology", description: "Efficient project management ensuring timely delivery." },
         ]
     },
     "mobile-app-development": {
+        id: "mobile-app-development",
         title: "Mobile App Development",
         description: "Native and cross-platform mobile apps for iOS and Android.",
-        intro: { heading: "Mobile First Solutions", content: "We build high-performance mobile applications that provide seamless user experiences." },
-        features: [],
-        faq: []
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "iOS App Development", description: "High-performance apps tailored for the Apple ecosystem.", icon: Smartphone },
+            { title: "Android App Development", description: "Scalable and robust apps for the vast Android market.", icon: Smartphone },
+            { title: "Cross-Platform Apps", description: "Efficient apps that run seamlessly on both iOS and Android.", icon: Smartphone },
+            { title: "App UI/UX Design", description: "Intuitive and engaging designs for mobile interfaces.", icon: Smartphone },
+        ],
+        process: [
+            { title: "Strategy", description: "Defining the app concept and target audience." },
+            { title: "Design", description: "Creating wireframes and UI prototypes." },
+            { title: "Development", description: "Coding the app with the latest frameworks." },
+            { title: "Testing", description: "Rigorous testing on multiple devices." },
+            { title: "Launch", description: "Deploying to App Store and Play Store." },
+        ],
+        whyChooseUs: [
+            { title: "Expert Developers", description: "Skilled in Swift, Kotlin, React Native, and Flutter." },
+            { title: "Seamless Performance", description: "Optimized apps for diverse devices." },
+            { title: "End-to-End Service", description: "From concept to post-launch support." },
+            { title: "Agile Approach", description: "Flexible development adapting to your feedback." },
+        ]
     },
-    "cloud-solutions": {
-        title: "Cloud Solutions",
-        description: "Secure and efficient cloud infrastructure and migration services.",
-        intro: { heading: "Cloud Infrastructure", content: "Optimize your business with scalable and secure cloud solutions." },
-        features: [],
-        faq: []
-    },
-    "digital-marketing": {
-        title: "Digital Marketing Services",
-        description: "Data-driven strategies to boost your online presence and ROI.",
-        intro: { heading: "Grow Your Business Online", content: "Comprehensive digital marketing strategies to reach your target audience." },
-        features: [],
-        faq: []
-    },
-    "ui-ux-design": {
-        title: "UI/UX Design Services",
-        description: "Intuitive and engaging user interfaces for better experience.",
-        intro: { heading: "Design That Works", content: "User-centric design solutions that enhance engagement and satisfaction." },
-        features: [],
-        faq: []
-    },
-    "ecommerce": {
-        title: "E-commerce Development",
-        description: "Comprehensive online store solutions to grow your sales.",
-        intro: { heading: "Sell Online Effectively", content: "Robust e-commerce platforms designed to maximize conversion and sales." },
-        features: [],
-        faq: []
-    },
-    "ai-development": {
-        title: "Artificial Intelligence Solutions",
-        description: "Smart AI & ML solutions to automate and innovate.",
-        intro: { heading: "Intelligent Solutions", content: "Leverage the power of AI to automate processes and gain insights." },
-        features: [],
-        faq: []
-    },
-    "iot-solutions": {
-        title: "IoT Solutions",
-        description: "Connecting devices for smarter operations and data insights.",
-        intro: { heading: "Connected Ecosystems", content: "Innovative IoT solutions to connect and manage your smart devices." },
-        features: [],
-        faq: []
-    },
-    "data-analytics": {
-        title: "Data Analytics",
-        description: "Turn raw data into actionable insights for decision making.",
-        intro: { heading: "Data Driven Decisions", content: "Advanced analytics to help you understand your data and make informed decisions." },
-        features: [],
-        faq: []
-    },
-    "cyber-security": {
-        title: "Cyber Security Services",
-        description: "Protecting your digital assets with advanced security measures.",
-        intro: { heading: "Secure Your Business", content: "Comprehensive security services to protect your infrastructure and data." },
-        features: [],
-        faq: []
-    },
-    "devops-services": {
-        title: "DevOps Services",
-        description: "Streamlining development and operations for faster delivery.",
-        intro: { heading: "Efficient Operations", content: "DevOps practices to accelerate delivery and improve reliability." },
-        features: [],
-        faq: []
-    },
-    "seo-optimization": {
+    "search-engine-optimization": {
+        id: "search-engine-optimization",
         title: "SEO Optimization",
         description: "Ranking your website higher to drive organic traffic.",
-        intro: { heading: "Rank Higher", content: "Proven SEO strategies to improve your search engine visibility." },
-        features: [],
-        faq: []
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "On-Page SEO", description: "Optimizing individual web pages to rank higher.", icon: Megaphone },
+            { title: "Off-Page SEO", description: "Building authority through backlinks and social signals.", icon: Megaphone },
+            { title: "Technical SEO", description: "Improving site structure and performance for crawlers.", icon: Megaphone },
+            { title: "Local SEO", description: "Optimizing for local search results and Google Maps.", icon: Megaphone },
+        ],
+        process: [
+            { title: "Audit", description: "Analyzing current site performance." },
+            { title: "Keyword Research", description: "Identifying high-value search terms." },
+            { title: "Optimization", description: "Implementing technical and content fixes." },
+            { title: "Reporting", description: "Tracking progress and adjusting strategy." },
+            { title: "Growth", description: "Scaling traffic and conversions." },
+        ],
+        whyChooseUs: [
+            { title: "Data-Driven", description: "Strategies based on analytics and trends." },
+            { title: "Transparent Reporting", description: "Clear insights into your ROI." },
+            { title: "White Hat Techniques", description: "Ethical practices for long-term success." },
+            { title: "Continuous Improvement", description: "Adapting to algorithm updates." },
+        ]
     },
-    // Placeholder for other services to prevent 404s until populated
-    "default": {
-        title: "Our Services",
-        description: "Comprehensive digital solutions tailored to your business needs.",
-        intro: { heading: "Expert Digital Solutions", content: "We provide top-notch services to help your business grow." },
-        features: [],
-        faq: []
-    }
+    "ui-ux-graphic-design": {
+        id: "ui-ux-graphic-design",
+        title: "UI/UX & Graphic Design",
+        description: "Intuitive and engaging user interfaces for better experience.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "User Research", description: "Understanding user behavior and needs.", icon: Palette },
+            { title: "Wireframing", description: "Blueprinting layout and flow.", icon: Palette },
+            { title: "Visual Design", description: "Creating stunning, on-brand aesthetics.", icon: Palette },
+            { title: "Prototyping", description: "Interactive mockups for testing.", icon: Palette },
+        ],
+        process: [
+            { title: "Empathize", description: "Understanding the user." },
+            { title: "Define", description: "Stating the problem clearly." },
+            { title: "Ideate", description: "Brainstorming creative solutions." },
+            { title: "Prototype", description: "Building tangible representations." },
+            { title: "Test", description: "Validating with real users." },
+        ],
+        whyChooseUs: [
+            { title: "Creative Experts", description: "Designers with a keen eye for detail." },
+            { title: "User-Centric", description: "Designs that prioritize the end-user." },
+            { title: "Modern Tools", description: "Using Figma, Adobe XD, and more." },
+            { title: "Brand Consistency", description: "Ensuring cohesive visual identity." },
+        ]
+    },
+    "cloud": {
+        id: "cloud",
+        title: "Cloud Solutions",
+        description: "Secure and efficient cloud infrastructure and migration services.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Cloud Migration", description: "Moving legacy systems to the cloud.", icon: Cloud },
+            { title: "Cloud Infrastructure", description: "Setting up robust cloud environments.", icon: Cloud },
+            { title: "Cloud Security", description: "Protecting data and applications.", icon: Cloud },
+            { title: "Managed Services", description: "Ongoing management and optimization.", icon: Cloud },
+        ],
+        process: [
+            { title: "Assessment", description: "Evaluating current infrastructure." },
+            { title: "Strategy", description: "Planning the migration path." },
+            { title: "Migration", description: "Executing the move securely." },
+            { title: "Optimization", description: "Fine-tuning for performance and cost." },
+            { title: "Support", description: "24/7 monitoring and assistance." },
+        ],
+        whyChooseUs: [
+            { title: "Certified Experts", description: "AWS, Azure, and Google Cloud professionals." },
+            { title: "Scalability", description: "Solutions that grow with your business." },
+            { title: "Cost-Effective", description: "Optimizing comprehensive cloud spend." },
+            { title: "Security First", description: "Best-in-class security measures." },
+        ]
+    },
+    "erp-development": {
+        id: "erp-development",
+        title: "ERP Development",
+        description: "Streamlining and integrating business techniques into a unified system.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Custom ERP", description: "Tailored enterprise resource planning systems.", icon: Settings },
+            { title: "ERP Integration", description: "Connecting ERP with existing tools.", icon: Settings },
+            { title: "Module Development", description: "Adding specific functionality like HR or Finance.", icon: Settings },
+            { title: "Migration & Upgrade", description: "Modernizing legacy ERP systems.", icon: Settings },
+        ],
+        process: [
+            { title: "Consulting", description: "Analyzing business processes." },
+            { title: "Selection", description: "Choosing the right stack or platform." },
+            { title: "Implementation", description: "Deploying the ERP solution." },
+            { title: "Customization", description: "Tailoring to specific needs." },
+            { title: "Training", description: "Onboarding staff effectively." },
+        ],
+        whyChooseUs: [
+            { title: "Process Expertise", description: "Deep understanding of business workflows." },
+            { title: "Efficiency", description: "Automating manual tasks." },
+            { title: "Data Accuracy", description: "Single source of truth for data." },
+            { title: "Scalability", description: "Systems that expand with your enterprise." },
+        ]
+    },
+    "crm-development": {
+        id: "crm-development",
+        title: "CRM Development",
+        description: "Tailor-made CRM services to beautify consumer relationships.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Custom CRM", description: "Building CRM from the ground up.", icon: Handshake },
+            { title: "Salesforce Solutions", description: "Expert implementation and customization.", icon: Handshake },
+            { title: "CRM Integration", description: "Syncing with email, marketing, and support.", icon: Handshake },
+            { title: "Automation", description: "Automating follow-ups and workflows.", icon: Handshake },
+        ],
+        process: [
+            { title: "Discovery", description: "Mapping customer journey." },
+            { title: "Architecture", description: "Designing the data model." },
+            { title: "Development", description: "Building features and dashboards." },
+            { title: "Integration", description: "Connecting with other tools." },
+            { title: "Rollout", description: "Training and deployment." },
+        ],
+        whyChooseUs: [
+            { title: "Customer Focus", description: "Tools that help you serve better." },
+            { title: "Data Insights", description: "Actionable analytics on sales." },
+            { title: "Efficiency", description: "Streamlined sales operations." },
+            { title: "Custom Fit", description: "Aligned with your sales process." },
+        ]
+    },
+    "offshore-development": {
+        id: "offshore-development",
+        title: "Offshore Development",
+        description: "Access to international talent and dedicated development teams.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Dedicated Teams", description: "Your own remote dev team.", icon: Globe },
+            { title: "Staff Augmentation", description: "Adding experts to your in-house team.", icon: Globe },
+            { title: "Project Outsourcing", description: "Full project delivery.", icon: Globe },
+            { title: "Consulting", description: "Technical guidance and strategy.", icon: Globe },
+        ],
+        process: [
+            { title: "Requirement", description: "Defining skill sets needed." },
+            { title: "Screening", description: "Selecting the best candidates." },
+            { title: "Onboarding", description: "Integrating with your workflow." },
+            { title: "Development", description: "Agile delivery and reporting." },
+            { title: "Management", description: "Ongoing HR and support." },
+        ],
+        whyChooseUs: [
+            { title: "Cost Efficient", description: "High quality at competitive rates." },
+            { title: "Global Talent", description: "Access to top skills worldwide." },
+            { title: "Flexible Scaling", description: "Scale up or down easily." },
+            { title: "Seamless Comms", description: "Effective communication tools." },
+        ]
+    },
+    "ai-development": {
+        id: "ai-development",
+        title: "AI Development",
+        description: "Smart AI & ML solutions to automate and innovate.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Machine Learning", description: "Predictive models and algorithms.", icon: BrainCircuit },
+            { title: "NLP", description: "Natural Language Processing solutions.", icon: BrainCircuit },
+            { title: "Computer Vision", description: "Image and video analysis.", icon: BrainCircuit },
+            { title: "Chatbots", description: "Intelligent conversational agents.", icon: BrainCircuit },
+        ],
+        process: [
+            { title: "Feasibility", description: "Assessing AI potential." },
+            { title: "Data Prep", description: "Cleaning and labeling data." },
+            { title: "Modeling", description: "Training and testing models." },
+            { title: "Integration", description: "Deploying models to apps." },
+            { title: "Monitoring", description: "Tracking performance and drift." },
+        ],
+        whyChooseUs: [
+            { title: "Cutting Edge", description: "Using latest AI research." },
+            { title: "Business Value", description: "Focusing on ROI." },
+            { title: "Ethical AI", description: "Responsible and fair systems." },
+            { title: "Expert Team", description: "Data scientists and engineers." },
+        ]
+    },
+    "block-chain": {
+        id: "block-chain",
+        title: "Blockchain",
+        description: "Secure and transparent transactions through decentralized technology.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Smart Contracts", description: "Self-executing digital agreements.", icon: Link },
+            { title: "DApps", description: "Decentralized application development.", icon: Link },
+            { title: "Private Blockchains", description: "Enterprise-grade distributed ledgers.", icon: Link },
+            { title: "NFT Marketplaces", description: "Platforms for digital assets.", icon: Link },
+        ],
+        process: [
+            { title: "Use Case", description: "Identifying blockchain fit." },
+            { title: "Architecture", description: "Designing the network." },
+            { title: "Development", description: "Coding contracts and UI." },
+            { title: "Audit", description: "Security verification." },
+            { title: "Launch", description: "Mainnet deployment." },
+        ],
+        whyChooseUs: [
+            { title: "Security", description: "Immutable and safe systems." },
+            { title: "Transparency", description: "Open and verifiable data." },
+            { title: "Innovation", description: "Pioneering new business models." },
+            { title: "Expertise", description: "Deep knowledge of chains." },
+        ]
+    },
+    "iot-development": {
+        id: "iot-development",
+        title: "IoT Development",
+        description: "Connecting devices for smarter operations and data insights.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Device Connectivity", description: "Protocols for hardware communication.", icon: Cpu },
+            { title: "IoT Cloud Platform", description: "Managing device data at scale.", icon: Cpu },
+            { title: "Remote Monitoring", description: "Real-time tracking systems.", icon: Cpu },
+            { title: "Edge Computing", description: "Processing data near the source.", icon: Cpu },
+        ],
+        process: [
+            { title: "Prototyping", description: "Proof of concept with hardware." },
+            { title: "Connectivity", description: "Establishing reliable networks." },
+            { title: "Platform", description: "Building the backend." },
+            { title: "App", description: "Creating user interfaces." },
+            { title: "Deployment", description: "Rolling out devices." },
+        ],
+        whyChooseUs: [
+            { title: "End-to-End", description: "Hardware to software solutions." },
+            { title: "Scalability", description: "Handling millions of devices." },
+            { title: "Security", description: "Device and data protection." },
+            { title: "Innovation", description: "Smart solutions for industry." },
+        ]
+    },
+    "devops": {
+        id: "devops",
+        title: "DevOps Services",
+        description: "Streamlining development and operations for faster delivery.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "CI/CD", description: "Automated build and deploy pipelines.", icon: Infinity },
+            { title: "Infrastructure as Code", description: "Managing infra with code.", icon: Infinity },
+            { title: "Containerization", description: "Docker and Kubernetes solutions.", icon: Infinity },
+            { title: "Monitoring", description: "Full-stack observability.", icon: Infinity },
+        ],
+        process: [
+            { title: "Assessment", description: "Analyzing current workflows." },
+            { title: "Automation", description: "Scripting manual tasks." },
+            { title: "Pipeline", description: "Building CI/CD flows." },
+            { title: "Cloud", description: "Optimizing environment." },
+            { title: "Feedback", description: "Continuous improvement loop." },
+        ],
+        whyChooseUs: [
+            { title: "Speed", description: "Faster time to market." },
+            { title: "Reliability", description: "Stable and predictable releases." },
+            { title: "Collaboration", description: "Better dev and ops harmony." },
+            { title: "Efficiency", description: "Reduced manual effort." },
+        ]
+    },
+};
+
+export const defaultService = {
+    ...servicesData["web-development"],
+    title: "Service",
+    description: "Professional IT services tailored to your needs.",
 };
