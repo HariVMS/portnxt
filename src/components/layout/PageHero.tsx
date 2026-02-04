@@ -16,15 +16,15 @@ export default function PageHero({ title, description, breadcrumb }: PageHeroPro
             {/* Decorative Circle */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
-            <div className="container relative z-10">
-                <div className="max-w-4xl">
-                    {breadcrumb && (
+            <div className="container relative z-10 pt-10">
+                <div className="max-w-4xl ">
+                    {/* {breadcrumb && (
                         <div className="flex items-center gap-2 text-sm text-slate-400 font-bold tracking-widest uppercase mb-4">
                             <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                             <span>/</span>
                             <span className="text-primary">{breadcrumb}</span>
                         </div>
-                    )}
+                    )} */}
 
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
                         {title}

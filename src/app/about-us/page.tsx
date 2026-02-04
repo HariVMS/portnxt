@@ -23,7 +23,7 @@ export default function AboutUs() {
                 subtitle="WHO WE ARE"
                 title="We are a pleasant team of specialists who love helping businesses develop."
                 description=""
-                imageSrc="/img/Home/about_us_robot.webp" // Need to verify if this exists, else use hero_robot
+                imageSrc="/img/company/about.svg" // Need to verify if this exists, else use hero_robot
                 imageAlt="About Portnext Team"
                 listItems={[
                     "Software Development & Digital Marketing Specialists",

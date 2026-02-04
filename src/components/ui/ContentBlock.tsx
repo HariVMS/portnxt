@@ -27,7 +27,7 @@ export default function ContentBlock({
 }: ContentBlockProps) {
     return (
         <section className="py-20 overflow-hidden">
-            <div className="container">
+            <div className="container 2xl:max-w-[1536px]">
                 <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${reverse ? 'lg:flex-row-reverse' : ''}`}>
 
                     {/* Image Side */}
