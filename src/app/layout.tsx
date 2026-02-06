@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -17,7 +18,8 @@ const brandon = localFont({
 
 export const metadata: Metadata = {
   title: "Portnext Innovation | Software Development & Digital Marketing",
-  description: "Transforming Ideas into Reality with cutting-edge software solutions.",
+  description:
+    "Transforming Ideas into Reality with cutting-edge software solutions.",
 };
 
 export default function RootLayout({
@@ -32,6 +34,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>

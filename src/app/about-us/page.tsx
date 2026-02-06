@@ -2,6 +2,10 @@ import PageHero from "@/components/layout/PageHero";
 import ContentBlock from "@/components/ui/ContentBlock";
 import Stats from "@/components/sections/Stats";
 import { CheckCircle2, Lightbulb, Users, Target, Rocket } from "lucide-react";
+import OurValues from "@/components/sections/about/OurValues";
+import OurProcess from "@/components/sections/about/OurProcess";
+import SuccessStories from "@/components/sections/about/SuccessStories";
+import EsteemedClients from "@/components/sections/about/EsteemedClients";
 
 export const metadata = {
     title: "About Us | Portnext Innovation",
@@ -113,6 +117,49 @@ export default function AboutUs() {
 
             {/* Reusing Home Stats because it's relevant */}
             <Stats />
+            {/* Vision & Mission */}
+            <section className="py-20 bg-gray-50">
+                <div className="container">
+                    <div className="grid md:grid-cols-2 gap-10">
+                        {/* Vision Card */}
+                        <div className="bg-white p-12 rounded-[2.5rem] shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 relative overflow-hidden group border border-slate-100">
+                            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <Lightbulb size={120} className="text-secondary-blue" />
+                            </div>
+                            <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-500">
+                                <Lightbulb size={40} />
+                            </div>
+                            <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Vision</h3>
+                            <p className="text-slate-600 leading-relaxed text-lg">
+                                We visualize a dynamic world where businesses flourish and individuals achieve their dreams through our innovative digital solutions. We provide essential software and services that empower entrepreneurs and professionals, making success more accessible and helping them realize their full potential.
+                            </p>
+                        </div>
+
+                        {/* Mission Card */}
+                        <div className="bg-white p-12 rounded-[2.5rem] shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 relative overflow-hidden group border border-slate-100">
+                            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <Target size={120} className="text-secondary-peach" />
+                            </div>
+                            <div className="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 transition-transform duration-500">
+                                <Target size={40} />
+                            </div>
+                            <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h3>
+                            <p className="text-slate-600 leading-relaxed text-lg">
+                                Our mission is to empower businesses of all sizes by delivering exceptional digital solutions that drive growth, streamline operations, and enhance customer experiences. We are committed to providing innovative strategies and solutions that inspire transformation and promote lasting success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <OurValues />
+
+            <OurProcess />
+
+
+            <SuccessStories />
+
+            <EsteemedClients />
         </main>
     );
 }
