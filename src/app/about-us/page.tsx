@@ -138,7 +138,7 @@ export default function AboutUs() {
                         {/* Mission Card */}
                         <div className="bg-white p-12 rounded-[2.5rem] shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 relative overflow-hidden group border border-slate-100">
                             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                                <Target size={120} className="text-secondary-peach" />
+                                <Target size={120} className="text-secondary-peach" />  
                             </div>
                             <div className="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 transition-transform duration-500">
                                 <Target size={40} />
