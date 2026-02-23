@@ -148,7 +148,7 @@ export default function AboutUs() {
               width={50}
               height={50}
               src="/img/company/vision.svg"
-              alt="Makelink Innovation Mission"
+              alt="Port NxT Mission"
               title="Our Vision"
             ></Image>
             <div>
@@ -172,7 +172,7 @@ export default function AboutUs() {
               height={50}
               className=""
               src="/img/company/mission.svg"
-              alt="Makelink Innovation Mission"
+              alt="Port NxT Mission"
               title="Our Mission"
             ></Image>
             <div>
@@ -198,7 +198,7 @@ export default function AboutUs() {
               width={50}
               height={50}
               src="/img/company/value.svg"
-              alt="Makelink Innovation Values"
+              alt="Port NxT Values"
               title="Our Values"
             />
             <div>
