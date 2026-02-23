@@ -75,7 +75,7 @@ export default function AboutUs() {
 
       {/* Our Story Section */}
       {/* Reusing the robot image from Home/About or similar. Assuming extracted as 'about-main.webp' or reusing 'robot.webp' */}
-      <section
+      <section className="w-full"
         style={{
           backgroundImage: "url('/img/company/background.svg')",
           backgroundSize: "contain",
@@ -100,8 +100,8 @@ export default function AboutUs() {
       </section>
 
       {/* Detailed Story Paragraphs */}
-      <section className="py-10 bg-white -mt-10">
-        <div className="container max-w-4xl text-slate-600 text-lg leading-relaxed space-y-6">
+      <section className="py-10 bg-white w-full -mt-10">
+        <div className="container max-w-7xl text-slate-600 text-lg leading-relaxed space-y-6">
           <p>
             Welcome to Portnext Innovation Pvt. Ltd. We're a pleasant team of
             specialists who love helping businesses develop. Our enterprise
@@ -257,7 +257,7 @@ export default function AboutUs() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-10 bg-white">
+      <section className="py-10 pt-20 bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">

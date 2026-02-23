@@ -29,7 +29,7 @@ const steps = [
 
 export default function OurProcess() {
     return (
-        <section className="py-10 bg-gray-50">
+        <section className="py-10 pt-20 bg-gray-50">
             <div className="container 2xl:max-w-[1536px] w-full">
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">OUR PROCESS</span>

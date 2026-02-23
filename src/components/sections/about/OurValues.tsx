@@ -47,7 +47,7 @@ const values = [
 
 export default function OurValues() {
     return (
-        <section className="py-10 bg-white">
+        <section className="py-10 pt-20 bg-white">
             <div className="container">
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">OUR VALUES</span>

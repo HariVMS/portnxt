@@ -27,7 +27,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-white flex  flex-col gap-4 pb-0">
+    <section className="py-20 pb-23 bg-white flex  flex-col gap-4 pb-0">
       <div className="container 2xl:max-w-[1536px] w-full">
         <div className="text-center  flex mb-12">
           <h3 className="font-bold  relative  text-xl sm:text-xl lg:text-2xl mb-4 px-6 max-w-[78%]  mx-auto w-full text-justify lg:text-center">
