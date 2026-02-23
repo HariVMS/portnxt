@@ -1,0 +1,44 @@
+﻿
+> prtnxt@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 14.0s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/25) ...
+  Generating static pages using 11 workers (6/25) 
+  Generating static pages using 11 workers (12/25) 
+  Generating static pages using 11 workers (18/25) 
+Γ£ô Generating static pages using 11 workers (25/25) in 6.1s
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about-us
+Γö£ Γùï /blogs
+Γö£ Γùï /careers
+Γö£ Γùï /contact-us
+Γö£ ΓùÅ /industries/[slug]
+Γöé Γö£ /industries/healthcare
+Γöé Γö£ /industries/finance
+Γöé Γö£ /industries/education
+Γöé Γöö [+2 more paths]
+Γö£ Γùï /industries/education
+Γö£ Γùï /industries/finance
+Γö£ Γùï /industries/healthcare
+Γö£ Γùï /industries/real-estate
+Γö£ Γùï /industries/retail
+Γöö ΓùÅ /services/[slug]
+  Γö£ /services/web-development
+  Γö£ /services/mobile-app-development
+  Γö£ /services/search-engine-optimization
+  Γöö [+9 more paths]
+
+
+Γùï  (Static)  prerendered as static content
+ΓùÅ  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

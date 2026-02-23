@@ -75,7 +75,8 @@ export default function AboutUs() {
 
       {/* Our Story Section */}
       {/* Reusing the robot image from Home/About or similar. Assuming extracted as 'about-main.webp' or reusing 'robot.webp' */}
-      <section className="w-full"
+      <section
+        className="w-full"
         style={{
           backgroundImage: "url('/img/company/background.svg')",
           backgroundSize: "contain",
@@ -196,8 +197,9 @@ export default function AboutUs() {
         </div>
         <div className="lg:mt-8 mt-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 sm:px-6 lg:px-8">
           <div className="bg-[#B5F1CC] lg:p-10 p-4 rounded-3xl lg:rounded-[40px] duration-500 transition">
-            <img
-              className=""
+            <Image
+              width={50}
+              height={50}
               src="/img/company/value.svg"
               alt="Makelink Innovation Values"
               title="Our Values"
@@ -316,6 +318,141 @@ export default function AboutUs() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="client" className="py-8 lg:py-16 bg-[#192020]">
+        <div className="container mx-auto max-w-[1536px]">
+          <div className="mx-auto flex lg:max-w-[65rem] flex-col items-center text-center text-white">
+            <h3 className="font-bold text-xl sm:text-3xl lg:text-3xl mb-4">
+              Core Value
+            </h3>
+            <p>
+              At Makelink Innovation, our decisions and processes are guided by
+              an articulated set of values that influence everything from hiring
+              to designing and developing solutions.{" "}
+            </p>
+            <p className="text-[#FFD8C0]">
+              Our values encompass all the essential elements of innovation and
+              excellence.{" "}
+            </p>
+            <p>
+              {" "}
+              They encourage us to learn from every project, collaborate
+              seamlessly with a strong team spirit, and maintain transparency
+              and accountability. We believe this is the only approach to
+              achieving true excellence.
+            </p>
+          </div>
+          <div className="bg-[#252B2B] border-[#3B4040] border rounded-[40px] lg:mt-10 mt-4 lg:p-8 p-3">
+            <div className="bg-[#FFD8C0] rounded-[30px] p-4">
+              <div className="lg:p-14 p-2">
+                <dl className="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-8">
+                  <div className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                        <img
+                          className=""
+                          src="/img/about/continue.svg"
+                          alt="Continuous Learning icon"
+                          title="Continuous Learning"
+                        />
+                      </div>
+                      <h5 className="font-heading ml-16 text-lg lg:text-xl leading-6 font-semibold ">
+                        Continuous Learning
+                      </h5>
+                    </dt>
+                    <p className="mt-2 ml-16 text-base">
+                      {" "}
+                      In an ever-evolving technological landscape, continuous
+                      learning allows us to stay ahead.{" "}
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                        <img
+                          className=""
+                          src="/img/about/accountably.svg"
+                          alt="Accountability icon"
+                          title="Accountability"
+                        />
+                      </div>
+                      <h5 className="font-heading ml-16 text-lg lg:text-xl leading-6 font-semibold">
+                        Accountability{" "}
+                      </h5>
+                    </dt>
+                    <p className="mt-2 ml-16 text-base">
+                      {" "}
+                      Maintaining unwavering accountability is essential for
+                      thriving in the competitive tech solutions market.{" "}
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                        <img
+                          className=""
+                          src="/img/about/transparancy.svg"
+                          alt="Transparency icon"
+                          title="Transparency"
+                        />
+                      </div>
+                      <h5 className="font-heading ml-16 text-lg lg:text-xl leading-6 font-semibold">
+                        Transparency{" "}
+                      </h5>
+                    </dt>
+                    <p className="mt-2 ml-16 text-base">
+                      Building client-provider relationships based on
+                      transparency consistently leads to the best results.{" "}
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                        <img
+                          className=""
+                          src="/img/about/excellence.svg"
+                          alt="Excellence icon"
+                          title="Excellence"
+                        />
+                      </div>
+                      <h5 className="font-heading ml-16 text-lg lg:text-xl leading-6 font-semibold">
+                        Excellence{" "}
+                      </h5>
+                    </dt>
+                    <p className="mt-2 ml-16 text-base">
+                      {" "}
+                      Innovation and excellence constantly go hand in hand. We
+                      are committed to going the extra mile to ensure
+                      exceptional service quality.{" "}
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                        <img
+                          className=""
+                          src="/img/about/team.svg"
+                          alt="Team Work icon"
+                          title="Team Work"
+                        />
+                      </div>
+                      <h5 className="font-heading ml-16 text-lg lg:text-xl leading-6 font-semibold">
+                        Team Work{" "}
+                      </h5>
+                    </dt>
+                    <p className="mt-2 ml-16 text-base">
+                      {" "}
+                      Outstanding teamwork is central to our efforts. With each
+                      new project, we maintain our commitment as a team of
+                      innovators.{" "}
+                    </p>
+                  </div>
+                </dl>
+              </div>
+            </div>
           </div>
         </div>
       </section>

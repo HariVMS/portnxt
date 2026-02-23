@@ -14,12 +14,53 @@ const brandon = localFont({
     },
   ],
   variable: "--font-brandon",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: "Portnext Innovation | Software Development & Digital Marketing",
+  metadataBase: new URL("https://portnext.com"), // Using placeholder domain, update later if known
+  title: {
+    default: "Portnext Innovation | Software Development & Digital Marketing",
+    template: "%s | Portnext Innovation",
+  },
   description:
-    "Transforming Ideas into Reality with cutting-edge software solutions.",
+    "We’re the right tech-solutions partner for all your digital innovation & transformation needs. Empowering enterprises and startups alike to stay ahead in an increasingly digital-driven market.",
+  keywords: [
+    "Software Development",
+    "Digital Marketing",
+    "Web Development",
+    "Mobile Apps",
+    "Portnext Innovation",
+    "Tech Solutions",
+    "Digital Transformation",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: "Portnext Innovation",
+    title: "Portnext Innovation | Software Development & Digital Marketing",
+    description:
+      "Transforming Ideas into Reality with cutting-edge software solutions.",
+    images: [
+      {
+        url: "/img/hero-image.png", // Using an existing banner image
+        width: 1200,
+        height: 630,
+        alt: "Portnext Innovation Banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portnext Innovation",
+    description: "Software Development & Digital Marketing Specialists",
+    images: ["/img/hero-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

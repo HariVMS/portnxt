@@ -7,21 +7,21 @@ const stories = [
     category: "E-Commerce",
     description:
       "Developed a customized e-commerce platform integrated with inventory management and digital payment solutions. Online sales exceeded expectations within six months.",
-    image: "/img/Home/company/about-us-banner.svg", // Using provided images as placeholders
+    image: "/img/company/about-us-banner.svg", // Using provided images as placeholders
   },
   {
     title: "Scaling a HealthTech Startup with Custom Software",
     category: "Healthcare",
     description:
       "Delivered a secure web and mobile application that included real-time video consultations and electronic health records. Scaled to 10k+ users in a year.",
-    image: "/img/Home/company/about-us-banner.svg",
+    image: "/img/company/about-us-banner.svg", // Using provided images as placeholders
   },
   {
     title: "Driving 4X Growth through Digital Marketing",
     category: "Marketing",
     description:
       "Redesigned website and implemented comprehensive SEO and paid ads strategy. Client saw monthly inquiries quadruple within six months.",
-    image: "/img/Home/company/about-us-banner.svg",
+    image: "/img/company/about.svg",
   },
 ];
 
