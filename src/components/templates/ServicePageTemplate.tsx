@@ -99,6 +99,109 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
+      {/* Major Operations Section */}
+      {data.majorOperations && data.majorOperations.length > 0 && (
+        <section className="py-20 lg:py-28 bg-slate-50">
+          <div className="container 2xl:max-w-[1536px]">
+            <div className="text-center mb-16 max-w-3xl mx-auto">
+              <span className="text-[#007bfd] font-bold tracking-widest text-sm uppercase mb-3 block">
+                Technical Capabilities
+              </span>
+              <h2 className="text-black font-bold text-3xl md:text-5xl mb-6">
+                Major Operations
+              </h2>
+              <p className="text-slate-500 text-lg">
+                Deep technical expertise enabling robust implementation of{" "}
+                {data.title}.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {data.majorOperations.map((op, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl p-8 border border-slate-100 hover:border-[#007bfd]/50 hover:shadow-xl transition-all shadow-sm group"
+                >
+                  <div className="w-14 h-14 bg-[#007bfd]/10 rounded-xl flex items-center justify-center text-[#007bfd] mb-6 group-hover:bg-[#007bfd] group-hover:text-white transition-colors">
+                    {op.icon ? (
+                      <op.icon size={28} />
+                    ) : (
+                      <CheckCircle2 size={28} />
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                    {op.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-sm">
+                    {op.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Summary Works Section */}
+      {data.summaryWorks && data.summaryWorks.length > 0 && (
+        <section className="py-20 lg:py-28 bg-slate-900 text-white">
+          <div className="container 2xl:max-w-[1536px]">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+              <div className="max-w-2xl">
+                <span className="text-[#ED184F] font-bold tracking-widest text-sm uppercase mb-3 block">
+                  Proven Results
+                </span>
+                <h2 className="font-bold text-3xl md:text-5xl mb-6">
+                  Summary Works & Case Studies
+                </h2>
+                <p className="text-slate-400 text-lg">
+                  Real-world scenarios where our {data.title} expertise drove
+                  transformation.
+                </p>
+              </div>
+              <Link
+                href="/about-us"
+                className="inline-flex flex-shrink-0 items-center gap-2 text-white border border-slate-700 hover:bg-white hover:text-black px-6 py-3 rounded-full font-bold transition-all"
+              >
+                View Case Studies <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {data.summaryWorks.map((work, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-3xl bg-slate-800 border border-slate-700 hover:border-[#ED184F] transition-colors"
+                >
+                  <div className="aspect-video w-full relative overflow-hidden bg-slate-950">
+                    <Image
+                      src={work.image || "/img/Home/about_us_robot.webp"}
+                      alt={work.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-80"
+                    />
+                    {work.industry && (
+                      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold tracking-wider text-white">
+                        {work.industry}
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-8 md:p-10 flex flex-col h-full">
+                    <h3 className="text-2xl font-bold mb-4">{work.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-8">
+                      {work.description}
+                    </p>
+                    <span className="font-bold text-[#ED184F] group-hover:text-white transition-colors mt-auto inline-flex items-center gap-2">
+                      Read Report <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* 3. Process Section - Matches Reference: Numbered White Cards in Grid */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container 2xl:max-w-[1536px]">
