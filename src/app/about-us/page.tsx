@@ -257,7 +257,7 @@ export default function AboutUs() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-white">
+      <section className="py-10 bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">
