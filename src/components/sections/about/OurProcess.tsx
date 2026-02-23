@@ -29,8 +29,8 @@ const steps = [
 
 export default function OurProcess() {
     return (
-        <section className="py-24 bg-gray-50">
-            <div className="container">
+        <section className="py-10 bg-gray-50">
+            <div className="container max-w-[1536px]">
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">OUR PROCESS</span>
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">How we bring your ideas to life</h2>
