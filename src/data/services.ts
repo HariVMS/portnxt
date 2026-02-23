@@ -1,6 +1,6 @@
-
 import {
-    Code2, Smartphone, Megaphone, Palette, Cloud, Settings, Handshake, Globe, BrainCircuit, Link, Cpu, Infinity
+    Code2, Smartphone, Megaphone, Palette, Cloud, Settings, Handshake, Globe, BrainCircuit, Link, Cpu, Infinity,
+    LineChart, Database, LayoutDashboard, Monitor, ShoppingCart, Activity, FileJson, Share2, ClipboardList
 } from "lucide-react";
 
 export interface ServiceData {
@@ -28,312 +28,322 @@ export interface ServiceData {
 }
 
 export const servicesData: Record<string, ServiceData> = {
-    "web-development": {
-        id: "web-development",
-        title: "Web Development",
-        description: "Robust and scalable websites tailored to your business needs. We create pioneering, feasible websites that drive engagement.",
+    "salesforce-consulting": {
+        id: "salesforce-consulting",
+        title: "Salesforce Consulting & Implementation Services",
+        description: "At Port NxT Digital Solutions, we help organizations unlock the full potential of Salesforce by designing scalable CRM ecosystems that improve sales performance, customer service efficiency, and operational visibility.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "Custom Web Development", description: "Tailored solutions built from scratch to meet your specific business requirements.", icon: Code2 },
-            { title: "E-commerce Development", description: "Secure and scalable online stores with seamless shopping experiences.", icon: Code2 },
-            { title: "CMS Development", description: "Easy-to-manage websites using powerful Content Management Systems.", icon: Code2 },
-            { title: "Full-Stack Development", description: "Comprehensive front-end and back-end integration for robust applications.", icon: Code2 },
-            { title: "Web Application Development", description: "Custom web apps to streamline your business operations.", icon: Code2 },
-            { title: "Maintenance & Support", description: "Ongoing support to keep your website secure and up-to-date.", icon: Code2 },
+            { title: "Implementation & Customization", description: "Sales Cloud & Service Cloud setup, custom workflows, and Lightning customization.", icon: Handshake },
+            { title: "CRM Optimization", description: "Lead scoring, case lifecycle automation, and CRM performance audit.", icon: Handshake },
+            { title: "Integration Services", description: "ERP, Microsoft Fabric, and REST/SOAP API integrations.", icon: Handshake },
+            { title: "Data & Analytics", description: "Salesforce API ingestion pipelines and Power BI executive dashboards.", icon: Handshake },
+            { title: "Automation & AI Enablement", description: "AI-based lead prioritization and conversational CRM bots.", icon: Handshake },
         ],
         process: [
-            { title: "Discovery & Analysis", description: "Understanding your business needs, challenges, and goals." },
-            { title: "Planning & Design", description: "Developing a detailed plan and designing a tailored solution." },
-            { title: "Development", description: "Building the website using the current technologies." },
-            { title: "Testing & QA", description: "Conducting diligent testing to ensure functionality." },
-            { title: "Deployment", description: "Implementing the website and providing user training." },
+            { title: "Assessment", description: "CRM Assessment & Gap Analysis" },
+            { title: "Architecture", description: "Architecture & Data Model Design" },
+            { title: "Customization", description: "Implementation & Customization" },
+            { title: "Integration", description: "Integration & Data Synchronization" },
+            { title: "Optimization", description: "User Training & Continuous Optimization" },
         ],
         whyChooseUs: [
-            { title: "Experienced Team", description: "Adept developers with ample experience in web development." },
-            { title: "Customized Solutions", description: "Specialized solutions designed to meet your unique requirements." },
-            { title: "User-Centric Design", description: "Prioritizing user experience for functional and appealing interfaces." },
-            { title: "Proven Methodology", description: "Efficient project management ensuring timely delivery." },
+            { title: "Enterprise Focus", description: "Built for operational visibility and business growth." },
+            { title: "Custom Scalability", description: "Designing multi-business-unit CRM architecture." },
+            { title: "Data Synchronization", description: "Event-driven integration methodologies." },
+            { title: "AI-Ready CRM", description: "Equipping your teams with intelligent pipelines." },
+        ]
+    },
+    "digital-marketing": {
+        id: "digital-marketing",
+        title: "Digital Marketing & Performance Growth Services",
+        description: "Port NxT Digital Solutions delivers data-driven digital marketing strategies that generate measurable business growth. We combine paid media, SEO, conversion optimization, and analytics to create scalable performance engines.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Google Ads Management", description: "Search, Display, Shopping & YouTube Campaigns with ROI-driven bidding.", icon: Megaphone },
+            { title: "Meta Ads", description: "Campaign setup, lookalike audience strategies, and funnel-based structuring.", icon: Megaphone },
+            { title: "Search Engine Optimization (SEO)", description: "On-page & off-page SEO, backlink building, and local SEO.", icon: Megaphone },
+            { title: "Conversion Optimization", description: "Corporate websites, mobile-first UX, and conversion rate optimization (CRO).", icon: Megaphone },
+            { title: "Performance Marketing", description: "Full-funnel paid media strategy and A/B testing campaign scaling.", icon: Megaphone },
+        ],
+        process: [
+            { title: "Research", description: "Market & Competitor Research" },
+            { title: "Architecture", description: "Funnel Strategy & Campaign Architecture" },
+            { title: "Development", description: "Creative & Landing Page Development" },
+            { title: "Launch", description: "Campaign Launch & Optimization" },
+            { title: "Scaling", description: "Continuous Performance Scaling & Reporting" },
+        ],
+        whyChooseUs: [
+            { title: "Data-driven Strategy", description: "We rely on concrete data for audience segmentation and KPIs." },
+            { title: "High-Performance Growth", description: "Targeting CPA, ROAS, LTV, and measurable impact." },
+            { title: "Complete Funnels", description: "Holistic strategies converting leads through multiple channels." },
+            { title: "Constant Analytics", description: "Real-time performance dashboards directly integrated into your core systems." },
+        ]
+    },
+    "microsoft-dynamics-365": {
+        id: "microsoft-dynamics-365",
+        title: "Microsoft Dynamics 365 Implementation Services",
+        description: "Port NxT Digital Solutions delivers complete Microsoft Dynamics 365 implementation services across CRM and ERP workloads to streamline operations, improve customer engagement, and enable real-time decision-making.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Dynamics 365 CRM", description: "Dynamics 365 Sales, Customer Service, Marketing, and Field Service.", icon: Settings },
+            { title: "Dynamics 365 ERP", description: "Business Central, Finance & Operations, and Supply Chain Management.", icon: Settings },
+            { title: "Customization & Extensions", description: "Power Platform extensions, custom plugins, and API integrations.", icon: Settings },
+            { title: "Integration & Migration", description: "Integration with Salesforce, SAP, Oracle, and Azure Data Lake.", icon: Settings },
+            { title: "Reporting & Analytics", description: "Power BI executive dashboards and real-time KPI monitoring.", icon: Settings },
+        ],
+        process: [
+            { title: "Assessment", description: "Business Process Assessment & Gap Analysis" },
+            { title: "Architecture", description: "Solution Architecture & Environment Setup" },
+            { title: "Configuration", description: "Configuration & Custom Development" },
+            { title: "Validation", description: "Data Migration & User Acceptance Testing (UAT)" },
+            { title: "Go-Live", description: "Go-Live & Post-Implementation Support" },
+        ],
+        whyChooseUs: [
+            { title: "End-to-end Deployments", description: "From initial roadmap to customized operations in the ecosystem." },
+            { title: "Role-based Dashboards", description: "Tailored insights for specific leadership or operational roles." },
+            { title: "Power Platform Experts", description: "Extend functionality rapidly using deep Power Apps & Power Automate experience." },
+            { title: "Seamless Migration", description: "Minimal disruption during legacy integrations." }
+        ]
+    },
+    "oracle-erp-cloud": {
+        id: "oracle-erp-cloud",
+        title: "Oracle ERP & Cloud Implementation Services",
+        description: "Port NxT Digital Solutions delivers end-to-end Oracle ERP and Oracle Cloud implementation services, enabling enterprises to streamline finance, operations, procurement, and supply chain management.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Oracle ERP Implementation", description: "Oracle EBS, Fusion Cloud ERP, supply chain, and financials setup.", icon: Database },
+            { title: "Oracle HCM Cloud", description: "Core HR, Payroll, Talent Acquisition, and Workforce Analytics.", icon: Database },
+            { title: "Customization & Extensions", description: "Custom workflows, approval hierarchies, and API integration.", icon: Database },
+            { title: "Data Migration", description: "Legacy system migration securely into Oracle Cloud ecosystems.", icon: Database },
+            { title: "Business Intelligence", description: "Oracle BI, OTBI reporting, and enterprise performance analytics.", icon: Database },
+        ],
+        process: [
+            { title: "Mapping", description: "Business Process Assessment & Requirement Mapping" },
+            { title: "Setup", description: "Solution Architecture & Cloud Environment Setup" },
+            { title: "Configuration", description: "Configuration & Custom Development" },
+            { title: "Migration", description: "Data Migration & Integration" },
+            { title: "Go-Live", description: "Testing, Compliance Validation & Continuous Support" },
+        ],
+        whyChooseUs: [
+            { title: "Secure Modernization", description: "Future-ready operations for finance and industrial processes." },
+            { title: "Unified Analytics", description: "Real-time visibility into complex procurement operations." },
+            { title: "Industry Specializations", description: "Tailored processes for Healthcare, Retail, and Manufacturing." },
+            { title: "Custom Workflows", description: "Role-specific adjustments to standard modules to match your exact business models." }
+        ]
+    },
+    "web-ecommerce-application": {
+        id: "web-ecommerce-application",
+        title: "Web Application & E-Commerce Development",
+        description: "Port NxT designs scalable, secure, and high-performance web and e-commerce applications tailored to modern business needs. We build enterprise-grade platforms converted-focused and mobile-first.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Custom Web Applications", description: "Enterprise portals, SaaS platforms, and API-first backend architecture.", icon: Code2 },
+            { title: "E-Commerce Development", description: "Headless commerce, multi-vendor marketplaces, and customized funnel experiences.", icon: ShoppingCart },
+            { title: "Performance Optimization", description: "Core Web Vitals compliance, A/B testing, and CRO strategies.", icon: Activity },
+            { title: "Integration & Scalability", description: "CRM, ERP, analytics, and robust CI/CD deployment logic.", icon: Infinity },
+        ],
+        process: [
+            { title: "Analysis", description: "Business Requirement Analysis" },
+            { title: "Design", description: "UX Wireframing & Prototype Design" },
+            { title: "Development", description: "Agile Sprint-Based Development" },
+            { title: "Testing", description: "Security & Performance Testing" },
+            { title: "Deployment", description: "Deployment, Monitoring & Continuous Enhancement" },
+        ],
+        whyChooseUs: [
+            { title: "Conversion Focused", description: "Maximized pipelines through optimized frontend interactions." },
+            { title: "Cloud-Native", description: "Scalable backend deployments that support enterprise growth." },
+            { title: "Modern Tech Stack", description: "React, Angular, .NET, Node.js, Laravel, Azure." },
+            { title: "Agile Delivery", description: "Rapid releases prioritizing functionality and performance validation." }
+        ]
+    },
+    "data-visualization-fabric": {
+        id: "data-visualization-fabric",
+        title: "Data Visualization & Analytics with Microsoft Fabric",
+        description: "Port NxT Digital Solutions delivers enterprise-grade data visualization solutions using Microsoft Fabric and Power BI. We design scalable analytics platforms transforming raw data into actionable intelligence.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Analytics Architecture", description: "OneLake, Lakehouse/Warehouse, Medallion Architecture, and Delta Tables.", icon: LineChart },
+            { title: "Power BI Dashboards", description: "Executive KPI dashboards, operational reports, and financial modeling.", icon: LineChart },
+            { title: "Advanced Data Modeling", description: "Star schema design, Role-Level Security (RLS), and semantic tuning.", icon: LineChart },
+            { title: "Real-Time Analytics", description: "Predictive analytics, streaming integration, and scenario modeling.", icon: LineChart },
+            { title: "Enterprise Connectivity", description: "Integrations for Dynamics 365, Salesforce, and Oracle data ingestion.", icon: LineChart },
+        ],
+        process: [
+            { title: "Assessment", description: "Data Assessment & KPI Identification" },
+            { title: "Modeling", description: "Architecture Design & Data Modeling" },
+            { title: "Pipeline", description: "Fabric Implementation & Pipeline Development" },
+            { title: "Dashboards", description: "Dashboard Development & User Validation" },
+            { title: "Optimization", description: "Performance Optimization & Continuous Enhancement" },
+        ],
+        whyChooseUs: [
+            { title: "Enterprise-Grade Scale", description: "We prepare data strategies for millions of records and real-time visualization." },
+            { title: "Governance Controls", description: "Secure semantic layers protecting vital operational data." },
+            { title: "Direct Lake Innovation", description: "Extensive experience unlocking high-performance analytics in Microsoft Fabric." },
+            { title: "Actionable Focus", description: "Moving beyond raw charts into predictive logic for the C-Suite." }
+        ]
+    },
+    "data-engineering-azure-informatica": {
+        id: "data-engineering-azure-informatica",
+        title: "Data Engineering Services with Azure & Informatica",
+        description: "Port NxT Digital Solutions designs scalable, secure, and high-performance data ecosystems enabling organizations to centralize, transform, and govern data using Microsoft Azure and Informatica.",
+        heroImage: "/img/company/web-development.webp",
+        subServices: [
+            { title: "Azure Data Platform", description: "ADLS, Azure Data Factory, Synapse Analytics, and Databricks (PySpark).", icon: FileJson },
+            { title: "Data Ingestion", description: "Incremental loading, SCD Type 2 logic, flattening, and reconciliation frameworks.", icon: FileJson },
+            { title: "Informatica Engineering", description: "PowerCenter, IICS, ETL/ELT workflows, data profiling, and MDM support.", icon: FileJson },
+            { title: "Governance & Security", description: "RBAC, data encryption, compliance execution, and lineage tracking.", icon: FileJson },
+            { title: "System Integration", description: "Unified ERP frameworks mapped into real-time analytics sync.", icon: FileJson },
+        ],
+        process: [
+            { title: "Planning", description: "Enterprise Data Assessment & Architecture Planning" },
+            { title: "Mapping", description: "Data Model Design & Source Mapping" },
+            { title: "Automation", description: "Pipeline Development & Automation" },
+            { title: "Validation", description: "Testing, Validation & Performance Optimization" },
+            { title: "Assurance", description: "Deployment, Monitoring & Continuous Support" },
+        ],
+        whyChooseUs: [
+            { title: "Complex Transformations", description: "Experienced in enterprise data normalization tasks and massive load requirements." },
+            { title: "Platform Agnostic", description: "We blend Informatica toolchains directly with native Azure cloud operations securely." },
+            { title: "Robust Auditing", description: "Logging and compliance frameworks integrated natively into the ELT process." },
+            { title: "Modern Lakehouse", description: "Expertise mapping Medallion principles correctly over traditional warehouses." }
         ]
     },
     "mobile-app-development": {
         id: "mobile-app-development",
-        title: "Mobile App Development",
-        description: "Native and cross-platform mobile apps for iOS and Android.",
+        title: "Mobile Application Development",
+        description: "Port NxT Digital Solutions develops high-performance, secure, and scalable mobile applications for iOS and Android platforms, linking deeply with enterprise CRM, ERP, and operations.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "iOS App Development", description: "High-performance apps tailored for the Apple ecosystem.", icon: Smartphone },
-            { title: "Android App Development", description: "Scalable and robust apps for the vast Android market.", icon: Smartphone },
-            { title: "Cross-Platform Apps", description: "Efficient apps that run seamlessly on both iOS and Android.", icon: Smartphone },
-            { title: "App UI/UX Design", description: "Intuitive and engaging designs for mobile interfaces.", icon: Smartphone },
+            { title: "Native iOS", description: "Swift-based, iPhone/iPad optimized apps with secure biometric compliance.", icon: Smartphone },
+            { title: "Native Android", description: "Kotlin & Java-based, device-responsive UIs tailored for Google Play deployments.", icon: Smartphone },
+            { title: "Cross-Platform", description: "Flutter and React Native for cost-efficient mobility and rapid time to market.", icon: Smartphone },
+            { title: "Enterprise Integrations", description: "Connecting tools directly to Dynamics 365, Oracle, and Field Management systems.", icon: Smartphone },
+            { title: "Mobility Analytics", description: "In-app performance tracking, push notification metrics, and synchronization mapping.", icon: Smartphone },
         ],
         process: [
-            { title: "Strategy", description: "Defining the app concept and target audience." },
-            { title: "Design", description: "Creating wireframes and UI prototypes." },
-            { title: "Development", description: "Coding the app with the latest frameworks." },
-            { title: "Testing", description: "Rigorous testing on multiple devices." },
-            { title: "Launch", description: "Deploying to App Store and Play Store." },
+            { title: "Journey", description: "Requirement Analysis & User Journey Mapping" },
+            { title: "Design", description: "UX/UI Wireframing & Prototype Design" },
+            { title: "Agile", description: "Agile Development & Sprint Execution" },
+            { title: "Testing", description: "Security Testing & Performance Validation" },
+            { title: "Deployment", description: "Deployment & Continuous Maintenance" },
         ],
         whyChooseUs: [
-            { title: "Expert Developers", description: "Skilled in Swift, Kotlin, React Native, and Flutter." },
-            { title: "Seamless Performance", description: "Optimized apps for diverse devices." },
-            { title: "End-to-End Service", description: "From concept to post-launch support." },
-            { title: "Agile Approach", description: "Flexible development adapting to your feedback." },
+            { title: "Seamless Operations", description: "Mobile ecosystems designed to augment existing workforce management tasks securely." },
+            { title: "Cross-Platform Leverage", description: "Lower overhead targeting widespread distribution with shared code strategies." },
+            { title: "Secure Data Layers", description: "Robust architectural safeguards ensuring field and CRM analytics remain isolated." },
+            { title: "Deep Integrations", description: "Direct connectivity to large enterprise applications, not just standalone logic." }
         ]
     },
-    "search-engine-optimization": {
-        id: "search-engine-optimization",
-        title: "SEO Optimization",
-        description: "Ranking your website higher to drive organic traffic.",
+    "custom-ai-solutions": {
+        id: "custom-ai-solutions",
+        title: "Custom AI Solutions & Intelligent Systems",
+        description: "Port NxT Digital Solutions designs custom AI systems tailored to enterprise needs, automating decision-making and unlocking insights across structured and unstructured data formats.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "On-Page SEO", description: "Optimizing individual web pages to rank higher.", icon: Megaphone },
-            { title: "Off-Page SEO", description: "Building authority through backlinks and social signals.", icon: Megaphone },
-            { title: "Technical SEO", description: "Improving site structure and performance for crawlers.", icon: Megaphone },
-            { title: "Local SEO", description: "Optimizing for local search results and Google Maps.", icon: Megaphone },
+            { title: "Generative AI Solutions", description: "Custom GPTs, Retrieval-Augmented Generation (RAG) platforms, and search.", icon: BrainCircuit },
+            { title: "AI Agents & Workflows", description: "Multi-agent orchestration, email automation, and ERP-integrated transactional bots.", icon: BrainCircuit },
+            { title: "Predictive Analytics", description: "Sales forecasting, customer churn prediction, and risk anomaly detection ML mapping.", icon: BrainCircuit },
+            { title: "Intelligent Document Processing", description: "OCR extractions, NLP invoice compliance, and contract review sentiment logic.", icon: BrainCircuit },
+            { title: "Enterprise Connectivity", description: "Secure API cloud AI ecosystems directly woven into SAP, Dynamics, or Salesforce.", icon: BrainCircuit },
         ],
         process: [
-            { title: "Audit", description: "Analyzing current site performance." },
-            { title: "Keyword Research", description: "Identifying high-value search terms." },
-            { title: "Optimization", description: "Implementing technical and content fixes." },
-            { title: "Reporting", description: "Tracking progress and adjusting strategy." },
-            { title: "Growth", description: "Scaling traffic and conversions." },
+            { title: "Feasibility", description: "AI Use Case Identification & Feasibility Study" },
+            { title: "Design", description: "Data Preparation & Model Design" },
+            { title: "Development", description: "Model Development & Testing" },
+            { title: "Integration", description: "Integration & Deployment" },
+            { title: "Optimization", description: "Monitoring, Optimization & Continuous Improvement" },
         ],
         whyChooseUs: [
-            { title: "Data-Driven", description: "Strategies based on analytics and trends." },
-            { title: "Transparent Reporting", description: "Clear insights into your ROI." },
-            { title: "White Hat Techniques", description: "Ethical practices for long-term success." },
-            { title: "Continuous Improvement", description: "Adapting to algorithm updates." },
+            { title: "Responsible AI", description: "Bias-checked, enterprise-compliant logic models protecting internal IP." },
+            { title: "Real Workflows", description: "We connect generative concepts to tangible API-driven outputs for operations." },
+            { title: "Document Automation", description: "Cutting-edge extractions turning unstructured paperwork into actionable tables." },
+            { title: "Scalable Infrastructure", description: "Building ML pipelines capable of updating securely with new data drifts over time." }
         ]
     },
-    "ui-ux-graphic-design": {
-        id: "ui-ux-graphic-design",
-        title: "UI/UX & Graphic Design",
-        description: "Intuitive and engaging user interfaces for better experience.",
+    "servicenow-implementation": {
+        id: "servicenow-implementation",
+        title: "ServiceNow Implementation & Consulting Services",
+        description: "Port NxT provides end-to-end ServiceNow consulting and implementation services to streamline IT operations, automate workflows, and enhance service delivery across enterprise departments.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "User Research", description: "Understanding user behavior and needs.", icon: Palette },
-            { title: "Wireframing", description: "Blueprinting layout and flow.", icon: Palette },
-            { title: "Visual Design", description: "Creating stunning, on-brand aesthetics.", icon: Palette },
-            { title: "Prototyping", description: "Interactive mockups for testing.", icon: Palette },
+            { title: "IT Service Management (ITSM)", description: "Incident tracking, Service Catalogs, SLA configuration, and CMDB tuning.", icon: Globe },
+            { title: "IT Operations Management (ITOM)", description: "Discovery mapping, event analytics, and infrastructure cloud monitoring.", icon: Globe },
+            { title: "HR Service Delivery (HRSD)", description: "Onboarding automation portals connecting natively to ERP and payroll structures.", icon: Globe },
+            { title: "Custom Development on ServiceNow", description: "Low-code application creation scoped precisely for role-based governance.", icon: Globe },
+            { title: "Analytics & Reporting", description: "Performance Analytics bridging Service delivery insights continuously into Power BI.", icon: Globe }
         ],
         process: [
-            { title: "Empathize", description: "Understanding the user." },
-            { title: "Define", description: "Stating the problem clearly." },
-            { title: "Ideate", description: "Brainstorming creative solutions." },
-            { title: "Prototype", description: "Building tangible representations." },
-            { title: "Test", description: "Validating with real users." },
+            { title: "Mapping", description: "Current State Assessment & Process Mapping" },
+            { title: "Setup", description: "Platform Architecture & Environment Setup" },
+            { title: "Customization", description: "Module Configuration & Customization" },
+            { title: "Migration", description: "Integration & Data Migration" },
+            { title: "Adoption", description: "User Training, Go-Live Support & Continuous Optimization" }
         ],
         whyChooseUs: [
-            { title: "Creative Experts", description: "Designers with a keen eye for detail." },
-            { title: "User-Centric", description: "Designs that prioritize the end-user." },
-            { title: "Modern Tools", description: "Using Figma, Adobe XD, and more." },
-            { title: "Brand Consistency", description: "Ensuring cohesive visual identity." },
+            { title: "Cross-Department Efficiency", description: "Eliminating silos between IT, HR, and Operations teams securely." },
+            { title: "Performance Driven", description: "Mapping configurations directly to SLAs and actionable visibility KPIs." },
+            { title: "Extensibility", description: "Connecting ServiceNow smoothly back to deep SAP/Oracle enterprise data foundations." },
+            { title: "Expert Governance", description: "Setting rigid RBAC boundaries to meet external auditing and regulatory standards." }
         ]
     },
-    "cloud": {
-        id: "cloud",
-        title: "Cloud Solutions",
-        description: "Secure and efficient cloud infrastructure and migration services.",
+    "jira-implementation": {
+        id: "jira-implementation",
+        title: "Jira Implementation & Agile Project Management",
+        description: "Port NxT provides end-to-end Jira consulting and optimization services helping organizations streamline Agile delivery, project visibility, and CI/CD collaboration natively.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "Cloud Migration", description: "Moving legacy systems to the cloud.", icon: Cloud },
-            { title: "Cloud Infrastructure", description: "Setting up robust cloud environments.", icon: Cloud },
-            { title: "Cloud Security", description: "Protecting data and applications.", icon: Cloud },
-            { title: "Managed Services", description: "Ongoing management and optimization.", icon: Cloud },
+            { title: "Jira Software Implementation", description: "Scrum/Kanban configuration, advanced permissions, workflows, and automation logic.", icon: Share2 },
+            { title: "Jira Service Management", description: "ITSM portal setups matching incident routing schemas and escalation matrices.", icon: Share2 },
+            { title: "DevOps Integration", description: "Binding deployments inherently to GitHub/GitLab pipelines and Azure DevOps tracking.", icon: Share2 },
+            { title: "Analytics", description: "Executive reporting spanning burndown charts and broad Microsoft Fabric integrations.", icon: Share2 },
+            { title: "Optimization & Migration", description: "Moving legacy project histories seamlessly into Jira Cloud or Data Center deployments.", icon: Share2 }
         ],
         process: [
-            { title: "Assessment", description: "Evaluating current infrastructure." },
-            { title: "Strategy", description: "Planning the migration path." },
-            { title: "Migration", description: "Executing the move securely." },
-            { title: "Optimization", description: "Fine-tuning for performance and cost." },
-            { title: "Support", description: "24/7 monitoring and assistance." },
+            { title: "Assessment", description: "Agile Process Assessment & Gap Analysis" },
+            { title: "Design", description: "Platform Architecture & Workflow Design" },
+            { title: "Setup", description: "Configuration & Integration Setup" },
+            { title: "Validation", description: "Testing & User Acceptance Validation" },
+            { title: "Improvement", description: "Go-Live & Continuous Improvement" }
         ],
         whyChooseUs: [
-            { title: "Certified Experts", description: "AWS, Azure, and Google Cloud professionals." },
-            { title: "Scalability", description: "Solutions that grow with your business." },
-            { title: "Cost-Effective", description: "Optimizing comprehensive cloud spend." },
-            { title: "Security First", description: "Best-in-class security measures." },
+            { title: "Holistic Tracing", description: "End-to-end pipeline visibility from business ticket to source-code delivery." },
+            { title: "Frictionless Processes", description: "We minimize administrative burdens through highly targeted automation logic." },
+            { title: "Enterprise Aggregation", description: "Synchronizing project milestones into broader organizational reporting." },
+            { title: "Certified Frameworks", description: "Aligning software deployment methodologies to robust governance models." }
         ]
     },
-    "erp-development": {
-        id: "erp-development",
-        title: "ERP Development",
-        description: "Streamlining and integrating business techniques into a unified system.",
+    "sap-implementation": {
+        id: "sap-implementation",
+        title: "SAP Implementation & Enterprise Transformation",
+        description: "Port NxT delivers secure, high-performance SAP implementation services to modernize core business processes and improve operational visibility mapping against global architecture standards.",
         heroImage: "/img/company/web-development.webp",
         subServices: [
-            { title: "Custom ERP", description: "Tailored enterprise resource planning systems.", icon: Settings },
-            { title: "ERP Integration", description: "Connecting ERP with existing tools.", icon: Settings },
-            { title: "Module Development", description: "Adding specific functionality like HR or Finance.", icon: Settings },
-            { title: "Migration & Upgrade", description: "Modernizing legacy ERP systems.", icon: Settings },
+            { title: "SAP S/4HANA Implementation", description: "Green/Brownfield deployments traversing Finance, Asset Management, and Supply Chain structures.", icon: ClipboardList },
+            { title: "SAP BTP", description: "Business Technology Platform extensions, Fiori interfaces, and workflow rules.", icon: ClipboardList },
+            { title: "SAP SuccessFactors", description: "Core HR recruitment, goal tracking, and payroll processing migrations.", icon: ClipboardList },
+            { title: "Integration & Migration", description: "Data harmonization moving legacy ERPs smoothly or syncing to Azure Data Lakes.", icon: ClipboardList },
+            { title: "SAP Analytics", description: "Predictive planning models mapped inside SAP Analytics Cloud dashboards.", icon: ClipboardList }
         ],
         process: [
-            { title: "Consulting", description: "Analyzing business processes." },
-            { title: "Selection", description: "Choosing the right stack or platform." },
-            { title: "Implementation", description: "Deploying the ERP solution." },
-            { title: "Customization", description: "Tailoring to specific needs." },
-            { title: "Training", description: "Onboarding staff effectively." },
+            { title: "Blueprinting", description: "Business Process Assessment & Blueprinting" },
+            { title: "Architecture", description: "Solution Architecture & Landscape Design" },
+            { title: "Development", description: "Module Configuration & Custom Development" },
+            { title: "Testing", description: "Data Migration, Testing & Validation" },
+            { title: "Hypercare", description: "Go-Live, Hypercare & Continuous Support" }
         ],
         whyChooseUs: [
-            { title: "Process Expertise", description: "Deep understanding of business workflows." },
-            { title: "Efficiency", description: "Automating manual tasks." },
-            { title: "Data Accuracy", description: "Single source of truth for data." },
-            { title: "Scalability", description: "Systems that expand with your enterprise." },
+            { title: "Massive Scope Support", description: "Expertise untangling multi-faceted corporate layers during global IT restructures." },
+            { title: "Clean Digital Cores", description: "Focusing heavily on minimized technical debt during S/4HANA transitions." },
+            { title: "Future Ready Integrations", description: "Using BTP effectively to modernize UI/UX and API reach for the workforce." },
+            { title: "Rigorous Auditing", description: "Financial tracking configurations strictly matched against global compliance matrices." }
         ]
-    },
-    "crm-development": {
-        id: "crm-development",
-        title: "CRM Development",
-        description: "Tailor-made CRM services to beautify consumer relationships.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "Custom CRM", description: "Building CRM from the ground up.", icon: Handshake },
-            { title: "Salesforce Solutions", description: "Expert implementation and customization.", icon: Handshake },
-            { title: "CRM Integration", description: "Syncing with email, marketing, and support.", icon: Handshake },
-            { title: "Automation", description: "Automating follow-ups and workflows.", icon: Handshake },
-        ],
-        process: [
-            { title: "Discovery", description: "Mapping customer journey." },
-            { title: "Architecture", description: "Designing the data model." },
-            { title: "Development", description: "Building features and dashboards." },
-            { title: "Integration", description: "Connecting with other tools." },
-            { title: "Rollout", description: "Training and deployment." },
-        ],
-        whyChooseUs: [
-            { title: "Customer Focus", description: "Tools that help you serve better." },
-            { title: "Data Insights", description: "Actionable analytics on sales." },
-            { title: "Efficiency", description: "Streamlined sales operations." },
-            { title: "Custom Fit", description: "Aligned with your sales process." },
-        ]
-    },
-    "offshore-development": {
-        id: "offshore-development",
-        title: "Offshore Development",
-        description: "Access to international talent and dedicated development teams.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "Dedicated Teams", description: "Your own remote dev team.", icon: Globe },
-            { title: "Staff Augmentation", description: "Adding experts to your in-house team.", icon: Globe },
-            { title: "Project Outsourcing", description: "Full project delivery.", icon: Globe },
-            { title: "Consulting", description: "Technical guidance and strategy.", icon: Globe },
-        ],
-        process: [
-            { title: "Requirement", description: "Defining skill sets needed." },
-            { title: "Screening", description: "Selecting the best candidates." },
-            { title: "Onboarding", description: "Integrating with your workflow." },
-            { title: "Development", description: "Agile delivery and reporting." },
-            { title: "Management", description: "Ongoing HR and support." },
-        ],
-        whyChooseUs: [
-            { title: "Cost Efficient", description: "High quality at competitive rates." },
-            { title: "Global Talent", description: "Access to top skills worldwide." },
-            { title: "Flexible Scaling", description: "Scale up or down easily." },
-            { title: "Seamless Comms", description: "Effective communication tools." },
-        ]
-    },
-    "ai-development": {
-        id: "ai-development",
-        title: "AI Development",
-        description: "Smart AI & ML solutions to automate and innovate.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "Machine Learning", description: "Predictive models and algorithms.", icon: BrainCircuit },
-            { title: "NLP", description: "Natural Language Processing solutions.", icon: BrainCircuit },
-            { title: "Computer Vision", description: "Image and video analysis.", icon: BrainCircuit },
-            { title: "Chatbots", description: "Intelligent conversational agents.", icon: BrainCircuit },
-        ],
-        process: [
-            { title: "Feasibility", description: "Assessing AI potential." },
-            { title: "Data Prep", description: "Cleaning and labeling data." },
-            { title: "Modeling", description: "Training and testing models." },
-            { title: "Integration", description: "Deploying models to apps." },
-            { title: "Monitoring", description: "Tracking performance and drift." },
-        ],
-        whyChooseUs: [
-            { title: "Cutting Edge", description: "Using latest AI research." },
-            { title: "Business Value", description: "Focusing on ROI." },
-            { title: "Ethical AI", description: "Responsible and fair systems." },
-            { title: "Expert Team", description: "Data scientists and engineers." },
-        ]
-    },
-    "block-chain": {
-        id: "block-chain",
-        title: "Blockchain",
-        description: "Secure and transparent transactions through decentralized technology.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "Smart Contracts", description: "Self-executing digital agreements.", icon: Link },
-            { title: "DApps", description: "Decentralized application development.", icon: Link },
-            { title: "Private Blockchains", description: "Enterprise-grade distributed ledgers.", icon: Link },
-            { title: "NFT Marketplaces", description: "Platforms for digital assets.", icon: Link },
-        ],
-        process: [
-            { title: "Use Case", description: "Identifying blockchain fit." },
-            { title: "Architecture", description: "Designing the network." },
-            { title: "Development", description: "Coding contracts and UI." },
-            { title: "Audit", description: "Security verification." },
-            { title: "Launch", description: "Mainnet deployment." },
-        ],
-        whyChooseUs: [
-            { title: "Security", description: "Immutable and safe systems." },
-            { title: "Transparency", description: "Open and verifiable data." },
-            { title: "Innovation", description: "Pioneering new business models." },
-            { title: "Expertise", description: "Deep knowledge of chains." },
-        ]
-    },
-    "iot-development": {
-        id: "iot-development",
-        title: "IoT Development",
-        description: "Connecting devices for smarter operations and data insights.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "Device Connectivity", description: "Protocols for hardware communication.", icon: Cpu },
-            { title: "IoT Cloud Platform", description: "Managing device data at scale.", icon: Cpu },
-            { title: "Remote Monitoring", description: "Real-time tracking systems.", icon: Cpu },
-            { title: "Edge Computing", description: "Processing data near the source.", icon: Cpu },
-        ],
-        process: [
-            { title: "Prototyping", description: "Proof of concept with hardware." },
-            { title: "Connectivity", description: "Establishing reliable networks." },
-            { title: "Platform", description: "Building the backend." },
-            { title: "App", description: "Creating user interfaces." },
-            { title: "Deployment", description: "Rolling out devices." },
-        ],
-        whyChooseUs: [
-            { title: "End-to-End", description: "Hardware to software solutions." },
-            { title: "Scalability", description: "Handling millions of devices." },
-            { title: "Security", description: "Device and data protection." },
-            { title: "Innovation", description: "Smart solutions for industry." },
-        ]
-    },
-    "devops": {
-        id: "devops",
-        title: "DevOps Services",
-        description: "Streamlining development and operations for faster delivery.",
-        heroImage: "/img/company/web-development.webp",
-        subServices: [
-            { title: "CI/CD", description: "Automated build and deploy pipelines.", icon: Infinity },
-            { title: "Infrastructure as Code", description: "Managing infra with code.", icon: Infinity },
-            { title: "Containerization", description: "Docker and Kubernetes solutions.", icon: Infinity },
-            { title: "Monitoring", description: "Full-stack observability.", icon: Infinity },
-        ],
-        process: [
-            { title: "Assessment", description: "Analyzing current workflows." },
-            { title: "Automation", description: "Scripting manual tasks." },
-            { title: "Pipeline", description: "Building CI/CD flows." },
-            { title: "Cloud", description: "Optimizing environment." },
-            { title: "Feedback", description: "Continuous improvement loop." },
-        ],
-        whyChooseUs: [
-            { title: "Speed", description: "Faster time to market." },
-            { title: "Reliability", description: "Stable and predictable releases." },
-            { title: "Collaboration", description: "Better dev and ops harmony." },
-            { title: "Efficiency", description: "Reduced manual effort." },
-        ]
-    },
+    }
 };
 
 export const defaultService = {
-    ...servicesData["web-development"],
+    ...servicesData["salesforce-consulting"],
     title: "Service",
     description: "Professional IT services tailored to your needs.",
 };
+
