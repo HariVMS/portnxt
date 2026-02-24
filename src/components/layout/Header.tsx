@@ -609,7 +609,7 @@ export default function Header() {
               <div className="bg-slate-50/80 p-5 space-y-6 border-b border-slate-100">
                 <div>
                   <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
-                    Enterprise
+                    Enterprise Solutions
                   </div>
                   <div className="space-y-3">
                     <Link
@@ -627,18 +627,25 @@ export default function Header() {
                       Microsoft Dynamics 365
                     </Link>
                     <Link
-                      href="/services/oracle-erp-cloud"
+                      href="/services/oracle-erp"
                       className="block text-slate-600 hover:text-primary font-normal text-[15px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Oracle ERP Cloud
+                      Oracle ERP & Cloud
+                    </Link>
+                    <Link
+                      href="/services/sap-implementation"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      SAP Implementation
                     </Link>
                   </div>
                 </div>
 
                 <div>
                   <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
-                    Digital
+                    Data Solutions
                   </div>
                   <div className="space-y-3">
                     <Link
@@ -649,11 +656,69 @@ export default function Header() {
                       Microsoft Fabric
                     </Link>
                     <Link
+                      href="/services/data-engineering"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Data Engineering
+                    </Link>
+                    <Link
                       href="/services/custom-ai-solutions"
                       className="block text-slate-600 hover:text-primary font-normal text-[15px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Custom AI Solutions
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
+                    Specialized Solutions
+                  </div>
+                  <div className="space-y-3">
+                    <Link
+                      href="/services/servicenow-implementation"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      ServiceNow Implementation
+                    </Link>
+                    <Link
+                      href="/services/jira-implementation"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Jira Implementation
+                    </Link>
+                    <Link
+                      href="/services/digital-marketing"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Digital Marketing
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
+                    Development Solutions
+                  </div>
+                  <div className="space-y-3">
+                    <Link
+                      href="/services/web-development"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Web & App Development
+                    </Link>
+                    <Link
+                      href="/services/mobile-app-development"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Mobile App Development
                     </Link>
                   </div>
                 </div>

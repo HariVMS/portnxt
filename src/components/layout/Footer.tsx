@@ -318,7 +318,9 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://wa.me/919942383516"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
                 >
                   <FaWhatsapp size={19} />
@@ -336,7 +338,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:connect@portnxt.in"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
                 >
                   <Mail size={16} />

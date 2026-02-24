@@ -102,9 +102,9 @@ export default function ContactInfo() {
             <FaWhatsapp size={16} />
           </a>
           <a
-            href="#"
+            href="mailto:connect@portnxt.in"
             className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
-            aria-label="YouTube"
+            aria-label="Mail"
           >
             <Mail size={16} />
           </a>
