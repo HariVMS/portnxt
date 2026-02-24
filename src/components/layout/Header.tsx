@@ -119,91 +119,18 @@ export default function Header() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-100 max-h-[80vh] overflow-y-auto">
-            <div className="flex flex-col p-4 font-bold text-sm text-slate-800">
-              <Link href="/about-us" className="py-3 border-b border-slate-50">
-                COMPANY
-              </Link>
-
-              <button
-                className="flex items-center justify-between py-3 border-b border-slate-50"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-              >
-                SERVICES
-                <ChevronDown
-                  size={14}
-                  className={`transform transition-transform ${
-                    isServicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {isServicesOpen && (
-                <div className="bg-slate-50 p-4 space-y-4">
-                  <div className="font-bold text-primary text-xs uppercase">
-                    Enterprise
-                  </div>
-                  <Link
-                    href="/services/salesforce-consulting"
-                    className="block text-slate-600 font-normal py-1"
-                  >
-                    Salesforce Consulting
-                  </Link>
-                  <Link
-                    href="/services/microsoft-dynamics-365"
-                    className="block text-slate-600 font-normal py-1"
-                  >
-                    Dynamics 365
-                  </Link>
-
-                  <div className="font-bold text-primary text-xs uppercase mt-2">
-                    Digital
-                  </div>
-                  <Link
-                    href="/services/microsoft-fabric"
-                    className="block text-slate-600 font-normal py-1"
-                  >
-                    Microsoft Fabric
-                  </Link>
-                  <Link
-                    href="/services/custom-ai-solutions"
-                    className="block text-slate-600 font-normal py-1"
-                  >
-                    Custom AI Solutions
-                  </Link>
-                </div>
-              )}
-
-              <Link href="/careers" className="py-3 border-b border-slate-50">
-                CAREERS
-              </Link>
-              <Link href="/blogs" className="py-3 border-b border-slate-50">
-                BLOG
-              </Link>
-              <Link
-                href="/contact-us"
-                className="py-3 border-b border-slate-50"
-              >
-                CONTACT
-              </Link>
-            </div>
-          </div>
-        )}
       </header>
       {/* Main Navigation */}
       <div className="container bg-white w-full relative 2xl:max-w-[1536px] 2xl:h-[92px]">
-        <div className="flex justify-between items-center h-full">
-          {/* Logo - Renaming to Portnext visually via Alt for now, assuming image swap later or it contains text */}
+        <div className="flex justify-between items-center h-full py-4 lg:py-0">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/img/Home/makelink-innovation-logo.webp"
-              alt="Portnext Innovation"
-              width={290}
-              height={60}
-              className="" // Should ideally be replaced by actual Portnext logo
+              alt="Port NxT Digital Solutions"
+              width={200}
+              height={45}
+              className="w-[200px] md:w-[290px] h-auto"
               priority
             />
           </Link>
@@ -578,6 +505,111 @@ export default function Header() {
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown (Absolute Positioning for proper flow) */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto">
+          <div className="flex flex-col p-4 font-bold text-base text-slate-800">
+            <Link
+              href="/about-us"
+              className="py-4 border-b border-slate-100 active:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              COMPANY
+            </Link>
+
+            <button
+              className="flex items-center justify-between py-4 border-b border-slate-100 active:bg-slate-50"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              SERVICES
+              <ChevronDown
+                size={18}
+                className={`transform transition-transform ${
+                  isServicesOpen ? "rotate-180 text-primary" : ""
+                }`}
+              />
+            </button>
+
+            {isServicesOpen && (
+              <div className="bg-slate-50/80 p-5 space-y-6 border-b border-slate-100">
+                <div>
+                  <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
+                    Enterprise
+                  </div>
+                  <div className="space-y-3">
+                    <Link
+                      href="/services/salesforce-consulting"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Salesforce Consulting
+                    </Link>
+                    <Link
+                      href="/services/microsoft-dynamics-365"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Microsoft Dynamics 365
+                    </Link>
+                    <Link
+                      href="/services/oracle-erp-cloud"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Oracle ERP Cloud
+                    </Link>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="font-bold text-primary text-xs tracking-widest uppercase mb-3">
+                    Digital
+                  </div>
+                  <div className="space-y-3">
+                    <Link
+                      href="/services/microsoft-fabric"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Microsoft Fabric
+                    </Link>
+                    <Link
+                      href="/services/custom-ai-solutions"
+                      className="block text-slate-600 hover:text-primary font-normal text-[15px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Custom AI Solutions
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <Link
+              href="/careers"
+              className="py-4 border-b border-slate-100 active:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              CAREERS
+            </Link>
+            <Link
+              href="/blogs"
+              className="py-4 border-b border-slate-100 active:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              BLOG
+            </Link>
+            <Link
+              href="/contact-us"
+              className="py-4 border-b border-slate-100 active:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              CONTACT
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
