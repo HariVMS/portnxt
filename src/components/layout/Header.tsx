@@ -12,6 +12,7 @@ import {
   Monitor,
   Megaphone,
   ChevronRight,
+  Mail,
 } from "lucide-react";
 import {
   FacebookIcon,
@@ -20,6 +21,7 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "@/Icons/Header";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,14 +59,16 @@ export default function Header() {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 bg-white shadow-sm transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-[48px]"
+        isVisible
+          ? "translate-y-0"
+          : "-translate-y-[80px] xs:-translate-y-[61px] sm:-translate-y-[48px]"
       }`}
     >
-      <header className="w-full grid grid-rows-[48px_1fr] z-50 bg-white shadow-sm ">
+      <header className="w-full grid sm:grid-rows-[48px_1fr] z-50 bg-white shadow-sm ">
         {/* Top Bar */}
         <div className="bg-primary text-white py-2 w-full flex  text-xs md:text-sm">
-          <div className="container flex flex-col md:flex-row 2xl:max-w-[1536px] justify-between items-center gap-2">
-            <div className="flex items-center gap-4">
+          <div className="container flex flex-col xs:flex-row 2xl:max-w-[1536px] justify-between items-center gap-2">
+            <div className="flex xs:flex-col xs:gap-1  items-center sm:flex-row sm:gap-4">
               <div className="flex items-center gap-3">
                 <a
                   href="tel:+919667949121"
@@ -83,7 +87,7 @@ export default function Header() {
                 className="flex items-center gap-2 hover:text-white/80 transition-colors"
               >
                 <span className="font-normal text-[15px]">
-                  sales@portnext.com
+                  sales@portnxt.in
                 </span>
               </a>
             </div>
@@ -92,27 +96,17 @@ export default function Header() {
                 {/* Social Icons - White circle bg in reference? Simplified here */}
                 <a href="#">
                   <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
-                    <FacebookIcon />
-                  </span>
-                </a>
-                <a href="#">
-                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
-                    <InstagramIcon />
-                  </span>
-                </a>
-                <a href="#">
-                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
                     <LinkedinIcon />
                   </span>
                 </a>
                 <a href="#">
                   <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
-                    <TwitterIcon />
+                    <FaWhatsapp size={19} />
                   </span>
                 </a>
                 <a href="#">
                   <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
-                    <YoutubeIcon />
+                    <Mail size={19} />
                   </span>
                 </a>
               </div>
@@ -121,7 +115,7 @@ export default function Header() {
         </div>
       </header>
       {/* Main Navigation */}
-      <div className="container bg-white w-full relative 2xl:max-w-[1536px] 2xl:h-[92px]">
+      <div className="container bg-white w-full relative 2xl:max-w-[1536px] h-[90px] md:h-[95px] 2xl:h-[92px]">
         <div className="flex justify-between items-center h-full py-4 2xl:pl-10 lg:py-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
@@ -136,16 +130,16 @@ export default function Header() {
           </Link>
           <div className="flex items-center justify-center gap-3">
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-5 font-bold text-[16px] tracking-normal text-slate-800 uppercase">
+            <nav className="hidden md:flex items-center md:gap-3 lg:gap-5 font-bold text-[16px] tracking-normal text-slate-800 uppercase">
               <Link
                 href="/about-us"
-                className="hover:text-sky-700 transition-colors "
+                className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px] "
               >
                 COMPANY
               </Link>
 
               <div className="relative group">
-                <button className="flex items-center gap-2 hover:text-sky-700 transition-colors py-4">
+                <button className="flex items-center gap-2 hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px] py-4">
                   SERVICES
                   <ChevronDown size={14} className="text-gray-500" />
                 </button>
@@ -311,7 +305,7 @@ export default function Header() {
                         </g>
                       </svg>
                       <div className="font-bold text-slate-900 text-base">
-                        Data & Engineering
+                        Data Solutions
                       </div>
                     </div>
                     <ul className="space-y-4 text-sm text-slate-600 font-normal">
@@ -339,18 +333,7 @@ export default function Header() {
                           Data Engineering
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href="/services/web-development"
-                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
-                        >
-                          <ChevronRight
-                            size={14}
-                            className=" group-hover/item:text-primary w-5 h-5"
-                          />
-                          Web & App Development
-                        </Link>
-                      </li>
+
                       <li>
                         <Link
                           href="/services/custom-ai-solutions"
@@ -402,7 +385,7 @@ export default function Header() {
                         </g>
                       </svg>
                       <div className="font-bold text-slate-900 text-base">
-                        Specialized Integrations
+                        Specialized Solutions
                       </div>
                     </div>
                     <ul className="space-y-4 text-sm text-slate-600 font-normal">
@@ -442,6 +425,89 @@ export default function Header() {
                           Digital Marketing
                         </Link>
                       </li>
+                    </ul>
+                  </div>
+
+                  {/* Data & Engineering Services */}
+                  <div className="space-y-4">
+                    <div className="bg-[#D1F2EC] p-3 h-[60px] w-[290px]  rounded-lg flex items-center gap-3">
+                      <svg
+                        width="44px"
+                        height="44px"
+                        viewBox="-6.72 -6.72 37.44 37.44"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0">
+                          <rect
+                            x="-6.72"
+                            y="-6.72"
+                            width="37.44"
+                            height="37.44"
+                            rx="18.72"
+                            fill="#ffffff"
+                          ></rect>
+                        </g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M9 4H6C4.89543 4 4 4.89543 4 6V14C4 15.1046 4.89543 16 6 16H18C19.1046 16 20 15.1046 20 14V12"
+                            stroke="#000000"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                          <path
+                            d="M15 4L13 6L15 8"
+                            stroke="#000000"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                          <path
+                            d="M19 4L21 6L19 8"
+                            stroke="#000000"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                          <path
+                            d="M12 16V20"
+                            stroke="#000000"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                          <path
+                            d="M8 20H16"
+                            stroke="#000000"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </g>
+                      </svg>
+                      <div className="font-bold text-slate-900 text-base">
+                        Development
+                      </div>
+                    </div>
+                    <ul className="space-y-4 text-sm text-slate-600 font-normal">
+                      <li>
+                        <Link
+                          href="/services/web-development"
+                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className=" group-hover/item:text-primary w-5 h-5"
+                          />
+                          Web & App Development
+                        </Link>
+                      </li>
                       <li>
                         <Link
                           href="/services/mobile-app-development"
@@ -461,19 +527,19 @@ export default function Header() {
 
               <Link
                 href="/careers"
-                className="hover:text-sky-700 transition-colors"
+                className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px]"
               >
                 CAREERS
               </Link>
               <Link
                 href="/blogs"
-                className="hover:text-sky-700 transition-colors"
+                className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px]"
               >
                 BLOG
               </Link>
               <Link
                 href="/contact-us"
-                className="hover:text-sky-700 transition-colors"
+                className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px]"
               >
                 CONTACT
               </Link>
@@ -483,9 +549,9 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/brochure"
-                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
+                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 lg:h-[68px] lg:max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
               >
-                <span className="text-[18px]">BROCHURE</span>
+                <span className="sm:text-[12px] lg:text-[18px]">BROCHURE</span>
                 <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">
                   {" "}
                   <GoArrowUpRight
@@ -498,7 +564,7 @@ export default function Header() {
           </div>
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden text-slate-800"
+            className="md:hidden text-slate-800 pr-5"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -508,7 +574,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown (Absolute Positioning for proper flow) */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto">
+        <div className="md:hidden absolute  top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto">
           <div className="flex flex-col p-4 font-bold text-base text-slate-800">
             <Link
               href="/about-us"
