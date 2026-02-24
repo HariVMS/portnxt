@@ -492,7 +492,7 @@ export default function Header() {
                         </g>
                       </svg>
                       <div className="font-bold text-slate-900 text-base">
-                        Development
+                        Development Solutions
                       </div>
                     </div>
                     <ul className="space-y-4 text-sm text-slate-600 font-normal">
