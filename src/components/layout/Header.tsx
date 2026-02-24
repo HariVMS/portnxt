@@ -95,7 +95,7 @@ export default function Header() {
               <div className="flex items-center space-x-2">
                 {/* Social Icons - White circle bg in reference? Simplified here */}
                 <a
-                  href="https://www.linkedin.com/company/port-nxt-digital-solutions/"
+                  href="https://linkedin.com/company/port-nxt-digital-solutions"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -104,7 +104,7 @@ export default function Header() {
                   </span>
                 </a>
                 <a
-                  href="https://wa.me/919942383516"
+                  href="https://api.whatsapp.com/send?phone=919942383516"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
