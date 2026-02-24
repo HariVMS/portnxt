@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Transforming Digital Ambitions into Scalable Technology Solutions",
     images: [
       {
-        url: "/img/hero-image.png",
+        url: "/portnxt/Name_Logo.png",
         width: 1200,
         height: 630,
         alt: "Port NxT Digital Solutions Banner",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Port NxT Digital Solutions",
     description:
       "Transforming Digital Ambitions into Scalable Technology Solutions",
-    images: ["/img/hero-image.png"],
+    images: ["/portnxt/Name_Logo.png"],
   },
   icons: {
     icon: "/favicon.ico",

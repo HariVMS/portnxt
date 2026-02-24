@@ -130,7 +130,7 @@ export default function Services() {
                 ) : (
                   <service.icon
                     size={32}
-                    className="text-primary group-hover:text-white transition-colors"
+                    className="text-primary  transition-colors"
                   />
                 )}
               </div>

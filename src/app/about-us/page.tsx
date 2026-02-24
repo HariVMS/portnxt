@@ -29,13 +29,8 @@ export const metadata = {
 export default function AboutUs() {
   return (
     <main>
-      {/* <PageHero
-                title="Software Development & Digital Marketing Company"
-                description="Portnext Innovation empowers enterprises and startups alike to stay ahead in an increasingly digital-driven market."
-                breadcrumb="About Us"
-            /> */}
       <section
-        className="w-full mt-27 "
+        className="w-full mt-22.5 "
         style={{
           backgroundImage: "url('/img/company/about-us-banner.svg')",
           backgroundSize: "contain",
@@ -55,10 +50,10 @@ export default function AboutUs() {
               focused on enterprise data platforms, AI-powered automation, and
               custom application development for global clients.{" "}
             </p>
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center pb-4 gap-4">
               <Link
                 href="/contact-us"
-                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
+                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-2 max-h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
               >
                 <span className="text-[18px]">LET'S TALK</span>
                 <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">

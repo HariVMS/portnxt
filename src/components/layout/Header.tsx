@@ -122,15 +122,15 @@ export default function Header() {
       </header>
       {/* Main Navigation */}
       <div className="container bg-white w-full relative 2xl:max-w-[1536px] 2xl:h-[92px]">
-        <div className="flex justify-between items-center h-full py-4 lg:py-0">
+        <div className="flex justify-between items-center h-full py-4 2xl:pl-10 lg:py-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/img/Home/makelink-innovation-logo.webp"
+              src="/portnxt/Name_Logo.png"
               alt="Port NxT Digital Solutions"
               width={200}
               height={45}
-              className="w-[200px] md:w-[290px] h-auto"
+              className="w-[200px] md:w-[210px] h-auto"
               priority
             />
           </Link>
