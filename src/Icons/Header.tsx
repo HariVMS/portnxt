@@ -70,7 +70,7 @@ export const LinkedinIcon = () => {
     <svg
       width="15px"
       height="15px"
-      viewBox="0 0 20 20"
+      viewBox="0 0 22 22"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"
@@ -95,6 +95,7 @@ export const LinkedinIcon = () => {
           <g
             id="Dribbble-Light-Preview"
             transform="translate(-180.000000, -7479.000000)"
+            className="group-hover:fill-white"
             fill="#007bfd"
           >
             <g id="icons" transform="translate(56.000000, 160.000000)">

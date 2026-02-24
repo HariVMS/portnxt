@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -19,7 +20,8 @@ export default function ContactInfo() {
         </div>
         <div>
           <p className="text-gray-900 text-lg dark:text-slate-800">
-            SCO. 7, IIIrd Floor, Amartex Plaza, near Vardhaman Mall, Sector 19,
+            SF NO : 60, Varathampalayam, Sathyamangalam, Erode (DT), Tamilnadu -
+            638401
           </p>
         </div>
       </div>
@@ -33,7 +35,7 @@ export default function ContactInfo() {
         </div>
         <div>
           <div className="flex flex-col gap-1 text-slate-600 font-light">
-            <span>Mobile: +91 96679 49121 | +91-7827294136</span>
+            <span>Mobile: +91 99423 83516</span>
             <span>Mail: connect@portnxt.in</span>
           </div>
         </div>
@@ -60,7 +62,7 @@ export default function ContactInfo() {
           Social Links
         </h4>
         <div className="flex items-center gap-3">
-          <a
+          {/* <a
             href="#"
             className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
             aria-label="Facebook"
@@ -80,20 +82,31 @@ export default function ContactInfo() {
             aria-label="Instagram"
           >
             <FaInstagram size={16} />
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://www.linkedin.com/company/port-nxt-digital-solutions/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all duration-300"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn size={16} />
           </a>
           <a
+            href="https://wa.me/919942383516"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp size={16} />
+          </a>
+          <a
             href="#"
             className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
             aria-label="YouTube"
           >
-            <FaYoutube size={16} />
+            <Mail size={16} />
           </a>
         </div>
       </div>

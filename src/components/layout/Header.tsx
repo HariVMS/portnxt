@@ -68,14 +68,14 @@ export default function Header() {
         {/* Top Bar */}
         <div className="bg-primary text-white py-2 w-full flex  text-xs md:text-sm">
           <div className="container flex flex-col xs:flex-row 2xl:max-w-[1536px] justify-between items-center gap-2">
-            <div className="flex xs:flex-col xs:gap-1  items-center sm:flex-row sm:gap-4">
+            <div className="flex xs:flex-col gap-2 xs:gap-1  items-center sm:flex-row sm:gap-4">
               <div className="flex items-center gap-3">
                 <a
-                  href="tel:+919667949121"
+                  href="tel:+919942383516"
                   className="flex items-center gap-2 hover:text-white/80 transition-colors"
                 >
                   <span className="font-normal text-[15px] font-brandon">
-                    +91 96679 49121
+                    +91 99423 83516
                   </span>
                 </a>
                 <span className="hidden md:inline text-white text-[18px]">
@@ -83,29 +83,37 @@ export default function Header() {
                 </span>
               </div>
               <a
-                href="mailto:sales@portnext.com"
+                href="mailto:connect@portnxt.in"
                 className="flex items-center gap-2 hover:text-white/80 transition-colors"
               >
                 <span className="font-normal text-[15px]">
-                  sales@portnxt.in
+                  connect@portnxt.in
                 </span>
               </a>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center space-x-2">
                 {/* Social Icons - White circle bg in reference? Simplified here */}
-                <a href="#">
-                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
+                <a
+                  href="https://www.linkedin.com/company/port-nxt-digital-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-8 h-8  rounded-full group flex items-center justify-center bg-white text-primary hover:text-white hover:bg-transparent border border-transparent hover:border-white transition-all">
                     <LinkedinIcon />
                   </span>
                 </a>
-                <a href="#">
-                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
+                <a
+                  href="https://wa.me/919942383516"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary hover:text-white hover:bg-transparent border border-transparent hover:border-white transition-all">
                     <FaWhatsapp size={19} />
                   </span>
                 </a>
-                <a href="#">
-                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary">
+                <a href="mailto:connect@portnxt.in">
+                  <span className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-primary hover:text-white hover:bg-transparent border border-transparent hover:border-white transition-all">
                     <Mail size={19} />
                   </span>
                 </a>
