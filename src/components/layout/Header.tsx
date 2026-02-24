@@ -145,7 +145,7 @@ export default function Header() {
                 </button>
 
                 {/* Mega Menu Dropdown */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[1000px] bg-white shadow-xl border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-3 gap-8 text-left normal-case px-7">
+                <div className="absolute top-full left-1/2 -translate-x-[58%] w-[1300px] bg-white shadow-xl border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-4 gap-8 text-left normal-case px-7">
                   {/* Core Enterprise Solutions */}
                   <div className="space-y-4">
                     <div className="bg-[#FFD1DC] p-3 h-[60px] w-[290px] rounded-lg flex items-center gap-3">
@@ -428,7 +428,7 @@ export default function Header() {
                     </ul>
                   </div>
 
-                  {/* Data & Engineering Services */}
+                  {/*  web Services */}
                   <div className="space-y-4">
                     <div className="bg-[#D1F2EC] p-3 h-[60px] w-[290px]  rounded-lg flex items-center gap-3">
                       <svg
