@@ -12,13 +12,19 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left z-20">
             <h1 className="text-white lg:max-w-[600px] lg:text-4xl font-bold leading-[1.2] text-xl !font-brandon">
               {" "}
-              MakeLink Innovation Transforming Ideas into Reality{" "}
+              Port NxT Digital Solutions
+              <br className="hidden md:block" />
+              <span className="text-2xl mt-2 block font-normal">
+                Transforming Digital Ambitions into Scalable Technology
+                Solutions
+              </span>{" "}
             </h1>
             <p className="text-sm md:text-[15.5px] text-background p-10 pt-9 px-0 font-light ">
-              We empower businesses to seize their present and shape their
-              future through cutting-edge software solutions and AI-driven
-              innovations, enabling them to overcome challenges and achieve
-              sustainable success.{" "}
+              Port NxT Digital Solutions is a full-service IT consulting and
+              technology partner helping businesses accelerate digital
+              transformation through Data Engineering, AI Solutions, Microsoft
+              Fabric, Power Platform, Web & App Development, and Cloud
+              Engineering.{" "}
             </p>
             <div className="mb-10 ">
               <Image

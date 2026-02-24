@@ -3,24 +3,24 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    title: "Transforming a Local Retailer into an E-commerce Leader",
-    category: "E-Commerce",
+    title: "Global Manufacturing Firm",
+    category: "Data Engineering",
     description:
-      "Developed a customized e-commerce platform integrated with inventory management and digital payment solutions. Online sales exceeded expectations within six months.",
+      "Migrated 5TB of legacy on-premise data into Azure Cloud Data Factory, deploying Power BI dashboards that increased supply chain visibility by 40%.",
     image: "/img/company/about-us-banner.svg", // Using provided images as placeholders
   },
   {
-    title: "Scaling a HealthTech Startup with Custom Software",
-    category: "Healthcare",
+    title: "Healthcare Provider",
+    category: "AI Solutions",
     description:
-      "Delivered a secure web and mobile application that included real-time video consultations and electronic health records. Scaled to 10k+ users in a year.",
+      "Built a custom generative AI document processor capable of parsing patient intake forms with 99% accuracy, cutting administrative overhead by 25%.",
     image: "/img/company/about-us-banner.svg", // Using provided images as placeholders
   },
   {
-    title: "Driving 4X Growth through Digital Marketing",
-    category: "Marketing",
+    title: "E-Commerce Retailer",
+    category: "Salesforce CRM",
     description:
-      "Redesigned website and implemented comprehensive SEO and paid ads strategy. Client saw monthly inquiries quadruple within six months.",
+      "Implemented customized Salesforce Service Cloud and integrated it tightly with their Magento storefront, boosting customer retention by 15%.",
     image: "/img/company/about.svg",
   },
 ];

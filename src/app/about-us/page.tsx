@@ -21,21 +21,16 @@ import { IntegrityIcon } from "@/Icons/company";
 import { LuBadgeCheck } from "react-icons/lu";
 
 export const metadata = {
-  title: "About Us | Portnext Innovation",
+  title: "About Us | Port NxT Digital Solutions",
   description:
-    "We’re the right tech-solutions partner for all your digital innovation & transformation needs.",
+    "Port NxT Digital Solutions is a technology-driven consulting firm focused on building scalable, secure, and performance-oriented digital systems.",
 };
 
 export default function AboutUs() {
   return (
     <main>
-      {/* <PageHero
-                title="Software Development & Digital Marketing Company"
-                description="Portnext Innovation empowers enterprises and startups alike to stay ahead in an increasingly digital-driven market."
-                breadcrumb="About Us"
-            /> */}
       <section
-        className="w-full mt-27 "
+        className="w-full mt-22.5 "
         style={{
           backgroundImage: "url('/img/company/about-us-banner.svg')",
           backgroundSize: "contain",
@@ -47,17 +42,18 @@ export default function AboutUs() {
           <div className="flex flex-col justify-center rounded-sm xl:max-w-4xl lg:text-left">
             <h1 className="text-white lg:text-4xl font-medium lg:leading-[1.3] text-xl">
               {" "}
-              We’re the right tech-solutions partner for all your digital
-              innovation &amp; transformation needs.{" "}
+              Building scalable, secure, and performance-oriented digital
+              systems.{" "}
             </h1>
             <p className="text-white my-3 lg:my-4 text-base font-normal leading-[1.4] lg:text-lg">
-              Makelink Innovation empowers enterprises and startups alike to
-              stay ahead in an increasingly digital-driven market.{" "}
+              Port NxT Digital Solutions is a technology-driven consulting firm
+              focused on enterprise data platforms, AI-powered automation, and
+              custom application development for global clients.{" "}
             </p>
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center pb-4 gap-4">
               <Link
                 href="/contact-us"
-                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
+                className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-2 max-h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
               >
                 <span className="text-[18px]">LET'S TALK</span>
                 <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">
@@ -89,14 +85,14 @@ export default function AboutUs() {
           title="We are a pleasant team of specialists who love helping businesses develop."
           description=""
           imageSrc="/img/company/about.svg" // Need to verify if this exists, else use hero_robot
-          imageAlt="About Portnext Team"
+          imageAlt="About Port NxT Team"
           listItems={[
-            "Software Development & Digital Marketing Specialists",
-            "Creating top-notch software answers just for you",
-            "Smart marketing strategies that bring you more customers",
+            "Enterprise Data Platforms & Architecture",
+            "AI-powered Automation & Custom Applications",
+            "Cloud Engineering & Infrastructure Modernization",
           ]}
           ctaText="Discover More"
-          ctaLink="/services/web-development"
+          ctaLink="/services/salesforce-consulting"
         />
       </section>
 
@@ -104,28 +100,24 @@ export default function AboutUs() {
       <section className="py-10 bg-white w-full -mt-10">
         <div className="container max-w-7xl text-slate-600 text-lg leading-relaxed space-y-6">
           <p>
-            Welcome to Portnext Innovation Pvt. Ltd. We're a pleasant team of
-            specialists who love helping businesses develop. Our enterprise
-            focuses on the most important areas: Software Development and
-            Digital Marketing. We accept it as true in creating an international
-            effect, and our intention is to help our customers shine inside the
-            Digital world.
+            Welcome to Port NxT Digital Solutions. We are a technology-driven
+            consulting firm focused on building scalable, secure, and
+            performance-oriented digital systems. We specialize in enterprise
+            data platforms, AI-powered automation, and custom application
+            development for global clients.
           </p>
           <p>
-            At Portnext, we create top-notch software answers just for you.
-            Whether or not you need web development, a mobile app, or even
-            special solutions like blockchain and IoT, we’ve given you covered.
+            Our Core Expertise includes Microsoft Fabric & Power BI Solutions,
+            Azure Data Engineering & Databricks, Power Platform, Custom Web &
+            Mobile Application Development, AI Agents & Generative AI Solutions,
+            and Cloud Infrastructure & DevOps.
+          </p>
+          <p>
             Our talented team works carefully with you to understand your
-            desires and innovate your ideas into truth. We use the latest
-            technology to ensure your software program is not just good, but the
-            best.
-          </p>
-          <p>
-            But that's not all! We also provide top-notch digital marketing
-            services. In today’s busy world, it’s important to stand out. Our
-            team knows just how to help your business get noticed. We create
-            smart marketing strategies that bring you more customers and help
-            your business grow.
+            desires and innovate your ideas into reality. We use the latest
+            technology to ensure your projects are delivered with the highest
+            quality, creating an impact that stands out in today's digital
+            landscape.
           </p>
         </div>
       </section>
@@ -135,7 +127,7 @@ export default function AboutUs() {
         <div className="mb-5">
           <div className="mx-auto flex font-brandon max-w-[60rem] flex-col items-center text-center">
             <h3 className="font-bold text-xl sm:text-3xl md:text-3xl mb-2 lg:mb-4">
-              What sets Makelink Innovation apart from others{" "}
+              What sets Port NxT Digital Solutions apart from others{" "}
             </h3>
             <p className="text-[14px] font-brandon! lg:text-[18px] leading-[1.4]">
               {" "}
@@ -151,7 +143,7 @@ export default function AboutUs() {
               width={50}
               height={50}
               src="/img/company/vision.svg"
-              alt="Makelink Innovation Mission"
+              alt="Port NxT Mission"
               title="Our Vision"
             ></Image>
             <div>
@@ -175,7 +167,7 @@ export default function AboutUs() {
               height={50}
               className=""
               src="/img/company/mission.svg"
-              alt="Makelink Innovation Mission"
+              alt="Port NxT Mission"
               title="Our Mission"
             ></Image>
             <div>
@@ -201,7 +193,7 @@ export default function AboutUs() {
               width={50}
               height={50}
               src="/img/company/value.svg"
-              alt="Makelink Innovation Values"
+              alt="Port NxT Values"
               title="Our Values"
             />
             <div>
@@ -209,7 +201,7 @@ export default function AboutUs() {
                 Our Values
               </h3>
               <p className="mt-1">
-                At Makelink Innovation, our values are the foundation of
+                At Port NxT Digital Solutions, our values are the foundation of
                 everything we do. They guide our mission to provide innovative
                 digital solutions while fostering trust, promoting innovation,
                 and surpassing client expectations. Our core values include:
@@ -266,7 +258,7 @@ export default function AboutUs() {
               WHY CHOOSE US
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-              What sets Portnext Innovation apart
+              What sets Port NxT Digital Solutions apart
             </h2>
           </div>
 
@@ -329,9 +321,9 @@ export default function AboutUs() {
               Core Value
             </h3>
             <p>
-              At Makelink Innovation, our decisions and processes are guided by
-              an articulated set of values that influence everything from hiring
-              to designing and developing solutions.{" "}
+              At Port NxT Digital Solutions, our decisions and processes are
+              guided by an articulated set of values that influence everything
+              from hiring to designing and developing solutions.{" "}
             </p>
             <p className="text-[#FFD8C0]">
               Our values encompass all the essential elements of innovation and

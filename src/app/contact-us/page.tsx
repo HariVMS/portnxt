@@ -3,8 +3,9 @@ import ContactInfo from "@/components/sections/contact/ContactInfo";
 import ContactMap from "@/components/sections/contact/ContactMap";
 
 export const metadata = {
-  title: "Contact Us | Makelink Innovation",
-  description: "Get in touch with Makelink Innovation for your software development and digital marketing needs.",
+  title: "Contact Us | Port NxT Digital Solutions",
+  description:
+    "Get in touch with Port NxT Digital Solutions for your software development and digital marketing needs.",
 };
 
 export default function ContactUs() {

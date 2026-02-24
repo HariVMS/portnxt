@@ -14,94 +14,85 @@ import {
   Shield,
   Globe,
   Plus,
+  Handshake,
+  Megaphone,
+  Settings,
 } from "lucide-react";
 import Image from "next/image";
 
 // Map titles to likely filenames based on extraction logic
 const services = [
   {
-    icon: Code,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
-    title: "Web Development",
-    filename: "web-development-services-icon.webp",
-    desc: "Robust and scalable websites tailored to your business needs.",
+    id: "salesforce-consulting",
+    icon: Handshake,
+    title: "Salesforce Consulting",
+    desc: "Scalable CRM ecosystems that improve sales performance.",
   },
   {
-    icon: Smartphone,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
-    title: "App Development",
-    filename: "mobile-app-development-services-icon.webp",
-    desc: "Native and cross-platform mobile apps for iOS and Android.",
-  },
-  {
-    icon: Cloud,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
-    title: "Cloud Solutions",
-    filename: "cloud-solutions-services-icon.webp",
-    desc: "Secure and efficient cloud infrastructure and migration services.",
-  },
-  {
-    icon: BarChart,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
+    id: "digital-marketing",
+    icon: Megaphone,
     title: "Digital Marketing",
-    filename: "digital-marketing-services-icon.webp",
-    desc: "Data-driven strategies to boost your online presence and ROI.",
+    desc: "Data-driven strategies that generate measurable business growth.",
   },
   {
-    icon: Monitor,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
-    title: "UI/UX Design",
-    filename: "ui-ux-design-services-icon.webp",
-    desc: "Intuitive and engaging user interfaces for better experience.",
+    id: "microsoft-dynamics-365",
+    icon: Settings,
+    title: "Microsoft Dynamics 365",
+    desc: "Complete implementation services across CRM and ERP.",
   },
   {
-    icon: ShoppingCart,
-    type: "img",
-    path: "/img/services/web-development-services-icon.webp",
-    title: "E-commerce",
-    filename: "ecommerce-services-icon.webp",
-    desc: "Comprehensive online store solutions to grow your sales.",
-  },
-  {
-    icon: Cpu,
-    title: "Artificial Intelligence",
-    filename: "ai-development-services-icon.webp",
-    desc: "Smart AI & ML solutions to automate and innovate.",
-  },
-  {
-    icon: Network,
-    title: "IoT Solutions",
-    filename: "iot-solutions-services-icon.webp",
-    desc: "Connecting devices for smarter operations and data insights.",
-  },
-  {
+    id: "oracle-erp-cloud",
     icon: Database,
-    title: "Data Analytics",
-    filename: "data-analytics-services-icon.webp",
-    desc: "Turn raw data into actionable insights for decision making.",
+    title: "Oracle ERP & Cloud",
+    desc: "Streamline finance, operations, procurement, and supply chain management.",
   },
   {
-    icon: Shield,
-    title: "Cyber Security",
-    filename: "cyber-security-services-icon.webp",
-    desc: "Protecting your digital assets with advanced security measures.",
+    id: "web-ecommerce-application",
+    icon: Code,
+    title: "Web & E-Commerce",
+    desc: "Scalable, secure, and high-performance web and e-commerce applications.",
   },
   {
-    icon: Layers,
-    title: "DevOps Services",
-    filename: "devops-services-icon.webp",
-    desc: "Streamlining development and operations for faster delivery.",
+    id: "data-visualization-fabric",
+    icon: BarChart,
+    title: "Microsoft Fabric",
+    desc: "Data visualization platforms converting raw data into actionable intelligence.",
   },
   {
+    id: "data-engineering-azure-informatica",
+    icon: Cloud,
+    title: "Data Engineering",
+    desc: "Scalable, secure, and high-performance data ecosystems.",
+  },
+  {
+    id: "mobile-app-development",
+    icon: Smartphone,
+    title: "Mobile App Development",
+    desc: "High-performance, secure mobile applications for iOS and Android.",
+  },
+  {
+    id: "custom-ai-solutions",
+    icon: Cpu,
+    title: "Custom AI Solutions",
+    desc: "Intelligent systems that automate decision-making and operational efficiency.",
+  },
+  {
+    id: "servicenow-implementation",
     icon: Globe,
-    title: "SEO Optimization",
-    filename: "seo-optimization-services-icon.webp",
-    desc: "Ranking your website higher to drive organic traffic.",
+    title: "ServiceNow Implementation",
+    desc: "Streamline IT operations, automate workflows, and enhance service delivery.",
+  },
+  {
+    id: "jira-implementation",
+    icon: Network,
+    title: "Jira Implementation",
+    desc: "Agile delivery, project visibility, and CI/CD collaboration natively.",
+  },
+  {
+    id: "sap-implementation",
+    icon: Layers,
+    title: "SAP Implementation",
+    desc: "Modernize business processes mapping against global architecture standards.",
   },
 ];
 
@@ -126,18 +117,20 @@ export default function Services() {
             >
               <div className="max-w-16 max-h-16 bg-transparent rounded-2xl flex items-center justify-center  transition-colors relative z-10 shrink-0">
                 {/* Try to load real image, fallback to icon. For now using Icon as placeholder until we download all 12 icons */}
-                {service.type === "img" ? (
+                {"type" in service &&
+                service.type === "img" &&
+                "path" in service ? (
                   <Image
-                    src={service.path ?? ""}
+                    src={service.path as string}
                     alt={service.title}
                     width={64}
                     height={64}
-                    className="object-cover w-full w-full"
+                    className="object-cover w-full h-full"
                   />
                 ) : (
                   <service.icon
                     size={32}
-                    className="text-primary group-hover:text-white transition-colors"
+                    className="text-primary  transition-colors"
                   />
                 )}
               </div>
@@ -150,9 +143,7 @@ export default function Services() {
                 </p>
 
                 <Link
-                  href={`/services/${service.title
-                    .toLowerCase()
-                    .replace(/ /g, "-")}`}
+                  href={`/services/${service.id}`}
                   className="inline-flex gap-[1px] items-center text-accent font-bold text-xs tracking-wider  transition-all relative z-10 mt-auto"
                 >
                   Read More

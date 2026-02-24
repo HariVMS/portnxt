@@ -19,44 +19,50 @@ const brandon = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portnext.com"), // Using placeholder domain, update later if known
+  metadataBase: new URL("https://portnxt.in"),
   title: {
-    default: "Portnext Innovation | Software Development & Digital Marketing",
-    template: "%s | Portnext Innovation",
+    default: "Port NxT Digital Solutions | Technology & Consulting Partner",
+    template: "%s | Port NxT Digital Solutions",
   },
   description:
-    "We’re the right tech-solutions partner for all your digital innovation & transformation needs. Empowering enterprises and startups alike to stay ahead in an increasingly digital-driven market.",
+    "Port NxT Digital Solutions is a full-service IT consulting and technology partner helping businesses accelerate digital transformation through Data Engineering, AI Solutions, Microsoft Fabric, Power Platform, Web & App Development, and Cloud Engineering.",
   keywords: [
-    "Software Development",
-    "Digital Marketing",
+    "Data Engineering",
+    "AI Solutions",
+    "Microsoft Fabric",
+    "Cloud Engineering",
+    "Power Platform",
     "Web Development",
     "Mobile Apps",
-    "Portnext Innovation",
-    "Tech Solutions",
+    "Port NxT Digital Solutions",
     "Digital Transformation",
+    "Salesforce Consulting",
+    "Dynamics 365",
+    "Oracle ERP",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Portnext Innovation",
-    title: "Portnext Innovation | Software Development & Digital Marketing",
+    siteName: "Port NxT Digital Solutions",
+    title: "Port NxT Digital Solutions | Technology & Consulting Partner",
     description:
-      "Transforming Ideas into Reality with cutting-edge software solutions.",
+      "Transforming Digital Ambitions into Scalable Technology Solutions",
     images: [
       {
-        url: "/img/hero-image.png", // Using an existing banner image
+        url: "/portnxt/Name_Logo.png",
         width: 1200,
         height: 630,
-        alt: "Portnext Innovation Banner",
+        alt: "Port NxT Digital Solutions Banner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portnext Innovation",
-    description: "Software Development & Digital Marketing Specialists",
-    images: ["/img/hero-image.png"],
+    title: "Port NxT Digital Solutions",
+    description:
+      "Transforming Digital Ambitions into Scalable Technology Solutions",
+    images: ["/portnxt/Name_Logo.png"],
   },
   icons: {
     icon: "/favicon.ico",
