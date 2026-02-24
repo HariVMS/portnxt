@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[url('/hero-banner.svg')] pt-32 pb-10 md:pt-48 md:pb-22  2xl:max-h-[717px]  overflow-hidden font-sans">
+    <section className="relative bg-[url('/hero-banner.svg')] pt-48 pb-22  2xl:max-h-[717px]  overflow-hidden font-sans">
       <div className="container 2xl:max-w-[1536px] relative z-10">
         <div className="grid md:grid-cols-[1fr_340px] lg:grid-cols-[1fr_440px] xl:grid-cols-[1fr_640px] md:flex-row items-center gap-8 md:gap-16  ">
           {/* Left Content */}

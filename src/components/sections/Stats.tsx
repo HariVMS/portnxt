@@ -27,14 +27,14 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-20 pb-23 bg-white flex  flex-col gap-4 pb-0">
+    <section className="py-20 pb-23   bg-white flex  flex-col gap-4">
       <div className="container 2xl:max-w-[1536px] w-full">
         <div className="text-center  flex mb-12">
-          <h3 className="font-bold  relative  text-xl sm:text-xl lg:text-2xl mb-4 px-6 max-w-[78%]  mx-auto w-full text-justify lg:text-center">
+          <h3 className="font-bold  relative pl-8 pr-0  text-xl sm:text-xl lg:text-2xl mb-4 sm:pl-10 sm:pr-6 xl:px-6 xl:max-w-[78%]  mx-auto w-full text-justify lg:text-center">
             Partner with Portnext Innovation to unlock tailored, scalable
             solutions that drive innovation and efficiency for your
             enterprise—trust our expertise to elevate your business.
-            <span className="text-[30px] absolute left-2 top-0 md:text-[40px] leading-tight">
+            <span className="text-[30px] absolute left-0 sm:left-2 xl:left-[3%] 2xl:left-[5%]  top-0 md:text-[40px] leading-tight">
               <svg
                 fill="#000000"
                 width="30px"
@@ -75,7 +75,7 @@ export default function Stats() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-30  md:grid-cols-2 lg:grid-cols-4 md:gap-x-8 md:gap-y-30">
           {stats.map((stat) => (
             <div
               key={stat.id}
@@ -93,7 +93,7 @@ export default function Stats() {
           ))}
         </div>
       </div>
-      <div className="bg-[#F2F6FB] lg:h-32 h-16"></div>
+      <div className="bg-[#F2F6FB] h-32 md:h-40 "></div>
     </section>
   );
 }

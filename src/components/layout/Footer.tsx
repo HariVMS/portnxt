@@ -9,6 +9,7 @@ import {
   Linkedin,
   Youtube,
   ChevronUp,
+  Mail,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa"; // You might need to install react-icons if not available, or use a customized SVG/Lucide icon if preferred. Assuming lucide for now if fa not avail or just svg.
 // Actually, let's stick to Lucide or standard SVGs to avoid dependency issues if react-icons isn't there, but user likely has it. Checked package.json? No, but common.
@@ -307,46 +308,27 @@ export default function Footer() {
             <div className="space-y-6">
               <div className="flex gap-3 flex-col">
                 <div className="text-white mb-1">
-                  Phone Number : +91 96679 49121
+                  Phone Number : +91 99423 83516
                 </div>
                 <div className="text-white">
-                  Email Address- sales@portnext.com
+                  Email Address- connect@portnxt.in
                 </div>
               </div>
 
               {/* Social Icons */}
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://wa.me/919942383516"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
                 >
-                  <Facebook
-                    size={16}
-                    fill="currentColor"
-                    className="stroke-0"
-                  />
+                  <FaWhatsapp size={19} />
                 </a>
                 <a
-                  href="#"
-                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
-                >
-                  {/* X Logo simulation since it's not always in lucide default old versions, or use Twitter but style as X if preferred, or generic. Using simple SVG for X if needed or just Text. Let's use a simple shape or the Lucide Twitter for now but the user asked for "Same Design". The image has an X logo. */}
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                  >
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
-                >
-                  <Instagram size={16} />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/company/port-nxt-digital-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
                 >
                   <Linkedin
@@ -356,10 +338,10 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:connect@portnxt.in"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
                 >
-                  <Youtube size={16} fill="currentColor" className="stroke-0" />
+                  <Mail size={16} />
                 </a>
               </div>
 
@@ -410,7 +392,7 @@ export default function Footer() {
         <div className="w-9 h-9 rounded-full bottom-[70px] right-[10px] absolute bg-[#25D366] z-10 animate-ping"></div>
 
         <a
-          href="https://wa.me/919667949121"
+          href="https://wa.me/919942383516"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-[#25D366] relative z-50  rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"

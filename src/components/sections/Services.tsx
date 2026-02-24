@@ -86,7 +86,7 @@ const services = [
     id: "jira-implementation",
     icon: Network,
     title: "Jira Implementation",
-    desc: "Agile delivery, project visibility, and CI/CD collaboration natively.",
+    desc: "Agile delivery, project visibility, and CI/CDF collaboration natively.",
   },
   {
     id: "sap-implementation",
@@ -94,6 +94,7 @@ const services = [
     title: "SAP Implementation",
     desc: "Modernize business processes mapping against global architecture standards.",
   },
+  
 ];
 
 export default function Services() {

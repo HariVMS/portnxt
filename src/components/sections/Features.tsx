@@ -22,7 +22,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative py-20 lg:py-14 overflow-hidden font-sans bg-[#0c1015]">
+    <section className="relative py-20 px-5 sm:px-4 lg:py-14 overflow-hidden font-sans bg-[#0c1015]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function About() {
   return (
-    <section className="py-12 bg-[#192020] text-white overflow-hidden relative font-sans">
+    <section className="py-12 px-5 sm:px-4 bg-[#192020] text-white overflow-hidden relative font-sans">
       <div className="container relative z-10 2xl:max-w-[1536px] px-0 ">
         <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16 2xl:grid 2xl:grid-cols-[600px_1fr] ">
           {/* Left Content - Visual */}
