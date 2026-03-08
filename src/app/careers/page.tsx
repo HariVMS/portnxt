@@ -20,7 +20,7 @@ export default function Careers() {
         subtitle="GROW WITH US"
         title="Join the #1 Software Development and Digital Marketing Agency"
         description="Discover a career in Software Development and Digital Marketing Services. Software development demands expertise in coding languages like Java, Python, or C++, in addition to problem-solving skills and critical thinking."
-        imageSrc="/img/Home/about_us_robot.webp" // Reusing robot for now
+        imageSrc="/service-hero/carrer.jpeg" // Reusing robot for now
         imageAlt="Careers at Port NxT"
         listItems={[
           "Software Development experts in coding languages",
