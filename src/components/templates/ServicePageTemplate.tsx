@@ -18,271 +18,233 @@ export default function ServicePageTemplate({
   data,
 }: ServicePageTemplateProps) {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-        {/* Background Image / Overlay */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0B0121]">
+        {/* Abstract futuristic background grid/glow */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src={data.heroImage || "/img/Home/about_us_robot.webp"}
-            alt={data.title}
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-slate-900/80 to-slate-900"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B0121] to-[#0B0121]"></div>
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
 
         <div className="container relative z-10 2xl:max-w-[1536px]">
-          <div className="max-w-4xl">
-            <span className="text-accent font-bold tracking-widest text-sm uppercase mb-4 block">
-              Services
-            </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              {data.title}
-            </h1>
-            <p className="text-slate-300 text-xl md:text-2xl leading-relaxed mb-10 max-w-2xl">
-              {data.description}
-            </p>
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#007bfd] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest hover:bg-transparent hover:text-[#007bfd] hover:border-[#007bfd] border-2 border-transparent transition-all duration-300 shadow-xl"
-            >
-              Start Your Project
-              <ArrowRight size={18} />
-            </Link>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="w-full lg:w-1/2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                {data.title}
+              </h1>
+              <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+                {data.description}
+              </p>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-2 bg-[#0A7AFF] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest hover:bg-blue-600 transition-all duration-300 shadow-[0_0_20px_rgba(10,122,255,0.4)]"
+              >
+                Start Your Project
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-[600px] aspect-[4/3]">
+                    <Image
+                        src={data.heroImage || "/img/Home/about_us_robot.webp"}
+                        alt={data.title}
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Services / Features Grid */}
-      <section className="py-20 lg:py-28 bg-white">
+      {/* 2. Overview Section (New from Figma) */}
+      {data.overview && (
+        <section className="py-20 lg:py-28 bg-white border-b border-gray-100">
+            <div className="container 2xl:max-w-[1536px]">
+                <div className="flex flex-col lg:flex-row items-center gap-16">
+                    <div className="w-full lg:w-1/2 flex justify-center">
+                        <div className="relative w-full max-w-[500px] aspect-square">
+                            <Image
+                                src={data.overview.image || "/img/Home/about_us_robot.webp"}
+                                alt={data.overview.title}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full lg:w-1/2">
+                        <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                            {data.overview.title}
+                        </h2>
+                        <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                            {data.overview.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      )}
+
+      {/* 3. Sub-Services / Features Grid */}
+      <section className="py-20 lg:py-28 bg-[#f8fafc]">
         <div className="container 2xl:max-w-[1536px]">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-black font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
               Empowering Your Business with{" "}
-              <span className="text-[#007bfd]">{data.title}</span>
+              <br className="hidden md:block" />
+              <span className="text-[#0A7AFF]">{data.title}</span>
             </h2>
-            <p className="text-slate-500 text-lg">
-              Comprehensive solutions designed to scale, innovate, and drive
-              growth for your enterprise.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.subServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-[30px] border bg-white p-2 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.12)] transition-all duration-300"
+                className="bg-white rounded-[24px] border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 relative group"
               >
-                <div className="flex flex-col rounded-xl p-6">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 text-[#007bfd]">
-                    {service.icon ? (
-                      <service.icon size={32} />
-                    ) : (
-                      <CheckCircle2 size={32} />
-                    )}
-                  </div>
-                  <h3 className="text-[18px] font-bold text-slate-900 mb-3 group-hover:text-[#007bfd] transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-base text-slate-500 leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-                  <span className="font-semibold text-[#ED184F] group-hover:underline inline-flex items-center gap-1">
-                    Read More <ArrowRight size={16} />
-                  </span>
+                <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 font-medium text-sm mb-6 group-hover:bg-[#0A7AFF] group-hover:text-white group-hover:border-[#0A7AFF] transition-colors">
+                  {index + 1}
                 </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-base text-slate-500 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Major Operations Section */}
-      {data.majorOperations && data.majorOperations.length > 0 && (
-        <section className="py-20 lg:py-28 bg-slate-50">
-          <div className="container 2xl:max-w-[1536px]">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
-              <span className="text-[#007bfd] font-bold tracking-widest text-sm uppercase mb-3 block">
-                Technical Capabilities
-              </span>
-              <h2 className="text-black font-bold text-3xl md:text-5xl mb-6">
-                Major Operations
-              </h2>
-              <p className="text-slate-500 text-lg">
-                Deep technical expertise enabling robust implementation of{" "}
-                {data.title}.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {data.majorOperations.map((op, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl p-8 border border-slate-100 hover:border-[#007bfd]/50 hover:shadow-xl transition-all shadow-sm group"
-                >
-                  <div className="w-14 h-14 bg-[#007bfd]/10 rounded-xl flex items-center justify-center text-[#007bfd] mb-6 group-hover:bg-[#007bfd] group-hover:text-white transition-colors">
-                    {op.icon ? (
-                      <op.icon size={28} />
-                    ) : (
-                      <CheckCircle2 size={28} />
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    {op.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">
-                    {op.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Summary Works Section */}
-      {data.summaryWorks && data.summaryWorks.length > 0 && (
-        <section className="py-20 lg:py-28 bg-slate-900 text-white">
-          <div className="container 2xl:max-w-[1536px]">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-              <div className="max-w-2xl">
-                <span className="text-[#ED184F] font-bold tracking-widest text-sm uppercase mb-3 block">
-                  Proven Results
-                </span>
-                <h2 className="font-bold text-3xl md:text-5xl mb-6">
-                  Summary Works & Case Studies
-                </h2>
-                <p className="text-slate-400 text-lg">
-                  Real-world scenarios where our {data.title} expertise drove
-                  transformation.
-                </p>
-              </div>
-              <Link
-                href="/about-us"
-                className="inline-flex flex-shrink-0 items-center gap-2 text-white border border-slate-700 hover:bg-white hover:text-black px-6 py-3 rounded-full font-bold transition-all"
-              >
-                View Case Studies <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {data.summaryWorks.map((work, idx) => (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-3xl bg-slate-800 border border-slate-700 hover:border-[#ED184F] transition-colors"
-                >
-                  <div className="aspect-video w-full relative overflow-hidden bg-slate-950">
-                    <Image
-                      src={work.image || "/img/Home/about_us_robot.webp"}
-                      alt={work.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-80"
-                    />
-                    {work.industry && (
-                      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold tracking-wider text-white">
-                        {work.industry}
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-8 md:p-10 flex flex-col h-full">
-                    <h3 className="text-2xl font-bold mb-4">{work.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                      {work.description}
-                    </p>
-                    <span className="font-bold text-[#ED184F] group-hover:text-white transition-colors mt-auto inline-flex items-center gap-2">
-                      Read Report <ArrowRight size={16} />
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* 3. Process Section - Matches Reference: Numbered White Cards in Grid */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container 2xl:max-w-[1536px]">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 font-serif">
+      {/* 4. Process Section (Dark theme with glowing centre) */}
+      <section className="py-24 lg:py-32 bg-[#1A1235] relative overflow-hidden">
+        {/* Glow behind lightbulb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div className="container 2xl:max-w-[1536px] relative z-10">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Our Process
             </h2>
-            <p className="text-slate-600 max-w-4xl text-sm leading-relaxed">
+            <p className="text-slate-300 max-w-4xl text-sm md:text-base leading-relaxed">
               In today's digital world, your website often serves as the first
               impression of your business. It is vital to perform well, look
               appealing, and provide an exceptional user experience tailored to
               your goals. At Port NxT Digital Solutions, our Custom Web
               Development Services create bespoke web solutions that are
               visually appealing, functional, secure, and optimized for success.
-              We craft digital experiences that drive engagement and growth
-              through a comprehensive and collaborative development process.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.process.map((step, idx) => (
-              <div
-                key={idx}
-                className="bg-white border rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden"
-              >
-                <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#007bfd] text-white flex items-center justify-center font-bold text-sm">
-                  {idx + 1}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+            {/* Left Process Cards */}
+            <div className="w-full lg:w-1/3 flex flex-col gap-6">
+                {data.process.slice(0, 2).map((step, idx) => (
+                    <div key={idx} className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors">
+                        <h4 className="text-lg font-bold text-white mb-3">{step.title}</h4>
+                        <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+                    </div>
+                ))}
+            </div>
+
+            {/* Center Lightbulb Illustration */}
+            <div className="w-full lg:w-1/3 flex justify-center py-10 lg:py-0">
+                <div className="relative w-[200px] h-[300px] md:w-[250px] md:h-[350px]">
+                    <Image 
+                        src="/services/alessandro-bianchi-_kdTyfnUFAc-unsplash-removebg-preview 1.png" 
+                        alt="Process Idea" 
+                        fill 
+                        className="object-contain filter drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]" 
+                    />
                 </div>
-                <div className="mt-10">
-                  <h4 className="text-lg font-bold text-slate-900 mb-3">
-                    {step.title}
-                  </h4>
-                  <p className="text-slate-500 text-xs leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+            </div>
+
+            {/* Right Process Cards */}
+            <div className="w-full lg:w-1/3 flex flex-col gap-6">
+                {data.process.slice(2, 4).map((step, idx) => (
+                    <div key={idx} className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors">
+                        <h4 className="text-lg font-bold text-white mb-3">{step.title}</h4>
+                        <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+                    </div>
+                ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Why Choose Us Section - Matches Reference: Circular Cards on Green Wave */}
-      <section className="relative py-28 overflow-hidden">
-        {/* Background Wave - Simulating the green curve from screenshot */}
-        <div className="absolute inset-0 z-0">
-          {/* Top White, Bottom Green split roughly */}
-          <div className="h-1/2 bg-white"></div>
-          <div className="h-1/2 bg-[#8bc540] relative">
-            {/* CSS Curve could go here, for now using solid or gradient to approximate */}
-            <div className="absolute -top-24 left-0 w-full h-48 bg-[#8bc540] rounded-[50%] transform scale-x-150"></div>
-          </div>
-          <div className="absolute inset-0 bg-transparent flex items-center justify-center">
-            <div className="w-[120%] h-[600px] bg-[#a3d95b] rounded-[100%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 -z-10 blur-3xl opacity-50"></div>
-          </div>
-        </div>
+      {/* 5. Major Operations Section */}
+      {data.majorOperations && data.majorOperations.length > 0 && (
+        <section className="py-20 lg:py-28 bg-white">
+          <div className="container 2xl:max-w-[1536px]">
+            <div className="mb-12">
+              <span className="text-[#0A7AFF] font-bold text-sm uppercase tracking-wider mb-2 block">
+                Technical Capabilities
+              </span>
+              <h2 className="text-black font-bold text-3xl md:text-4xl mb-6">
+                Major Operations
+              </h2>
+              <p className="text-slate-600 text-lg max-w-3xl">
+                Deep technical expertise enabling robust implementation of cutting-edge enterprise workflows.
+              </p>
+            </div>
 
-        {/* Visual Fix: Using a clip-path or SVG would be best, but for CSS-only: */}
-        <div className="absolute top-[20%] left-0 w-full h-[500px] bg-[#97d74d] -skew-y-3 origin-bottom-left z-0 transform scale-110"></div>
+            <div className="flex flex-col lg:flex-row gap-12">
+                <div className="w-full lg:w-3/5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {data.majorOperations.map((op, idx) => (
+                            <div
+                                key={idx}
+                                className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all"
+                            >
+                                <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 font-medium text-xs mb-5">
+                                    {idx + 1}
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                                {op.title}
+                                </h3>
+                                <p className="text-slate-500 leading-relaxed text-sm">
+                                {op.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="w-full lg:w-2/5 flex justify-center items-center">
+                    <div className="relative w-full aspect-square max-w-[500px]">
+                        <Image
+                            src="/services/ChatGPT Image Mar 3, 2026, 04_49_39 PM 1.png"
+                            alt="Major Operations"
+                            fill
+                            className="object-contain rounded-2xl"
+                        />
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+      )}
 
-        <div className="container relative z-10 2xl:max-w-[1536px] text-center">
-          <h2 className="text-3xl font-bold text-slate-800 mb-16 relative inline-block">
+      {/* 6. Why Choose Us Section (Lime Green with Circular Cards) */}
+      <section className="py-24 bg-[#8DC63F]">
+        <div className="container 2xl:max-w-[1536px]">
+          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-16">
             Why Choose Us?
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-10">
             {data.whyChooseUs.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-full w-[300px] h-[300px] p-8 flex flex-col items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-300 border-4 border-white/50 text-center relative z-20 group"
+                className="bg-white rounded-full w-[220px] h-[220px] md:w-[260px] md:h-[260px] p-6 flex flex-col items-center justify-center text-center shadow-lg hover:-translate-y-2 transition-transform duration-300"
               >
-                <div className="mb-4 text-[#007bfd] group-hover:scale-110 transition-transform">
-                  {/* Icons would be specific here, using generic for now */}
-                  <div className="p-3 bg-slate-100 rounded-full">
-                    <CheckCircle2 size={32} className="text-[#007bfd]" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-slate-500 text-[11px] leading-relaxed">
+                <p className="text-slate-500 text-xs md:text-sm leading-relaxed px-2">
                   {item.description}
                 </p>
               </div>
@@ -291,124 +253,161 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      {/* 5. Consultation Form Section - Matches Reference: Dark Box with 3D Illustration */}
-      <section className="py-20 bg-[#1a1a2e]">
-        <div className="container 2xl:max-w-[1000px] mx-auto bg-[#161b22] rounded-[40px] p-8 md:p-12 border border-slate-700 relative overflow-hidden shadow-2xl">
-          <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
-            <div className="w-full md:w-3/5">
-              <h2 className="text-2xl font-bold text-white mb-2">
-                Need a Consultation?
+      {/* 7. Summary Works Section (Clean White) */}
+      {data.summaryWorks && data.summaryWorks.length > 0 && (
+        <section className="py-20 lg:py-28 bg-white">
+          <div className="container 2xl:max-w-[1536px]">
+            <div className="mb-12">
+              <span className="text-[#0A7AFF] font-bold tracking-widest text-sm uppercase mb-3 block">
+                Proven Results
+              </span>
+              <h2 className="font-bold text-3xl md:text-4xl text-black">
+                Summary Works & Case Studies
               </h2>
-              <p className="text-slate-400 text-sm mb-8">
-                Let us know your business needs, and our team will reply shortly
+              <p className="text-slate-600 mt-4 max-w-3xl">
+                  Real-world scenarios where our {data.title} expertise drove transformation and superior return on investment.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {data.summaryWorks.map((work, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-3xl bg-white border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all"
+                >
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{work.title}</h3>
+                    <p className="text-slate-500 leading-relaxed mb-8">
+                      {work.description}
+                    </p>
+                    <Link href="/about-us" className="font-bold text-[#0A7AFF] hover:underline inline-flex items-center gap-2">
+                      Read Out Come <ArrowRight size={16} />
+                    </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 8. Consultation Form Section (Dark layout) */}
+      <section className="py-20 bg-[#141A29]">
+        <div className="container max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-3/5">
+              <h2 className="text-3xl font-bold text-white mb-2">
+                Need a consultation?
+              </h2>
+              <p className="text-slate-400 mb-10">
+                Contact our sales team directly, and our team will reply shortly
                 to start the conversation.
               </p>
 
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="bg-[#1f2633] border border-slate-600 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#007bfd]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Enter your mobile number"
-                    className="bg-[#1f2633] border border-slate-600 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#007bfd]"
-                  />
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Your Name</label>
+                      <input
+                        type="text"
+                        placeholder="Enter your name"
+                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                      />
+                  </div>
+                  <div className="space-y-2">
+                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Phone Number</label>
+                      <input
+                        type="text"
+                        placeholder="Enter your mobile number"
+                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                      />
+                  </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="bg-[#1f2633] border border-slate-600 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#007bfd]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Enter your business name"
-                    className="bg-[#1f2633] border border-slate-600 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#007bfd]"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Email Address</label>
+                      <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                      />
+                  </div>
+                  <div className="space-y-2">
+                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Business Name</label>
+                      <input
+                        type="text"
+                        placeholder="Enter your business name"
+                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                      />
+                  </div>
                 </div>
-                <textarea
-                  rows={4}
-                  placeholder="How can we help you"
-                  className="w-full bg-[#1f2633] border border-slate-600 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#007bfd]"
-                ></textarea>
+                <div className="space-y-2 pt-4">
+                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Message</label>
+                    <textarea
+                    rows={1}
+                    placeholder="How can we help you"
+                    className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors resize-none"
+                    ></textarea>
+                </div>
 
-                <div className="pt-4">
+                <div className="pt-8">
                   <button
                     type="submit"
-                    className="bg-[#007bfd] text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30 flex items-center gap-2"
+                    className="bg-[#0A7AFF] text-white px-10 py-3.5 rounded-full font-bold text-sm hover:bg-blue-600 transition-colors shadow-[0_0_15px_rgba(10,122,255,0.3)]"
                   >
-                    Get a Callback <ArrowRight size={16} />
+                    Get a Callback
                   </button>
                 </div>
               </form>
             </div>
 
-            <div className="w-full md:w-2/5 flex justify-center">
-              {/* Illustration Placeholder - Robot/Person */}
-              <div className="relative w-full h-[300px]">
+            <div className="w-full md:w-2/5 flex flex-col justify-center items-center relative">
+               {/* Contact channels floating at top right of form section in figma */}
+              <div className="flex gap-4 text-white text-xs mb-8 md:absolute md:-top-16 md:-right-8">
+                <div className="flex items-center gap-1">
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><Phone size={12} className="text-white" /></span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><MessageSquare size={12} className="text-white" /></span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><Mail size={12} className="text-white" /></span>
+                </div>
+              </div>
+
+              {/* Illustration Placeholder */}
+              <div className="relative w-[300px] h-[350px]">
                 <Image
-                  src="/img/Home/contact-us.webp"
-                  alt="Consultation"
+                  src="/services/sayyam-abbasi-5sefR8pTUG0-unsplash 12.png"
+                  alt="Consultation Illustration"
                   fill
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* Top Right Contact Info */}
-          <div className="absolute top-8 right-8 flex gap-4 text-white text-xs hidden md:flex">
-            <div className="flex items-center gap-1">
-              <Phone size={12} className="text-[#007bfd]" /> Call us
-            </div>
-            <div className="flex items-center gap-1">
-              <Mail size={12} className="text-yellow-400" /> Email us
-            </div>
-            <div className="flex items-center gap-1">
-              <MessageSquare size={12} className="text-green-500" /> WhatsApp
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. FAQ Section */}
-      {data.faq && data.faq.length > 0 && (
-        <section className="py-20 bg-white">
-          <div className="container max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
-              Frequently Asked Questions
-            </h2>
-            <FAQAccordion items={data.faq} />
-          </div>
-        </section>
-      )}
-
-      {/* 5. CTA Section */}
-      <section className="py-24 bg-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('/img/pattern.png')]"></div>
-        <div className="container 2xl:max-w-[1536px] relative z-10 text-center">
+      {/* 9. CTA Section */}
+      <section className="py-20 bg-[#0A7AFF] text-white">
+        <div className="container max-w-4xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Let's discuss how our {data.title} services can help you achieve
-            your goals.
+          <p className="text-lg text-blue-100 mb-10">
+            Let's discuss how our consulting & implementation services can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact-us"
-              className="inline-flex justify-center items-center gap-2 bg-white text-primary px-10 py-4 rounded-full font-bold text-lg tracking-wide hover:bg-slate-100 transition-colors shadow-2xl"
+              className="inline-flex justify-center items-center bg-white text-[#0A7AFF] px-8 py-3.5 rounded-full font-bold shadow-lg hover:bg-slate-50 transition-colors"
             >
-              Book a Call
+              Book a call
             </Link>
             <Link
               href="/"
-              className="inline-flex justify-center items-center gap-2 border-2 border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg tracking-wide hover:bg-white/10 transition-colors"
+              className="inline-flex justify-center items-center bg-[#4B9CFF] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#3B8DFF] transition-colors"
             >
-              View All Services
+              View More Services
             </Link>
           </div>
         </div>

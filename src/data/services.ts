@@ -9,6 +9,11 @@ export interface ServiceData {
     title: string;
     description: string;
     heroImage?: string;
+    overview?: {
+        title: string;
+        description: string;
+        image?: string;
+    };
     subServices: {
         title: string;
         description: string;
@@ -44,13 +49,18 @@ export const servicesData: Record<string, ServiceData> = {
         id: "salesforce-consulting",
         title: "Salesforce Consulting & Implementation Services",
         description: "Unlock the full potential of Salesforce by designing scalable CRM ecosystems that improve sales performance, customer service efficiency, and operational visibility.",
-        heroImage: "/img/company/web-development.webp",
+        heroImage: "/services/ChatGPT Image Mar 2, 2026, 03_31_17 PM 1.png",
+        overview: {
+            title: "Our Salesforce Consulting Services",
+            description: "Are you struggling with an inefficient Salesforce org? Are outdated strategies holding back your business? As your trusted Salesforce Consulting Partner, we understand these challenges and help you overcome them. Our expert team leverages Salesforce best practices to optimize workflows, eliminate redundancies, and enhance your digital capabilities.",
+            image: "/services/sayyam-abbasi-5sefR8pTUG0-unsplash 12.png"
+        },
         subServices: [
-            { title: "Implementation & Customization", description: "Sales & Service Cloud setup, custom workflows.", icon: Handshake },
-            { title: "CRM Optimization", description: "Lead scoring, automation, and performance audit.", icon: Zap },
-            { title: "Integration Services", description: "ERP, Fabric, and REST/SOAP integrations.", icon: Link },
-            { title: "Data & Analytics", description: "Salesforce API ingestion pipelines.", icon: LineChart },
-            { title: "Automation & AI", description: "AI-based lead prioritization.", icon: BrainCircuit },
+            { title: "Implementation and Customization", description: "As a reliable Salesforce partner, we implement and customize Salesforce to match your business requirements, ensuring it aligns directly with your goals.", icon: Handshake },
+            { title: "CRM Optimization", description: "Optimize leads, automate processes with Custom Salesforce Solutions, and analyze performance data to enhance your sales ops.", icon: Zap },
+            { title: "Integration Services", description: "We provide comprehensive Salesforce integrations tailored to your requirements, linking legacy systems, ERP software, and third-party apps for streamlined data flow.", icon: Link },
+            { title: "Data & Analytics", description: "With our specialized sales and marketing analytics services, you can track key metrics, forecast sales trends, and make proactive decisions.", icon: LineChart },
+            { title: "Automation & AI", description: "Leverage the power of AI to automate tedious tasks, score leads, and identify opportunities to drive efficiency and enhance user engagement.", icon: BrainCircuit },
         ],
         majorOperations: [
             { title: "Lightning Migration", description: "Seamless transition from Salesforce Classic to Lightning.", icon: Zap },
