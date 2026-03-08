@@ -23,9 +23,9 @@ export default function Footer() {
     <footer className="bg-[#192020] text-[#b0b0b0] text-[14px] font-sans pt-12 pb-6 relative z-50">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 2xl:max-w-[1536px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-0 lg:ml-10">
           {/* Column 1: Quick Menu */}
-          <div>
+          <div className="">
             <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">
               Quick Menu
             </h4>
@@ -35,47 +35,15 @@ export default function Footer() {
                   href="/about-us"
                   className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
                 >
-                  About Us
+                  About us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/portfolio"
+                  href="/career"
                   className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
                 >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/team"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/online-course"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Online Course
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/partners"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Our Partners
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/clients"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Our Clients
+                  Career
                 </Link>
               </li>
               <li>
@@ -83,15 +51,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
                 >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/helpdesk"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Helpdesk
+                  Contact us
                 </Link>
               </li>
             </ul>
@@ -228,7 +188,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Industries */}
-          <div>
+          {/* <div>
             <h4 className="text-base lg:text-[18px] text-white font-medium mb-3 lg:mb-7">
               Industries
             </h4>
@@ -281,24 +241,9 @@ export default function Footer() {
                   Logistics
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/industries/travel"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Travel
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/industries/manufacturing"
-                  className="text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-colors block"
-                >
-                  Manufacturing
-                </Link>
-              </li>
             </ul>
-          </div>
+          </div> */}
+          <div></div>
 
           {/* Column 5: Contact Info */}
           <div>
@@ -311,25 +256,17 @@ export default function Footer() {
                   Phone Number : +91 99423 83516
                 </div>
                 <div className="text-white">
-                  Email Address- connect@portnxt.in
+                  Email Address: connect@portnxt.in
                 </div>
               </div>
 
               {/* Social Icons */}
               <div className="flex gap-3">
                 <a
-                  href="https://wa.me/919942383516"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
-                >
-                  <FaWhatsapp size={19} />
-                </a>
-                <a
                   href="https://www.linkedin.com/company/port-nxt-digital-solutions/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
+                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-white text-[16px] transition-all"
                 >
                   <Linkedin
                     size={16}
@@ -338,22 +275,19 @@ export default function Footer() {
                   />
                 </a>
                 <a
+                  href="https://wa.me/919942383516"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-white text-[16px] transition-all"
+                >
+                  <FaWhatsapp size={19} />
+                </a>
+                <a
                   href="mailto:connect@portnxt.in"
-                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-[#73b9ef] text-[16px] transition-all"
+                  className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-white text-[16px] transition-all"
                 >
                   <Mail size={16} />
                 </a>
-              </div>
-
-              {/* Certification Logos */}
-              <div className="pt-4">
-                <Image
-                  src="/img/Home/startup-india-ISO-logo.svg"
-                  alt="Certifications"
-                  width={1000}
-                  height={1000}
-                  className=" object-contain" // Adjusted for proper containment
-                />
               </div>
             </div>
           </div>

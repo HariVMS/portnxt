@@ -38,9 +38,9 @@ export default function AboutUs() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="container flex flex-col justify-center p-6  md:py-12 lg:flex-row lg:justify-between">
-          <div className="flex flex-col justify-center rounded-sm xl:max-w-4xl lg:text-left">
-            <h1 className="text-white lg:text-4xl font-medium lg:leading-[1.3] text-xl">
+        <div className="container flex flex-col justify-center p-6  md:py-12  lg:flex-row lg:justify-between">
+          <div className="flex flex-col justify-center  rounded-sm xl:max-w-4xl lg:text-left">
+            <h1 className="text-white lg:text-4xl font-medium lg:leading-[1.3] lg:pt-3 text-xl">
               {" "}
               Building scalable, secure, and performance-oriented digital
               systems.{" "}
@@ -55,7 +55,7 @@ export default function AboutUs() {
                 href="/contact-us"
                 className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-2 max-h-[68px] max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
               >
-                <span className="text-[18px]">LET'S TALK</span>
+                <span className="text-[16px]">LET'S TALK</span>
                 <span className="w-[32px] h-[32px] rounded-full flex items-center justify-center bg-white">
                   {" "}
                   <GoArrowUpRight

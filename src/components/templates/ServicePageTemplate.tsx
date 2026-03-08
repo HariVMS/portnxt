@@ -359,7 +359,7 @@ export default function ServicePageTemplate({
               <form className="space-y-6" action="/contact">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                    <label className="text-xs text-slate-200 uppercase tracking-widest font-semibold">
                       Your Name
                     </label>
                     <input
@@ -369,7 +369,7 @@ export default function ServicePageTemplate({
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                    <label className="text-xs text-slate-200 uppercase tracking-widest font-semibold">
                       Phone Number
                     </label>
                     <input
@@ -381,7 +381,7 @@ export default function ServicePageTemplate({
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                    <label className="text-xs text-slate-200 uppercase tracking-widest font-semibold">
                       Email Address
                     </label>
                     <input
@@ -391,7 +391,7 @@ export default function ServicePageTemplate({
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                    <label className="text-xs text-slate-200 uppercase tracking-widest font-semibold">
                       Business Name
                     </label>
                     <input
@@ -402,7 +402,7 @@ export default function ServicePageTemplate({
                   </div>
                 </div>
                 <div className="space-y-2 pt-4">
-                  <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                  <label className="text-xs text-slate-200 uppercase tracking-widest font-semibold">
                     Message
                   </label>
                   <textarea
@@ -444,12 +444,13 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Illustration Placeholder */}
-              <div className="relative w-[300px] h-[350px]">
+              <div className="relative min-w-[300px] min-h-[400px]">
                 <Image
                   src="/services/sayyam-abbasi-5sefR8pTUG0-unsplash 12.png"
                   alt="Consultation Illustration"
-                  fill
-                  className="object-contain"
+                  width={1000}
+                  height={1000}
+                  className="object-contain rounded-[10px]"
                 />
               </div>
             </div>

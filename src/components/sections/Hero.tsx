@@ -26,7 +26,7 @@ export default function Hero() {
               Fabric, Power Platform, Web & App Development, and Cloud
               Engineering.{" "}
             </p>
-            <div className="mb-10 ">
+            {/* <div className="mb-10 ">
               <Image
                 src="/img/Home/startup-india-ISO-logo.svg"
                 alt="Portnext Innovation Digital Solutions ISO Certificates"
@@ -35,7 +35,7 @@ export default function Hero() {
                 className="max-w-full max-h-full"
                 priority
               />
-            </div>
+            </div> */}
 
             <div className="hidden md:flex items-center gap-4">
               <Link
