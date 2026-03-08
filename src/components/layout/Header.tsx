@@ -155,6 +155,84 @@ export default function Header() {
                 {/* Mega Menu Dropdown */}
                 <div className="absolute top-full left-1/2 -translate-x-[58%] w-[1300px] bg-white shadow-xl border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-4 gap-8 text-left normal-case px-7">
                   {/* Core Enterprise Solutions */}
+                  {/* Specialized Services */}
+                  <div className="space-y-4">
+                    <div className="bg-[#E0D4FC] h-[60px] w-[290px]  p-3 rounded-lg flex items-center gap-3">
+                      <svg
+                        width="40px"
+                        height="40px"
+                        viewBox="-6.72 -6.72 37.44 37.44"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0">
+                          <rect
+                            x="-6.72"
+                            y="-6.72"
+                            width="37.44"
+                            height="37.44"
+                            rx="18.72"
+                            fill="#ffffff"
+                          ></rect>
+                        </g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            stroke="#000000"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M13 15V7m0 8 5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3"
+                          ></path>
+                        </g>
+                      </svg>
+                      <div className="font-bold text-slate-900 text-base">
+                        Specialized Solutions
+                      </div>
+                    </div>
+                    <ul className="space-y-4 text-sm text-slate-600 font-normal">
+                      <li>
+                        <Link
+                          href="/services/servicenow-implementation"
+                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className=" group-hover/item:text-primary w-5 h-5"
+                          />
+                          ServiceNow Implementation
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/jira-implementation"
+                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className=" group-hover/item:text-primary w-5 h-5"
+                          />
+                          Jira Implementation
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/digital-marketing"
+                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className=" group-hover/item:text-primary w-5 h-5"
+                          />
+                          Digital Marketing
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                   <div className="space-y-4">
                     <div className="bg-[#FFD1DC] p-3 h-[60px] w-[290px] rounded-lg flex items-center gap-3">
                       <span>
@@ -352,85 +430,6 @@ export default function Header() {
                             className=" group-hover/item:text-primary w-5 h-5"
                           />
                           Custom AI Solutions
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Specialized Services */}
-                  <div className="space-y-4">
-                    <div className="bg-[#E0D4FC] h-[60px] w-[290px]  p-3 rounded-lg flex items-center gap-3">
-                      <svg
-                        width="40px"
-                        height="40px"
-                        viewBox="-6.72 -6.72 37.44 37.44"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                      >
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0">
-                          <rect
-                            x="-6.72"
-                            y="-6.72"
-                            width="37.44"
-                            height="37.44"
-                            rx="18.72"
-                            fill="#ffffff"
-                          ></rect>
-                        </g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            stroke="#000000"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 15V7m0 8 5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3"
-                          ></path>
-                        </g>
-                      </svg>
-                      <div className="font-bold text-slate-900 text-base">
-                        Specialized Solutions
-                      </div>
-                    </div>
-                    <ul className="space-y-4 text-sm text-slate-600 font-normal">
-                      <li>
-                        <Link
-                          href="/services/servicenow-implementation"
-                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
-                        >
-                          <ChevronRight
-                            size={14}
-                            className=" group-hover/item:text-primary w-5 h-5"
-                          />
-                          ServiceNow Implementation
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/services/jira-implementation"
-                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
-                        >
-                          <ChevronRight
-                            size={14}
-                            className=" group-hover/item:text-primary w-5 h-5"
-                          />
-                          Jira Implementation
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/services/digital-marketing"
-                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
-                        >
-                          <ChevronRight
-                            size={14}
-                            className=" group-hover/item:text-primary w-5 h-5"
-                          />
-                          Digital Marketing
                         </Link>
                       </li>
                     </ul>
