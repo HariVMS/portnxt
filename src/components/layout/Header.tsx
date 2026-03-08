@@ -153,7 +153,7 @@ export default function Header() {
                 </button>
 
                 {/* Mega Menu Dropdown */}
-                <div className="absolute top-full left-1/2 -translate-x-[58%] w-[1300px] bg-white shadow-xl border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-4 gap-8 text-left normal-case px-7">
+                <div className="absolute top-full left-1/2 -translate-x-[80%] w-[1300px] bg-white shadow-xl border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 rounded-b-xl p-8 grid grid-cols-4 gap-8 text-left normal-case px-7">
                   {/* Core Enterprise Solutions */}
                   {/* Specialized Services */}
                   <div className="space-y-4">
@@ -197,6 +197,18 @@ export default function Header() {
                     <ul className="space-y-4 text-sm text-slate-600 font-normal">
                       <li>
                         <Link
+                          href="/services/digital-marketing"
+                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
+                        >
+                          <ChevronRight
+                            size={14}
+                            className=" group-hover/item:text-primary w-5 h-5"
+                          />
+                          Digital Marketing
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
                           href="/services/servicenow-implementation"
                           className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
                         >
@@ -217,18 +229,6 @@ export default function Header() {
                             className=" group-hover/item:text-primary w-5 h-5"
                           />
                           Jira Implementation
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/services/digital-marketing"
-                          className="hover:text-sky-700 transition-all flex items-center gap-2 group/item text-[16px] text-black"
-                        >
-                          <ChevronRight
-                            size={14}
-                            className=" group-hover/item:text-primary w-5 h-5"
-                          />
-                          Digital Marketing
                         </Link>
                       </li>
                     </ul>
@@ -538,12 +538,12 @@ export default function Header() {
               >
                 CAREERS
               </Link>
-              <Link
+              {/* <Link
                 href="/blogs"
                 className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px]"
               >
                 BLOG
-              </Link>
+              </Link> */}
               <Link
                 href="/contact-us"
                 className="hover:text-sky-700 transition-colors sm:text-xs  lg:text-[16px]"
@@ -554,7 +554,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <div className="hidden md:flex items-center gap-4">
-              <Link
+              {/* <Link
                 href="/brochure"
                 className="flex items-center gap-1 bg-primary text-white px-8 pr-7 py-4 lg:h-[68px] lg:max-w-[208px]   rounded-full text-[12px] font-bold tracking-widest btn-hover-effect group border-2 border-white hover:border-primary shadow-lg"
               >
@@ -566,7 +566,7 @@ export default function Header() {
                     className="group-hover:rotate-45  stroke-[0.5] text-primary  transition-transform duration-500"
                   />
                 </span>
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/* Mobile Menu Toggle */}

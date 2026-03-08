@@ -296,7 +296,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 7. Summary Works Section (Clean White) */}
-      {data.summaryWorks && data.summaryWorks.length > 0 && (
+      {/* {data.summaryWorks && data.summaryWorks.length > 0 && (
         <section className="py-20 lg:py-28 bg-white">
           <div className="container 2xl:max-w-[1536px]">
             <div className="mb-12">
@@ -341,7 +341,7 @@ export default function ServicePageTemplate({
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* 8. Consultation Form Section (Dark layout) */}
       <section className="py-20 bg-[#141A29]">
