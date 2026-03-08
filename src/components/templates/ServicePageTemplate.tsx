@@ -20,7 +20,7 @@ export default function ServicePageTemplate({
   return (
     <main className="min-h-screen bg-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0B0121]">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32  overflow-hidden bg-[#0B0121]">
         {/* Abstract futuristic background grid/glow */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B0121] to-[#0B0121]"></div>
@@ -297,31 +297,43 @@ export default function ServicePageTemplate({
       {data.summaryWorks && data.summaryWorks.length > 0 && (
         <section className="py-20 lg:py-28 bg-white">
           <div className="container 2xl:max-w-[1536px]">
-            <div className="mb-12 text-center text-center">
+            <div className="mb-12">
               <span className="text-[#0A7AFF] font-bold tracking-widest text-sm uppercase mb-3 block">
                 Proven Results
               </span>
               <h2 className="font-bold text-3xl md:text-4xl text-black">
                 Summary Works & Case Studies
               </h2>
-              <p className="text-slate-600 mt-4 max-w-3xl mx-auto">
+              <p className="text-slate-600 mt-4 max-w-3xl">
                 Real-world scenarios where our {data.title.replace("\n", " ")}{" "}
                 expertise drove transformation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {data.summaryWorks.map((work, idx) => (
                 <div
                   key={idx}
-                  className="rounded-3xl bg-white border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all h-full"
+                  className="rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all flex flex-col overflow-hidden h-full min-h-[400px]"
                 >
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                    {work.title}
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed mb-4">
-                    {work.description}
-                  </p>
+                  <div className="w-full flex-grow bg-slate-50 relative min-h-[350px]">
+                    {work.image && (
+                      <Image
+                        src={work.image}
+                        alt={work.title}
+                        fill
+                        className="object-cover"
+                      />
+                    )}
+                  </div>
+                  <div className="p-8 md:p-10 bg-white">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                      {work.title}
+                    </h3>
+                    <p className="text-slate-500 leading-relaxed">
+                      {work.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -342,7 +354,7 @@ export default function ServicePageTemplate({
                 to start the conversation.
               </p>
 
-              <form className="space-y-6">
+              <form className="space-y-6" action="/contact">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
@@ -455,13 +467,13 @@ export default function ServicePageTemplate({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact-us"
-              className="inline-flex justify-center items-center bg-white text-[#0A7AFF] px-8 py-3.5 rounded-full font-bold shadow-lg hover:bg-slate-50 transition-colors"
+              href="/contact"
+              className="bg-white text-[#0A7AFF] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
             >
-              Book a call
+              Book a Call
             </Link>
             <Link
-              href="/"
+              href="/services"
               className="inline-flex justify-center items-center bg-[#4B9CFF] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#3B8DFF] transition-colors"
             >
               View More Services
