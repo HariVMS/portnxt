@@ -20,7 +20,7 @@ export default function ServicePageTemplate({
   return (
     <main className="min-h-screen bg-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32  overflow-hidden bg-[#0B0121]">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-10  overflow-hidden bg-[#0B0121]">
         {/* Abstract futuristic background grid/glow */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B0121] to-[#0B0121]"></div>
@@ -46,12 +46,13 @@ export default function ServicePageTemplate({
               </Link>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[600px] aspect-[4/3]">
+              <div className="relative w-full  aspect-[4/3]">
                 <Image
                   src={data.heroImage || "/img/Home/about_us_robot.webp"}
                   alt={data.title}
-                  fill
-                  className="object-contain"
+                  width={1000}
+                  height={1000}
+                  className="object-contain rounded-[10px]!"
                   priority
                 />
               </div>
@@ -92,9 +93,10 @@ export default function ServicePageTemplate({
       <section className="py-20 lg:py-28 bg-[#f8fafc]">
         <div className="container 2xl:max-w-[1536px]">
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-black font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
-              Empowering Your Business with <br className="hidden md:block" />
-              <span className="text-[#0A7AFF] whitespace-pre-line">
+            <h2 className="text-black font-bold flex flex-col gap-5 text-3xl md:text-4xl lg:text-5xl mb-6">
+              <span>Empowering Your Business with</span>{" "}
+              {/* <br className="hidden md:block h-0 " /> */}
+              <span className="text-[#0A7AFF]  whitespace-pre-line">
                 {data.title}
               </span>
             </h2>
@@ -104,7 +106,7 @@ export default function ServicePageTemplate({
             {data.subServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[24px] border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 relative group"
+                className="bg-white rounded-[20px] border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 relative group"
               >
                 <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 font-medium text-sm mb-6 group-hover:bg-[#0A7AFF] group-hover:text-white group-hover:border-[#0A7AFF] transition-colors">
                   {index + 1}
