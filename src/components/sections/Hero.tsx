@@ -59,9 +59,9 @@ export default function Hero() {
             <div className="relative w-full  animate-float">
               {/* 3D Image */}
               <Image
-                src="/img/Home/hero-img.webp"
+                src="/service-hero/Portnxt/Home/home-page.png"
                 alt="Portnext Innovation Digital Solutions"
-                width={700}
+                width={600}
                 height={700}
                 className=" object-contain drop-shadow-2xl"
                 priority
