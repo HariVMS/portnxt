@@ -47,36 +47,37 @@ export interface ServiceData {
 export const servicesData: Record<string, ServiceData> = {
     "salesforce-consulting": {
         id: "salesforce-consulting",
-        title: "Salesforce Consulting & Implementation Services",
+        title: "Salesforce Consulting &\nImplementation Services",
         description: "Unlock the full potential of Salesforce by designing scalable CRM ecosystems that improve sales performance, customer service efficiency, and operational visibility.",
         heroImage: "/services/ChatGPT Image Mar 2, 2026, 03_31_17 PM 1.png",
         overview: {
             title: "Our Salesforce Consulting Services",
-            description: "Are you struggling with an inefficient Salesforce org? Are outdated strategies holding back your business? As your trusted Salesforce Consulting Partner, we understand these challenges and help you overcome them. Our expert team leverages Salesforce best practices to optimize workflows, eliminate redundancies, and enhance your digital capabilities.",
+            description: "We offer comprehensive Salesforce consulting services across various clouds to help businesses of all sizes streamline operations, enhance customer engagement, and drive growth. Our certified experts provide tailored solutions that align with your business goals, ensuring maximum ROI from your Salesforce investment. Explore our specialized services below",
             image: "/services/sayyam-abbasi-5sefR8pTUG0-unsplash 12.png"
         },
         subServices: [
-            { title: "Implementation and Customization", description: "As a reliable Salesforce partner, we implement and customize Salesforce to match your business requirements, ensuring it aligns directly with your goals.", icon: Handshake },
-            { title: "CRM Optimization", description: "Optimize leads, automate processes with Custom Salesforce Solutions, and analyze performance data to enhance your sales ops.", icon: Zap },
-            { title: "Integration Services", description: "We provide comprehensive Salesforce integrations tailored to your requirements, linking legacy systems, ERP software, and third-party apps for streamlined data flow.", icon: Link },
-            { title: "Data & Analytics", description: "With our specialized sales and marketing analytics services, you can track key metrics, forecast sales trends, and make proactive decisions.", icon: LineChart },
-            { title: "Automation & AI", description: "Leverage the power of AI to automate tedious tasks, score leads, and identify opportunities to drive efficiency and enhance user engagement.", icon: BrainCircuit },
+            { title: "Implementation & Customization", description: "End-to-end Salesforce implementation tailored to your business processes. From discovery to deployment, we ensure a seamless Salesforce setup aligned with your goals.", icon: Handshake },
+            { title: "CRM Optimization", description: "Improve system performance and user adoption with in-depth CRM audits, workflow optimization, and automation enhancements that increase productivity and data accuracy.", icon: Zap },
+            { title: "Integration Services", description: "Seamlessly connect Salesforce with ERP systems, marketing platforms, payment gateways, and third-party applications using REST/SOAP APIs and secure middleware solutions.", icon: Link },
+            { title: "Data & Analytics", description: "Unlock actionable insights with advanced dashboards, custom reports, API data pipelines, and predictive analytics to support smarter business decisions.", icon: LineChart },
+            { title: "Automation & AI", description: "Leverage AI-driven workflows, intelligent lead prioritization, chatbots, and automated task management to streamline operations and enhance customer engagement.", icon: BrainCircuit },
         ],
         majorOperations: [
-            { title: "Lightning Migration", description: "Seamless transition from Salesforce Classic to Lightning.", icon: Zap },
-            { title: "AppExchange Development", description: "Building and publishing custom apps on AppExchange.", icon: Code2 },
-            { title: "CPQ Implementation", description: "Configure, Price, Quote solutions for complex sales.", icon: ClipboardList }
+            { title: "Lightning Migration", description: "Seamless transition from Salesforce Classic to Lightning Experience. We ensure data integrity, UI redesign, and user adoption with minimal downtime.", icon: Zap },
+            { title: "AppExchange Development", description: "Custom app development tailored to business needs. From architecture to publishing, we build secure and scalable AppExchange solutions.", icon: Code2 },
+            { title: "CPQ Implementation", description: "End-to-end Configure, Price, Quote setup for complex sales processes. Automated pricing rules, approvals, and proposal generation for faster deal closures.", icon: ClipboardList },
+            { title: "Salesforce Managed Services", description: "Ongoing support, enhancements, and performance monitoring. We provide proactive maintenance, upgrades, and continuous optimization to maximize ROI.", icon: Settings }
         ],
         summaryWorks: [
-            { title: "Global Retailer CRM Overhaul", description: "Unified 5 isolated CRM instances into a single Salesforce Lightning org, boosting sales velocity by 34%.", industry: "Retail", image: "/img/Home/about_us_robot.webp" },
-            { title: "FinServ Client Portal", description: "Developed a secure Experience Cloud portal for a major bank, reducing support tickets by 40%.", industry: "Financial Services", image: "/img/Home/about_us_robot.webp" }
+            { title: "Global Retailer CRM Overhaul", description: "Unified 5 isolated CRM instances into a single Salesforce Lightning org, boosting sales velocity by 34%." },
+            { title: "FinServ Client Portal", description: "Developed a secure Experience Cloud portal for a major bank, reducing support tickets by 40%." }
         ],
         process: [
-            { title: "Assessment", description: "CRM Assessment & Gap Analysis" },
-            { title: "Architecture", description: "Architecture & Data Model Design" },
-            { title: "Customization", description: "Implementation & Customization" },
-            { title: "Integration", description: "Integration & Data Synchronization" },
-            { title: "Optimization", description: "Continuous Optimization" },
+            { title: "Assessment", description: "We analyze your current CRM setup, business workflows, and challenges. A detailed gap analysis identifies improvement opportunities.This forms the foundation for a scalable solution." },
+            { title: "Architecture", description: "We design a secure and scalable Salesforce architecture.Data models, user roles, and automation flows are structured carefully.Built to support growth and long-term flexibility." },
+            { title: "Customization", description: "We configure and customize Salesforce to match your processes. Workflows, validations, and dashboards are tailored precisely. Ensuring seamless user experience and efficiency." },
+            { title: "Integration", description: "We integrate Salesforce with ERP, marketing, and third-party tools. Secure APIs enable real-time data synchronization. Creating a unified and connected ecosystem." },
+            { title: "Optimization", description: "We continuously monitor and refine system performance. Automation improvements and data enhancements are implemented. Maximizing ROI and user adoption over time." },
         ],
         whyChooseUs: [
             { title: "Enterprise Focus", description: "Built for operational visibility." },

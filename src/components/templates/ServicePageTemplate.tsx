@@ -31,7 +31,7 @@ export default function ServicePageTemplate({
         <div className="container relative z-10 2xl:max-w-[1536px]">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight whitespace-pre-line">
                 {data.title}
               </h1>
               <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
@@ -46,15 +46,15 @@ export default function ServicePageTemplate({
               </Link>
             </div>
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[600px] aspect-[4/3]">
-                    <Image
-                        src={data.heroImage || "/img/Home/about_us_robot.webp"}
-                        alt={data.title}
-                        fill
-                        className="object-contain"
-                        priority
-                    />
-                </div>
+              <div className="relative w-full max-w-[600px] aspect-[4/3]">
+                <Image
+                  src={data.heroImage || "/img/Home/about_us_robot.webp"}
+                  alt={data.title}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -63,28 +63,28 @@ export default function ServicePageTemplate({
       {/* 2. Overview Section (New from Figma) */}
       {data.overview && (
         <section className="py-20 lg:py-28 bg-white border-b border-gray-100">
-            <div className="container 2xl:max-w-[1536px]">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    <div className="w-full lg:w-1/2 flex justify-center">
-                        <div className="relative w-full max-w-[500px] aspect-square">
-                            <Image
-                                src={data.overview.image || "/img/Home/about_us_robot.webp"}
-                                alt={data.overview.title}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-                    <div className="w-full lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-                            {data.overview.title}
-                        </h2>
-                        <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                            {data.overview.description}
-                        </p>
-                    </div>
+          <div className="container 2xl:max-w-[1536px]">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="relative w-full max-w-[500px] aspect-square">
+                  <Image
+                    src={data.overview.image || "/img/Home/about_us_robot.webp"}
+                    alt={data.overview.title}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
+              </div>
+              <div className="w-full lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                  {data.overview.title}
+                </h2>
+                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                  {data.overview.description}
+                </p>
+              </div>
             </div>
+          </div>
         </section>
       )}
 
@@ -93,9 +93,10 @@ export default function ServicePageTemplate({
         <div className="container 2xl:max-w-[1536px]">
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-black font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
-              Empowering Your Business with{" "}
-              <br className="hidden md:block" />
-              <span className="text-[#0A7AFF]">{data.title}</span>
+              Empowering Your Business with <br className="hidden md:block" />
+              <span className="text-[#0A7AFF] whitespace-pre-line">
+                {data.title}
+              </span>
             </h2>
           </div>
 
@@ -124,7 +125,7 @@ export default function ServicePageTemplate({
       <section className="py-24 lg:py-32 bg-[#1A1235] relative overflow-hidden">
         {/* Glow behind lightbulb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-        
+
         <div className="container 2xl:max-w-[1536px] relative z-10">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -143,36 +144,74 @@ export default function ServicePageTemplate({
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
             {/* Left Process Cards */}
             <div className="w-full lg:w-1/3 flex flex-col gap-6">
-                {data.process.slice(0, 2).map((step, idx) => (
-                    <div key={idx} className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors">
-                        <h4 className="text-lg font-bold text-white mb-3">{step.title}</h4>
-                        <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+              {[data.process[0], data.process[3]]
+                .filter(Boolean)
+                .map((step, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors relative"
+                  >
+                    <div className="">
+                      <h4 className="text-lg font-bold text-white mb-3">
+                        {step.title}
+                      </h4>
+                      <p className="text-sm text-slate-400 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
+                  </div>
                 ))}
             </div>
 
             {/* Center Lightbulb Illustration */}
-            <div className="w-full lg:w-1/3 flex justify-center py-10 lg:py-0">
-                <div className="relative w-[200px] h-[300px] md:w-[250px] md:h-[350px]">
-                    <Image 
-                        src="/services/alessandro-bianchi-_kdTyfnUFAc-unsplash-removebg-preview 1.png" 
-                        alt="Process Idea" 
-                        fill 
-                        className="object-contain filter drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]" 
-                    />
-                </div>
+            <div className="w-full lg:w-1/3 flex justify-center py-10 lg:py-0 relative">
+              <div className="relative w-[200px] h-[300px] md:w-[250px] md:h-[350px]">
+                <Image
+                  src="/services/alessandro-bianchi-_kdTyfnUFAc-unsplash-removebg-preview 1.png"
+                  alt="Process Idea"
+                  fill
+                  className="object-contain filter drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]"
+                />
+              </div>
             </div>
 
             {/* Right Process Cards */}
             <div className="w-full lg:w-1/3 flex flex-col gap-6">
-                {data.process.slice(2, 4).map((step, idx) => (
-                    <div key={idx} className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors">
-                        <h4 className="text-lg font-bold text-white mb-3">{step.title}</h4>
-                        <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+              {[data.process[1], data.process[2]]
+                .filter(Boolean)
+                .map((step, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors relative"
+                  >
+                    <div className="">
+                      <h4 className="text-lg font-bold text-white mb-3">
+                        {step.title}
+                      </h4>
+                      <p className="text-sm text-slate-400 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
+                  </div>
                 ))}
             </div>
           </div>
+
+          {/* 5th Process Step (if exists) */}
+          {data.process[4] && (
+            <div className="flex justify-center mt-6">
+              <div className="w-full lg:w-1/3 bg-[#241B42]/80 backdrop-blur-sm border border-[#3A2E5D] rounded-2xl p-6 hover:border-[#0A7AFF] transition-colors relative">
+                <div className="">
+                  <h4 className="text-lg font-bold text-white mb-3">
+                    {data.process[4].title}
+                  </h4>
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {data.process[4].description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -188,41 +227,42 @@ export default function ServicePageTemplate({
                 Major Operations
               </h2>
               <p className="text-slate-600 text-lg max-w-3xl">
-                Deep technical expertise enabling robust implementation of cutting-edge enterprise workflows.
+                Deep technical expertise enabling robust implementation of
+                cutting-edge enterprise workflows.
               </p>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-12">
-                <div className="w-full lg:w-3/5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {data.majorOperations.map((op, idx) => (
-                            <div
-                                key={idx}
-                                className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all"
-                            >
-                                <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 font-medium text-xs mb-5">
-                                    {idx + 1}
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                                {op.title}
-                                </h3>
-                                <p className="text-slate-500 leading-relaxed text-sm">
-                                {op.description}
-                                </p>
-                            </div>
-                        ))}
+              <div className="w-full lg:w-3/5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {data.majorOperations.map((op, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all"
+                    >
+                      <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 font-medium text-xs mb-5">
+                        {idx + 1}
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-3">
+                        {op.title}
+                      </h3>
+                      <p className="text-slate-500 leading-relaxed text-sm">
+                        {op.description}
+                      </p>
                     </div>
+                  ))}
                 </div>
-                <div className="w-full lg:w-2/5 flex justify-center items-center">
-                    <div className="relative w-full aspect-square max-w-[500px]">
-                        <Image
-                            src="/services/ChatGPT Image Mar 3, 2026, 04_49_39 PM 1.png"
-                            alt="Major Operations"
-                            fill
-                            className="object-contain rounded-2xl"
-                        />
-                    </div>
+              </div>
+              <div className="w-full lg:w-2/5 flex justify-center items-center">
+                <div className="relative w-full aspect-square max-w-[500px]">
+                  <Image
+                    src="/services/ChatGPT Image Mar 3, 2026, 04_49_39 PM 1.png"
+                    alt="Major Operations"
+                    fill
+                    className="object-contain rounded-2xl"
+                  />
                 </div>
+              </div>
             </div>
           </div>
         </section>
@@ -257,31 +297,31 @@ export default function ServicePageTemplate({
       {data.summaryWorks && data.summaryWorks.length > 0 && (
         <section className="py-20 lg:py-28 bg-white">
           <div className="container 2xl:max-w-[1536px]">
-            <div className="mb-12">
+            <div className="mb-12 text-center text-center">
               <span className="text-[#0A7AFF] font-bold tracking-widest text-sm uppercase mb-3 block">
                 Proven Results
               </span>
               <h2 className="font-bold text-3xl md:text-4xl text-black">
                 Summary Works & Case Studies
               </h2>
-              <p className="text-slate-600 mt-4 max-w-3xl">
-                  Real-world scenarios where our {data.title} expertise drove transformation and superior return on investment.
+              <p className="text-slate-600 mt-4 max-w-3xl mx-auto">
+                Real-world scenarios where our {data.title.replace("\n", " ")}{" "}
+                expertise drove transformation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {data.summaryWorks.map((work, idx) => (
                 <div
                   key={idx}
-                  className="rounded-3xl bg-white border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all"
+                  className="rounded-3xl bg-white border border-gray-200 p-8 md:p-12 shadow-sm hover:shadow-xl transition-all h-full"
                 >
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{work.title}</h3>
-                    <p className="text-slate-500 leading-relaxed mb-8">
-                      {work.description}
-                    </p>
-                    <Link href="/about-us" className="font-bold text-[#0A7AFF] hover:underline inline-flex items-center gap-2">
-                      Read Out Come <ArrowRight size={16} />
-                    </Link>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                    {work.title}
+                  </h3>
+                  <p className="text-slate-500 leading-relaxed mb-4">
+                    {work.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -305,47 +345,57 @@ export default function ServicePageTemplate({
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Your Name</label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
-                      />
+                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                    />
                   </div>
                   <div className="space-y-2">
-                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Phone Number</label>
-                      <input
-                        type="text"
-                        placeholder="Enter your mobile number"
-                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
-                      />
+                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                      Phone Number
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your mobile number"
+                      className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                    />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Email Address</label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
-                      />
+                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                    />
                   </div>
                   <div className="space-y-2">
-                      <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Business Name</label>
-                      <input
-                        type="text"
-                        placeholder="Enter your business name"
-                        className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
-                      />
+                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                      Business Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your business name"
+                      className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors"
+                    />
                   </div>
                 </div>
                 <div className="space-y-2 pt-4">
-                    <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Message</label>
-                    <textarea
+                  <label className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
+                    Message
+                  </label>
+                  <textarea
                     rows={1}
                     placeholder="How can we help you"
                     className="w-full bg-transparent border-b border-slate-600 px-0 py-2 text-white placeholder:text-slate-600 focus:outline-none focus:border-[#0A7AFF] transition-colors resize-none"
-                    ></textarea>
+                  ></textarea>
                 </div>
 
                 <div className="pt-8">
@@ -360,16 +410,22 @@ export default function ServicePageTemplate({
             </div>
 
             <div className="w-full md:w-2/5 flex flex-col justify-center items-center relative">
-               {/* Contact channels floating at top right of form section in figma */}
+              {/* Contact channels floating at top right of form section in figma */}
               <div className="flex gap-4 text-white text-xs mb-8 md:absolute md:-top-16 md:-right-8">
                 <div className="flex items-center gap-1">
-                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><Phone size={12} className="text-white" /></span>
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                    <Phone size={12} className="text-white" />
+                  </span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><MessageSquare size={12} className="text-white" /></span>
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                    <MessageSquare size={12} className="text-white" />
+                  </span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center"><Mail size={12} className="text-white" /></span>
+                  <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                    <Mail size={12} className="text-white" />
+                  </span>
                 </div>
               </div>
 
@@ -394,7 +450,8 @@ export default function ServicePageTemplate({
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-blue-100 mb-10">
-            Let's discuss how our consulting & implementation services can help you achieve your goals.
+            Let's discuss how our consulting & implementation services can help
+            you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
