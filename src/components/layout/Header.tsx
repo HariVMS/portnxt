@@ -71,11 +71,11 @@ export default function Header() {
             <div className="flex xs:flex-col gap-2 xs:gap-1  items-center sm:flex-row sm:gap-4">
               <div className="flex items-center gap-3">
                 <a
-                  href="tel:+919942383516"
+                  href="tel:+918760227385"
                   className="flex items-center gap-2 hover:text-white/80 transition-colors"
                 >
                   <span className="font-normal text-[15px] font-brandon">
-                    +91 99423 83516
+                    +91 87602 27385
                   </span>
                 </a>
                 <span className="hidden md:inline text-white text-[18px]">
