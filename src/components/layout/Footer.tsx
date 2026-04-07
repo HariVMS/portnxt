@@ -253,7 +253,7 @@ export default function Footer() {
             <div className="space-y-6">
               <div className="flex gap-3 flex-col min-w-[300px]">
                 <div className="text-white mb-1">
-                  Phone : +91 99423 83516 ,+91 876022 7385
+                  Phone : +91 99423 83516, +91 87602 27385
                 </div>
                 <div className="text-white">
                   Email Address: connect@portnxt.in
