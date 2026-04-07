@@ -94,7 +94,6 @@ const services = [
     title: "SAP Implementation",
     desc: "Modernize business processes mapping against global architecture standards.",
   },
-  
 ];
 
 export default function Services() {

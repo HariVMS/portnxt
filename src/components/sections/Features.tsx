@@ -36,7 +36,6 @@ export default function Features() {
 
       <div className="container relative z-10 2xl:max-w-[1536px]">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 xl:grid 2xl:grid-cols-[1fr_400px]">
-
           {/* Left Content */}
           <div className="flex-1 w-full text-left">
             <div className="mb-12">
@@ -44,7 +43,8 @@ export default function Features() {
                 What Makes us Different?
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-[25px] font-bold text-white leading-tight max-w-3xl">
-                We offer solutions to simplify our software solutions for our clients.
+                We offer solutions to simplify our software solutions for our
+                clients.
               </h2>
             </div>
 
@@ -80,23 +80,35 @@ export default function Features() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>
   );
 }
 
-function FeatureItem({ feature }: { feature: { title: string; desc: string } }) {
+function FeatureItem({
+  feature,
+}: {
+  feature: { title: string; desc: string };
+}) {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" className="h-6 w-6 text-[#9CE0FF]"><path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path></svg></span>
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="20"
+            height="20"
+            fill="currentColor"
+            className="h-6 w-6 text-[#9CE0FF]"
+          >
+            <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
+          </svg>
+        </span>
         <h4 className="text-white font-bold text-lg">{feature.title}</h4>
       </div>
-      <p className="text-slate-200 text-sm leading-relaxed ">
-        {feature.desc}
-      </p>
+      <p className="text-slate-200 text-sm leading-relaxed ">{feature.desc}</p>
     </div>
   );
 }
