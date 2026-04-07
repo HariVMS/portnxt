@@ -275,7 +275,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="https://wa.me/919942383516"
+                  href="https://wa.me/918760227385⁠"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary text-[#C2C2C2] hover:text-white text-[16px] transition-all"
@@ -326,7 +326,7 @@ export default function Footer() {
         <div className="w-9 h-9 rounded-full bottom-[70px] right-[10px] absolute bg-[#25D366] z-10 animate-ping"></div>
 
         <a
-          href="https://wa.me/919942383516"
+          href="https://wa.me/918760227385⁠"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-[#25D366] relative z-50  rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"

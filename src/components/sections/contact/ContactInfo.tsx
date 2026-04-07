@@ -35,7 +35,7 @@ export default function ContactInfo() {
         </div>
         <div>
           <div className="flex flex-col gap-1 text-slate-600 font-light">
-            <span>Mobile: +91 99423 83516</span>
+            <span>Mobile: +91 99423 83516 , +91 8760227385</span>
             <span>Mail: connect@portnxt.in</span>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function ContactInfo() {
             <FaLinkedinIn size={16} />
           </a>
           <a
-            href="https://wa.me/919942383516"
+            href="https://wa.me/918760227385⁠"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300"
