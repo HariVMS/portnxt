@@ -168,8 +168,8 @@ export const servicesData: Record<string, ServiceData> = {
             { title: "Seamless Migration", description: "Minimal disruption." }
         ]
     },
-    "oracle-erp-cloud": {
-        id: "oracle-erp-cloud",
+    "oracle-erp": {
+        id: "oracle-erp",
         title: "Oracle Erp",
         description: "Professional IT services tailored to your needs.",
         heroImage: "/service-hero/Portnxt/Desktop - 3.png",
@@ -209,8 +209,8 @@ export const servicesData: Record<string, ServiceData> = {
             { title: "AI-Ready CRM", description: "Intelligent pipelines." }
         ]
     },
-    "web-ecommerce-application": {
-        id: "web-ecommerce-application",
+    "web-development": {
+        id: "web-development",
         title: "Web Development",
         description: "Professional IT services tailored to your needs.",
         heroImage: "/service-hero/Portnxt/Desktop - 11.png",
@@ -250,8 +250,8 @@ export const servicesData: Record<string, ServiceData> = {
             { title: "AI-Ready CRM", description: "Intelligent pipelines." }
         ]
     },
-    "data-visualization-fabric": {
-        id: "data-visualization-fabric",
+    "microsoft-fabric": {
+        id: "microsoft-fabric",
         title: "Microsoft Fabric",
         description: "Professional IT services tailored to your needs.",
         heroImage: "/service-hero/Portnxt/Desktop - 5.png",
@@ -291,8 +291,8 @@ export const servicesData: Record<string, ServiceData> = {
             { title: "AI-Ready CRM", description: "Intelligent pipelines." }
         ]
     },
-    "data-engineering-azure-informatica": {
-        id: "data-engineering-azure-informatica",
+    "data-engineering": {
+        id: "data-engineering",
         title: "Data Engineering",
         description: "Professional IT services tailored to your needs.",
         heroImage: "/service-hero/Portnxt/Desktop - 6.png",
